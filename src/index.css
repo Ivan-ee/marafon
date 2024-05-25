@@ -388,12 +388,18 @@ p {
 }
 
 .salary {
-    display: flex;
 
     margin-bottom: 180px;
+
+    .salary-blocks {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .salary-block-1 {
+    padding: 25px 14px 30px 26px;
+
     width: 383px;
     height: 334px;
 
@@ -405,33 +411,60 @@ p {
 }
 
 .salary-block-1 .salary-icon {
+    margin-bottom: 40px;
     text-align: left;
 }
 
+.salary-block-2 .salary-icon {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.salary-block-3{
+    width: 383px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .pointer{
+        height: 91px;
+        width: 82px;
+    }
+}
+
 .salary-block-1 .salary-text {
+    margin-bottom: 40px;
     font-size: 30px;
     font-weight: 500;
     line-height: 120%;
     letter-spacing: -1px;
     text-align: left;
-}
+    color: white;
 
-.salary-block-1 .salary-text span {
-    color: #C4F449;
+    span {
+        color: rgb(196, 244, 73);
+    }
 }
 
 .salary-block-1 .salary-desk {
     color: rgb(195, 195, 197);
     font-family: Nunito Sans, serif;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 150%;
     text-align: left;
+
+    span{
+        font-weight: bold;
+    }
 }
 
 .salary-block-2 {
+    position: relative;
+    top: 180px;
+
+    padding: 25px 14px 30px 26px;
     width: 383px;
-    height: 334px;
+    height: 242px;
 
     box-sizing: border-box;
     border-radius: 20px;
@@ -450,6 +483,16 @@ p {
 
 .salary-block-3 .pointer {
 
+}
+
+.salary-block-4{
+    position: relative;
+    top: 200px;
+}
+
+.salary-block-5{
+    position: relative;
+    top: 30px;
 }
 
 .whoIsIt {
