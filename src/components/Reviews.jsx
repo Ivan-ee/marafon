@@ -1,5 +1,6 @@
 import React from "react";
 import image1 from '../assets/r1.jpg';
+import arrow from '../assets/Arrow 1 (Stroke).svg';
 import image2 from '../assets/r2.png';
 import prev1 from '../assets/prev1.svg';
 import prev2 from '../assets/prev2.svg';
@@ -34,19 +35,23 @@ export const Reviews = () => {
                     </div>
                 </div>
 
-                <div className="block-2">
-                    <div className="video-prev">
-                        <VideoModal videoId="LcGh0g0Aycs" imageSrc={prev1}/>
-                    </div>
-                    <div className="block-title">Стас, 24 года, никогда не писал тексты.</div>
-                    <div className="desk">
-                        Пошёл в копирайтинг, чтобы освоить удаленную профессию и начать работать из дома. За неделю Стас
-                        разобрался <br/> в редактуре: понял, как писать и что писать, что для этого нужно. После
-                        марафона
-                        решил пойти на полный курс, теперь работает редактором.
+
+                <div>
+                    <img className='arrow-block' src={arrow} alt='1'/>
+                    <div className="block-2">
+                        <div className="video-prev">
+                            <VideoModal videoId="LcGh0g0Aycs" imageSrc={prev1}/>
+                        </div>
+                        <div className="block-title">Стас, 24 года, никогда не писал тексты.</div>
+                        <div className="desk">
+                            Пошёл в копирайтинг, чтобы освоить удаленную профессию и начать работать из дома. За неделю
+                            Стас
+                            разобрался <br/> в редактуре: понял, как писать и что писать, что для этого нужно. После
+                            марафона
+                            решил пойти на полный курс, теперь работает редактором.
+                        </div>
                     </div>
                 </div>
-
                 <div className="block-3">
                     <div className='image'>
 

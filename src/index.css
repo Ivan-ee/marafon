@@ -747,7 +747,15 @@ p {
     }
 }
 
+.arrow-block{
+    position: relative;
+    top: 80px;
+}
+
 .reviews .block-2 {
+    position: relative;
+    top: 120px;
+
     padding: 25px 14px 30px 26px;
 
     background: #C4F449;
@@ -775,6 +783,9 @@ p {
 }
 
 .reviews .block-10 {
+    position: relative;
+    top: -140px;
+
     padding: 25px 14px 30px 26px;
 
     background: #F4F4F6;
@@ -803,10 +814,13 @@ p {
 }
 
 .reviews .block-11 {
+    position: relative;
+    top: 110px;
+
     padding: 25px 14px 30px 26px;
 
     background: white;
-    border: 1px solid #F4F4F6;
+    border: 1px solid black;
 
     width: 383px;
     height: 735px;
@@ -834,6 +848,7 @@ p {
 
 .reviews .block-3 {
     position: relative;
+    top: 380px;
     z-index: 100;
 
     box-sizing: border-box;
@@ -876,6 +891,8 @@ p {
 }
 
 .reviews .block-13 {
+    position: relative;
+    top: -70px;
     border-radius: 20px;
 
     background: rgb(47, 47, 47);
@@ -886,6 +903,7 @@ p {
 
 .reviews .block-14 {
     position: relative;
+    top: -230px;
     z-index: 100;
 
     box-sizing: border-box;
@@ -919,6 +937,8 @@ p {
 }
 
 .block-16{
+    position: relative;
+    top: -290px;
     text-align: left;
 }
 
