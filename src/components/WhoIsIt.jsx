@@ -1,49 +1,56 @@
-import {Video} from "./Video.jsx";
+import image1 from '../assets/bac_green.png';
+import image2 from '../assets/galka.svg';
+import image from "../assets/Arrow 1.svg";
+import image3 from '../assets/Arrow 1 (1).svg';
 
 export const WhoIsIt = () => {
     return (
         <div className="whoIsIt">
             <div className='title'>
-                <div>Кто</div>
-                <div>такой</div>
-                <br/>копирайтер?
+                <div className='whoIsIt-titles'>
+                    <div>Кто</div>
+                    <div>такой</div>
+                </div>
+                <div style={{
+                    textAlign: 'right'
+                }}>копирайтер?
+                </div>
             </div>
 
             <div className='main-block'>
 
                 <div className='block-1'>
-                    <div className='image'>
-                        <div>1</div>
-                        <div>
-                            Копирайтер — это
-                            человек, который
-                            пишет тексты: для
-                            сайтов, телеграм-
-                            каналов или
-                            рассылок.
-                        </div>
-                    </div>
-                </div>
-
-                <div className='block-2'>
-                    <div>2</div>
+                    <div className='icon'>1</div>
                     <div className='block-title'>
-                        Это удаленная
-                        и стабильная
-                        профессия
-                    </div>
-                    <div className='text'>
                         Копирайтер — это
-                        человек, который
+                        человек, который <br/>
                         пишет тексты: для
                         сайтов, телеграм-
-                        каналов или
+                        каналов или <br/>
                         рассылок.
                     </div>
                 </div>
 
+                <div className='block-2'>
+                    <div className='icon'>2</div>
+                    <div className='block-title'>
+                        Это удаленная <br/>
+                        и стабильная <br/>
+                        профессия
+                    </div>
+                    <div className='text'>
+                        Копирайтеру платят не за разовые
+                        тексты, а за полноценное ведение блога,
+                        телеграма или канала на Яндекс.Дзене.
+                        Чтобы начать работать копирайтером,
+                        нужно понять базу и собрать портфолио.
+                        Как это сделать — подробно
+                        рассказываем на марафоне.
+                    </div>
+                </div>
+
                 <div className='block-3'>
-                    <div>3</div>
+                    <div className='icon'>3</div>
                     <div className='block-title'>
                         Стоимость работ
                         начинающих авторов
@@ -51,33 +58,27 @@ export const WhoIsIt = () => {
                     </div>
                     <div className='select'>
                         <div className='item'>
-                            <span className='icon'>
-                                1
-                            </span>
-                            Ведение телеграм-канала,
-                            20 постов в месяц — 40 000 ₽
+                            <img src={image2} style={{marginTop: 5}} alt='2'/>
+                            <div>Ведение телеграм-канала,
+                                <br/>20 постов в месяц — <span>40 000 ₽</span></div>
                         </div>
                         <div className='item'>
-                            <span className='icon'>
-                                2
-                            </span>
-                            Ведение телеграм-канала,
-                            20 постов в месяц — 40 000 ₽
+                            <img src={image2} style={{marginTop: 5}} alt='2'/>
+                            <div>Статья для Яндекс.Дзена — <br/>
+                                <span>от 4000 ₽</span></div>
                         </div>
                         <div className='item'>
-                            <span className='icon'>
-                                3
-                            </span>
-                            Ведение телеграм-канала,
-                            20 постов в месяц — 40 000 ₽
+                            <img src={image2} style={{marginTop: 5}} alt='2'/>
+                            <div>Статья для блога компании — <br/>
+                                <span>от 8000 ₽</span></div>
                         </div>
                     </div>
 
-                    <div>
-                        <button>
-                            Записаться
-                        </button>
-                    </div>
+                    <button className='btn'>
+                        <div>Записаться</div>
+                        <div>|</div>
+                        <div><img src={image3}/></div>
+                    </button>
                 </div>
             </div>
         </div>
