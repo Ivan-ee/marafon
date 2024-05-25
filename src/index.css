@@ -517,6 +517,7 @@ p {
 }
 
 .whoIsIt .title {
+    margin: 0 24px;
     position: relative;
     z-index: 10;
 
@@ -586,6 +587,9 @@ p {
 /*}*/
 
 .whoIsIt .block-2 {
+    position: relative;
+    top: 30px;
+
     padding: 25px 14px 30px 26px;
     width: 383px;
     height: 517px;
@@ -625,6 +629,9 @@ p {
 }
 
 .whoIsIt .block-3 {
+    position: relative;
+    top: 110px;
+
     display: flex;
     flex-direction: column;
     color: #F4F4F6;
@@ -669,7 +676,7 @@ p {
     }
 
     .select {
-    margin-bottom: 40px;
+        margin-bottom: 40px;
     }
 
     .btn {
@@ -702,6 +709,8 @@ p {
 }
 
 .reviews .title {
+    margin: 0 24px;
+
     color: rgb(47, 47, 47);
     font-size: 132px;
     font-weight: 500;
@@ -711,10 +720,31 @@ p {
 }
 
 .reviews .block-1 {
-    background: #F4F4F6;
+    position: relative;
+    top: -32px;
+    padding: 25px 14px 30px 26px;
+
+    background: rgba(220, 220, 222, 0.3);
+    backdrop-filter: blur(6px);
+    border: 1px solid white;
+
+    /*background: #F4F4F6;*/
     width: 383px;
-    height: 358px;
+    height: 458px;
     border-radius: 20px;
+
+    .icon{
+        margin-bottom: 40px;
+    }
+
+    .text{
+        color: rgb(47, 47, 47);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
 }
 
 .reviews .block-2 {
@@ -1220,3 +1250,96 @@ p {
     display: flex;
     justify-content: flex-end;
 }
+
+.modal__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal__align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__content {
+    position: relative;
+    width: 800px;
+    max-width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal__video-align {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.modal__video-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.modal__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__spinner-style {
+    font-size: 50px;
+    color: #fff;
+}
+
+.video-preview {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-image {
+    width: 100%;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
