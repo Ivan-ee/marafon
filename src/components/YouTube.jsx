@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { BiLoaderAlt } from "react-icons/bi";
+import {FaPlay} from "react-icons/fa";
 
 function VideoModal({ videoId, imageSrc }) {
     const [modal, setModal] = useState(false);
@@ -18,7 +19,7 @@ function VideoModal({ videoId, imageSrc }) {
         <div className="video-preview">
             <img src={imageSrc} alt="Video Preview" className="preview-image" />
             <button onClick={openModal} className="play-button">
-                Play
+                <FaPlay />
             </button>
             {modal ? (
                 <section className="modal__bg">
