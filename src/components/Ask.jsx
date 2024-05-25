@@ -1,5 +1,4 @@
 import React from "react";
-import {Input} from '@nextui-org/react';
 import {Controller, useForm} from "react-hook-form";
 
 export const Ask = () => {

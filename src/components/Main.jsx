@@ -1,5 +1,8 @@
 import {Title} from "./Title.jsx";
 import {Block} from "./block.jsx";
+import image from '../assets/Arrow 1.svg';
+import starBlack from '../assets/star_black.svg';
+import starWhite from '../assets/star_white.svg';
 
 export const Main = ({children}) => {
     return (
@@ -13,36 +16,21 @@ export const Main = ({children}) => {
                     <p className='timer'>
                         12:53:23
                     </p>
-                    <p className='last-price'>
+                    <div className='last-price'>
                         3990 ₽
-                    </p>
+                    </div>
                     <p className='price'>
                         890 ₽
                     </p>
                 </div>
-                <div style={{
-                    backgroundColor: 'rgba(138, 83, 255, 1)',
-                    borderRadius: 20,
-                    width: 383,
-                    height: 73,
-                    display: 'inline-flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    justifyContent: 'center',
-                }}>
-                    <p style={{
-                        fontSize: 25,
-                        lineHeight: '100%',
-                        color: 'rgba(250, 250, 250, 1)',
-                        textTransform: 'uppercase',
-                    }}>Записаться</p>
+                <div className='main-block-button'>
+                    <div>Записаться</div>
+                    <div>|</div>
+                    <div><img src={image}/></div>
                 </div>
             </Block>
             <Block className="t-t">
-                <div style={{
-                    padding: '20px 35px 35px 25px'
-                }}>
-                    <p className='text'>
+                    <div className='text'>
                         За неделю научитесь писать тексты
                         для компаний и личного блога —
                         изучите всю основу по копирайтингу
@@ -50,47 +38,46 @@ export const Main = ({children}) => {
                         Авторский марафон от ех-Главного
                         редактора УК Газпромбанк —
                         Марка Николаева.
-                    </p>
+                    </div>
 
-                    <p className='text-2'>
+                    <div className='text-2'>
                         Подходит для тех,
                         кто никогда не писал.
-                    </p>
-                </div>
+                    </div>
             </Block>
 
             <Block className="t-3">
                 <div className="image">
                     <div className="icon">
-                        *
+                        <img src={starBlack} className='star'/>
                     </div>
 
-                    <p className='text'>
-                        Марафон для тех,
+                    <div className='text'>
+                        Марафон для тех, <br/>
                         кто хочет освоить
                         удаленную профессию
-                    </p>
+                    </div>
                 </div>
                 <div className="two">
                     <div className="icon">
-                        *
+                        <img src={starWhite} className='star'/>
                     </div>
-                    <p className='text-1'>
+                    <div className='text-1'>
                         Начинаем учиться
-                    </p>
-                    <p className='text-2'>
+                    </div>
+                    <div className='text-2'>
                         3 января
-                    </p>
+                    </div>
                 </div>
                 <div className="three">
                     <div className="icon">
-                        *
+                        <img src={starBlack} className='star'/>
                     </div>
                     <p className='text-1'>
                         Свободно мест
                     </p>
                     <p className='text-2'>
-                        5
+                        005
                     </p>
                 </div>
             </Block>
