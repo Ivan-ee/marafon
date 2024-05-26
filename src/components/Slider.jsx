@@ -5,35 +5,72 @@ import mr1 from '../assets/mr1.png';
 import mr2 from '../assets/mr2.png';
 import mr3 from '../assets/mr3.png';
 import mr4 from '../assets/mr4.png';
+import arrow from '../assets/Arrow 1 (Stroke).svg';
+import arrowL from '../assets/Лево.svg';
+import arrowR from '../assets/Право.svg';
+import pol from '../assets/Polygon 1.svg';
 
 export const MySlider = () => {
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
-    let sliderRef1 = useRef(null);
-    let sliderRef2 = useRef(null);
-
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const sliderRef1 = useRef(null);
+    const sliderRef2 = useRef(null);
 
     useEffect(() => {
-        setNav1(sliderRef1);
-        setNav2(sliderRef2);
+        setNav1(sliderRef1.current);
+        setNav2(sliderRef2.current);
     }, []);
 
     useEffect(() => {
         const slides = document.querySelectorAll('.slick-slide');
 
-        console.log(slides)
+        console.log(slides);
         slides.forEach(slide => {
             const childDiv = slide.querySelector('div');
             if (childDiv) {
                 childDiv.classList.add('ct-flex');
             }
         });
+
+        const arrows = document.querySelectorAll('.main-slider .slick-arrow');
+        arrows.forEach(arrow => arrow.remove());
+
+        const arrows2 = document.querySelectorAll('.wrapper-slider .slick-arrow');
+        arrows2.forEach(arrow => arrow.remove());
     }, []);
+
+    const handleAfterChange = (current) => {
+        setCurrentSlide(current);
+    };
+
+    const handlePrevClick = () => {
+        if (sliderRef1.current) {
+            sliderRef1.current.slickPrev();
+        }
+        if (sliderRef2.current) {
+            sliderRef2.current.slickPrev();
+        }
+    };
+
+    const handleNextClick = () => {
+        if (sliderRef1.current) {
+            sliderRef1.current.slickNext();
+        }
+        if (sliderRef2.current) {
+            sliderRef2.current.slickNext();
+        }
+    };
+
+    const totalSlides = 4;
 
     return (
         <div className='main slider'>
             <div className='title'>
-                Как проходит
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div>Как</div>
+                    <div>проходит</div>
+                </div>
                 марафон
             </div>
             <link
@@ -50,7 +87,11 @@ export const MySlider = () => {
             <div className='main-block'>
                 <div className='main-slider'>
                     <div className='slider-image'>
-                        <Slider asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
+                        <Slider
+                            asNavFor={nav2}
+                            ref={sliderRef1}
+                            afterChange={handleAfterChange}
+                        >
                             <div className='item'>
                                 <img style={{borderRadius: 20}} src={mr1} alt='1'/>
                             </div>
@@ -67,16 +108,17 @@ export const MySlider = () => {
                     </div>
                 </div>
                 <div className='wrapper-slider'>
-                    <h4>Second Slider</h4>
+                    <img src={arrow} alt='1' style={{height: 34, width: 34}}/>
                     <Slider
                         asNavFor={nav1}
-                        ref={slider => (sliderRef2 = slider)}
+                        ref={sliderRef2}
                         slidesToShow={1}
                         swipeToSlide={true}
+                        afterChange={handleAfterChange}
                     >
                         <div className='slider-item'>
                             <div className='slider-title'>
-                                Изучаете 8 уроков
+                                Изучаете 8 уроков <br/>
                                 в формате текстов и
                                 видео.
                             </div>
@@ -85,7 +127,7 @@ export const MySlider = () => {
                                 или на улице в любое свободное время.
                             </div>
                             <button className='slider-btn'>
-                                Смотереть разбор
+                                Смотреть разбор из телеграмма <img src={pol} alt='1'/>
                             </button>
                         </div>
                         <div className='slider-item'>
@@ -99,7 +141,7 @@ export const MySlider = () => {
                                 работу от практикующих редакторов.
                             </div>
                             <button className='slider-btn'>
-                                Смотереть разбор домашки
+                                Смотреть разбор домашки <img src={pol} alt='1'/>
                             </button>
                         </div>
                         <div className='slider-item'>
@@ -117,21 +159,31 @@ export const MySlider = () => {
                         </div>
                         <div className='slider-item'>
                             <div className='slider-title'>
-                                Смотрите 3 вебинара
+                                Смотрите 3 вебинара <br/>
                                 от Марка с разборами
                                 текстов
                             </div>
                             <div className='slider-desc'>
-                                Узнайте, какие ошибки делают
+                                Узнайте, какие ошибки делают <br/>
                                 начинающие авторы и как их исправить.
                                 Марк поделится советами, которые
                                 использует в работе сам.
                             </div>
                         </div>
                     </Slider>
+                    <div className='buttons'>
+                        <button className='btn-icon' onClick={handlePrevClick}>
+                            <img src={arrowL} alt="Previous"/>
+                        </button>
+                        <div className='slide-counter'>
+                            {currentSlide + 1} / {totalSlides}
+                        </div>
+                        <button className='btn-icon' onClick={handleNextClick}>
+                            <img src={arrowR} alt="Next"/>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    )
-}
-
+    );
+};
