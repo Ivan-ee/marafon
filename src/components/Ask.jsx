@@ -81,7 +81,7 @@ export const Ask = () => {
                     {/* {errors.telegram && <span className="error">{errors.telegram.message}</span>} */}
                 </div>
 
-                <div className="textarea-group">
+                <div className="textarea-group" style={{justifyContent: 'left', gap: '25px'}}>
                     <Controller
                         name="question"
                         control={control}

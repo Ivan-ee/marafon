@@ -737,6 +737,7 @@ p {
 
 .reviews .main-block {
     display: flex;
+    justify-content: space-between;
 }
 
 .reviews .title {
@@ -1101,7 +1102,7 @@ p {
 }
 
 .slider .title {
-    margin: 0 24px;
+    margin: 0 24px 80px;
     color: rgb(47, 47, 47);
     font-size: 132px;
     font-weight: 500;
@@ -1353,6 +1354,10 @@ p {
 
 .about {
     margin-bottom: 360px;
+}
+
+.about .blocks{
+    justify-content: space-between;
 }
 
 .about .title {
@@ -1868,6 +1873,7 @@ p {
 
 .ask .input-group, .textarea-group {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     gap: 10px;
     width: 100%;
@@ -2028,6 +2034,18 @@ p {
 
 .video-prev {
     margin: 20px 0 40px;
+}
+
+.needed .main-block{
+    margin-bottom: 360px;
+}
+
+.needed{
+
+}
+
+.needed{
+    margin-bottom: 180px;
 }
 
 .needed .title {
