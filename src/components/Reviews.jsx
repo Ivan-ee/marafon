@@ -1,7 +1,7 @@
 import React from "react";
 import image1 from '../assets/r1.jpg';
 import arrow from '../assets/Arrow 1 (Stroke).svg';
-import image2 from '../assets/r2.png';
+import image2 from '../assets/new.svg';
 import prev1 from '../assets/prev1.svg';
 import prev2 from '../assets/prev2.svg';
 import prev3 from '../assets/prev3.svg';

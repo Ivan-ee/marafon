@@ -561,6 +561,7 @@ p {
 
 
 .whoIsIt .block-1 {
+    border: 1px solid white;
     padding: 25px 14px 30px 26px;
     position: relative;
     top: -35px;
@@ -1262,10 +1263,13 @@ p {
         color: #c3c3c5;
     }
 
-    margin-bottom: 90px;
+    margin: 0 24px 90px;
 }
 
 .description {
+
+    margin-bottom: 80px!important;
+
     .text-desk {
         margin: 40px 0;
         text-align: left;

@@ -21,6 +21,12 @@ export const Description = () => {
             element.classList.add('custom-p');
         })
 
+        const titleElement = document.querySelector('.description .title');
+        const nextElement = titleElement.nextElementSibling;
+        if (nextElement) {
+            nextElement.style.padding = '0';
+        }
+
     }, []);
 
     return (

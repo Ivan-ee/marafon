@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useRef} from "react";
 import Slider from "react-slick";
 
-import mr1 from '../assets/mr1.png';
-import mr2 from '../assets/mr2.png';
-import mr3 from '../assets/mr3.png';
-import mr4 from '../assets/mr4.png';
+import mr1 from '../assets/Скриншот.svg';
+import mr2 from '../assets/Скриншот2.svg';
+import mr3 from '../assets/Скриншот3.svg';
+import mr4 from '../assets/Скриншот4.svg';
 import arrow from '../assets/Arrow 1 (Stroke).svg';
 import arrowL from '../assets/Лево.svg';
 import arrowR from '../assets/Право.svg';

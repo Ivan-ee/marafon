@@ -1,8 +1,8 @@
 import imageSrc1 from '../assets/rub.svg';
 import imageSrc2 from '../assets/hh.svg';
 import imageSrc3 from '../assets/pointer.svg';
-import imageSrc4 from '../assets/img.png';
-import imageSrc5 from '../assets/img2.png';
+import imageSrc4 from '../assets/img2.svg';
+import imageSrc5 from '../assets/img.svg';
 
 export const Salary = () => {
     return (
