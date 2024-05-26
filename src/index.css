@@ -116,6 +116,14 @@ p {
     margin: 0 auto;
 }
 
+.block-arr{
+    width: 383px;
+    height: 530px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 .main-block {
     display: grid;
@@ -1553,6 +1561,7 @@ p {
 }
 
 .after .title {
+    margin: 0 24px;
     color: rgb(47, 47, 47);
     font-size: 132px;
     font-weight: 500;
@@ -1569,15 +1578,32 @@ p {
     margin-bottom: 180px;
 }
 
-
 .after .block-1 {
+    padding: 25px 14px 30px 26px;
+    position: relative;
+    top: -35px;
+    z-index: 1000;
 
     width: 383px;
     height: 530px;
 
     border-radius: 20px;
 
-    background: rgb(244, 244, 246);
+    background: rgba(220, 220, 222, 0.3);
+    backdrop-filter: blur(6px);
+
+    .icon{
+        margin-bottom: 40px;
+    }
+
+    .text {
+        color: rgb(47, 47, 47);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
 }
 
 .faq {

@@ -1,18 +1,29 @@
 import {Block} from "./block.jsx";
+import starBlack from "../assets/star_black.svg";
+import React from "react";
+import image from "../assets/Arrow 1.svg";
+import arrow from "../assets/Arrow 1 Stroke (1).svg";
 
 export const After = () => {
     return (
         <div className='main after'>
             <div className='title'>
-                Что будет
-                после оплаты
+                Что будет <br/>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <div>после</div>
+                    <div>оплаты</div>
+                </div>
             </div>
             <div className='blocks'>
                 <div className='block-1'>
-                    <div className='star'>*</div>
+                    <div className="icon">
+                        <img src={starBlack} className='star'/>
+                    </div>
                     <div className='text'>
-                        Мы добавим вас в чат-бота в Телеграме, куда будем отправлять уроки и вебинары. Через него можно
-                        связаться с редактором и получить ответ на любой вопрос. Учиться начнёте сразу, как будет
+                        Мы добавим вас <br/>
+                        в чат-бота в Телеграме, куда будем отправлять уроки и вебинары. <br/> Через него можно
+                        связаться <br/>с редактором и <br/>получить ответ <br/> на любой вопрос. Учиться начнёте сразу,
+                        как будет
                         удобно.
                     </div>
                 </div>
@@ -24,32 +35,22 @@ export const After = () => {
                         <p className='timer'>
                             12:53:23
                         </p>
-                        <p className='last-price'>
+                        <div className='last-price'>
                             3990 ₽
-                        </p>
+                        </div>
                         <p className='price'>
                             890 ₽
                         </p>
                     </div>
-                    <div style={{
-                        backgroundColor: 'rgba(138, 83, 255, 1)',
-                        borderRadius: 20,
-                        width: 383,
-                        height: 73,
-                        display: 'inline-flex',
-                        flexDirection: 'column',
-                        alignItems: 'flex-start',
-                        justifyContent: 'center',
-                    }}>
-                        <p style={{
-                            fontSize: 25,
-                            lineHeight: '100%',
-                            color: 'rgba(250, 250, 250, 1)',
-                            textTransform: 'uppercase',
-                        }}>Записаться</p>
+                    <div className='main-block-button'>
+                        <div>Записаться</div>
+                        <div>|</div>
+                        <div><img src={image}/></div>
                     </div>
                 </Block>
-                <div className='block'></div>
+                <div className='block-arr'>
+                    <img className='arrow-block' style={{height: 70, width: 70}} src={arrow} alt='1'/>
+                </div>
             </div>
         </div>
     )
