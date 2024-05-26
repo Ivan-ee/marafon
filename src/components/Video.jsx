@@ -1,23 +1,25 @@
+import VideoModal from "./YouTube.jsx";
+import prev1 from "../assets/123.png";
+import React from "react";
+import starBlack1 from "../assets/star_white.svg";
 
 
 export const Video = () => {
     return (
         <div className='video'>
             <div className='text'>
-                <div className='icon'>*</div>
-                Подробнее о профессии
-                копирайтера смотри
-                в видео. На примерах
+                <div className="icon">
+                    <img src={starBlack1} className="star" alt="star"/>
+                </div>
+                <span>Подробнее о профессии
+                копирайтера смотри <br/>
+                    в видео.</span> На примерах
                 показываю, что делает
-                копирайтер, — и за что
+                копирайтер, — и за что <br/>
                 ему платят деньги.
             </div>
             <div className='video-wrapper'>
-                <iframe width="725" height="408"
-                        src="https://www.youtube-nocookie.com/embed/L6Hby52EQXQ?si=BKjTLgZM3HmKQQ8A"
-                        title="YouTube video player" frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <VideoModal videoId="LcGh0g0Aycs" imageSrc={prev1}/>
             </div>
         </div>
     )

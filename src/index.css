@@ -944,7 +944,7 @@ p {
 }
 
 .video {
-    height: 462px;
+    height: 448px;
     display: flex;
 
     border-radius: 20px;
@@ -953,6 +953,10 @@ p {
 
     padding: 20px;
     box-sizing: border-box;
+
+    .video-wrapper {
+        min-width: 725px!important;
+    }
 }
 
 .video .text {
@@ -961,6 +965,16 @@ p {
     line-height: 120%;
     letter-spacing: -1px;
     text-align: left;
+
+    color: white;
+
+    .icon{
+        margin-bottom: 40px;
+    }
+
+    span{
+        color: #C4F449;
+    }
 }
 
 .slider .main-block {
@@ -1512,7 +1526,7 @@ p {
     margin: 0 24px;
     position: relative;
     z-index: 10;
-text-align: center;
+    text-align: center;
 
     color: rgb(47, 47, 47);
     font-size: 132px;
@@ -1615,6 +1629,7 @@ text-align: center;
     }
 }
 
+
 .needed .block-3 {
     position: relative;
     top: 180px;
@@ -1651,7 +1666,7 @@ text-align: center;
         margin-bottom: 160px;
     }
 
-    .text{
+    .text {
         color: rgb(122, 122, 122);
         font-family: Nunito Sans, serif;
         font-size: 17px;
