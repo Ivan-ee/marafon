@@ -15,15 +15,3 @@ COPY . .
 
 # Запускаем скрипт сборки
 RUN npm run build
-
-# Устанавливаем Nginx как веб-сервер
-FROM nginx:latest
-
-# Копируем конфигурационный файл Nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Устанавливаем директорию для сборки приложения
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Запускаем Nginx
-CMD ["nginx", "-g", "daemon off;"]
