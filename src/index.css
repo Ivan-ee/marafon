@@ -117,6 +117,8 @@ p {
 }
 
 .block-arr{
+    position: relative;
+    top: 180px;
     width: 383px;
     height: 530px;
 
@@ -1570,6 +1572,11 @@ p {
     text-transform: uppercase;
 }
 
+.after .o-t{
+    position: relative;
+    top: 250px;
+}
+
 .after .blocks {
     display: flex;
 }
@@ -1622,16 +1629,21 @@ p {
 .accordion {
 
     button {
+        padding: 20px 26px;
         position: relative;
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-align: left;
         width: 100%;
-        padding: 1em 0;
         font-size: 1.15rem;
         font-weight: 400;
         border: none;
         background: none;
         outline: none;
+
+        background: rgba(47, 47, 47, 0.9);
+        border-radius: 20px;
 
         &:hover, &:focus {
             cursor: pointer;
@@ -1644,63 +1656,36 @@ p {
         }
 
         .accordion-title {
-            padding: 1em 1.5em 1em 0;
-            background: rgba(47, 47, 47, 0.9);
-            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: -1px;
+            text-align: left;
         }
 
-        .icon {
-            display: inline-block;
-            position: absolute;
-            top: 18px;
-            right: 0;
-            width: 22px;
-            height: 22px;
-            border: 1px solid;
-            border-radius: 22px;
-
-            &::before {
-                display: block;
-                position: absolute;
-                content: '';
-                top: 9px;
-                left: 5px;
-                width: 10px;
-                height: 2px;
-                background: currentColor;
-            }
-
-            &::after {
-                display: block;
-                position: absolute;
-                content: '';
-                top: 5px;
-                left: 9px;
-                width: 2px;
-                height: 10px;
-                background: currentColor;
-            }
+        img {
+            transition: transform 0.3s ease-in-out; /* Добавляем переход */
         }
+
     }
 
     button[aria-expanded='true'] {
         color: blue;
 
-        .icon {
-            &::after {
-                width: 0;
-            }
-        }
 
         + .accordion-content {
             opacity: 1;
-            max-height: 9em;
+            max-height: 20em;
             transition: all 200ms linear;
             will-change: opacity, max-height;
         }
     }
 
     .accordion-content {
+
+
+        text-align: left;
         opacity: 0;
         max-height: 0;
         overflow: hidden;
@@ -1708,11 +1693,62 @@ p {
         will-change: opacity, max-height;
 
         p {
-            font-size: 1rem;
-            font-weight: 300;
-            margin: 2em 0;
+            padding: 20px;
+            color: rgb(47, 47, 47);
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -1px;
         }
     }
+
+    .accordion-item{
+        margin-bottom: 10px;
+    }
+}
+
+.b1{
+    background: #8A53FF!important;
+}
+.b2{
+    background: #F4F4F6!important;
+
+    .accordion-title{
+        color: black!important;
+    }
+}
+.b3{
+    .accordion-title{
+        color: black!important;
+    }
+    background: #C4F449!important;
+}
+.b4{
+    background: linear-gradient(to right,#b228b8, #8a53ff)!important;
+}
+.b5{
+    background: #2F2F2F!important;
+}
+.b6{
+
+    .accordion-title{
+        color: black!important;
+    }
+    background: #F4F4F6!important;
+}
+.b7{
+    background: #0267F8!important;
+}
+.b8{
+    background: #C4F449!important;
+
+    .accordion-title{
+        color: black!important;
+    }
+
+}
+.b9{
+    background: linear-gradient(to right,#b228b8, #8a53ff)!important;
 }
 
 .ask .title {

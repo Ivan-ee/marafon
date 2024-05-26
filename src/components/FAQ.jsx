@@ -1,84 +1,169 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef, useState} from "react";
+import arrowWhite from "../assets/up.svg";
+import arrowBlack from "../assets/down.svg";
 
 export const FAQ = () => {
-
-    useEffect(() => {
-        const items = document.querySelectorAll(".accordion button");
-
-        const toggleAccordion = (event) => {
-            const itemToggle = event.currentTarget.getAttribute('aria-expanded');
-
-            items.forEach(item => {
-                item.setAttribute('aria-expanded', 'false');
-            });
-
-            if (itemToggle === 'false') {
-                event.currentTarget.setAttribute('aria-expanded', 'true');
-            }
-        };
-
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
-
-        return () => {
-            items.forEach(item => item.removeEventListener('click', toggleAccordion));
-        };
-    }, []);
+    const [accordionItems, setAccordionItems] = useState([
+        {
+            id: "accordion-button-1",
+            title:
+                "Марафон подходит для новичков? Я никогда не писал, у меня получится?",
+            content:
+                "Да, марафон создан для тех, кто никогда не писал. Обучение выстроено от простого к сложному: мы не заставляемс первого дня писать огромные статьи, — нет. Сначала начинаем с основ: учимся избавляться от лишних слов, складывать слова предложения, а предложения —в логические абзацы. И только к концу марафона ученики пишут первый текст, а редакторы дают к нему рекомендации и помогают написать, если что-то идёт не так.",
+            buttonClass: "b1",
+            color: "white",
+        },
+        {
+            id: "accordion-button-2",
+            title:
+                "В каком формате проходят уроки?",
+            content:
+                "Вся теория в текстовых уроках и коротких вебинарах. Сначала мы отправляем \n" +
+                "вам текстовый урок, вы делаете домашнее задание — а после смотрите \n" +
+                "короткий вебинар с разбором ошибок. Текстовых уроки можно изучать \n" +
+                "в метро, кафе или на улице, а вебинары смотреть в любое свободное время — \n" +
+                "это удобно.",
+            buttonClass: "b2",
+            color: "black",
+        },
+        {
+            id: "accordion-button-3",
+            title:
+                "Если у меня возникнет вопрос?",
+            content:
+                " Вы можете задать его в общем чате — лично мне или нашим кураторам. Чем \n" +
+                "больше вопросов — тем лучше. Можете задавать вопросы на любые темы:\n" +
+                "по рекламе, своим текстам или поиску клиентов — мы ответим и подскажем.",
+            buttonClass: "b3",
+            color: "black",
+        },
+        {
+            id: "accordion-button-4",
+            title:
+                "Я уже работаю с текстом на хорошем уровне, мне стоит идти на марафон?",
+            content:
+                "Нет, вам лучше подойдет основной курс «Сильный редактор». На нём \n" +
+                "углубленная программа и больше обратной связи. После обучения мы \n" +
+                "помогаем ученикам трудоустроиться в компании, а особенно любимых \n" +
+                "забираем себе в агентство. Подробнее о программе и результатах учеников \n" +
+                "смотрите на странице «Сильный редактор»",
+            buttonClass: "b4",
+            color: "white",
+        },
+        {
+            id: "accordion-button-5",
+            title:
+                "Я смогу проходить марафон с телефона?",
+            content:
+                "Да, все уроки и вебинары можно смотреть с телефона. Домашнее задание \n" +
+                "тоже можно делать с телефона. В общем, да, проходить марафон можно \n" +
+                "с телефона.",
+            buttonClass: "b5",
+            color: "white",
+        },
+        {
+            id: "accordion-button-6",
+            title:
+                "Нужно ли быть грамотным, чтобы идти на марафон?",
+            buttonClass: "b6",
+            color: "black",
+            content:
+                "Нет, и в качестве доказательства мы записали видео о пяти мифах \n" +
+                "о копирайтинге. Посмотрите и поймите. Всё, что вы знали о текстах — могло \n" +
+                "оказаться совсем не так.",
+        },
+        {
+            id: "accordion-button-7",
+            title:
+                "Со скольки лет можно начать учиться?",
+            buttonClass: "b7",
+            color: "white",
+            content:
+                "Наш марафон проходят ученики всех возрастов. Главное — желание учиться \n" +
+                "и несколько часов свободного времени.",
+        },
+        {
+            id: "accordion-button-8",
+            title:
+                "Что, если я не буду успевать?",
+            buttonClass: "b8",
+            color: "black",
+            content:
+                "С каждым учеником работает куратор. К нему можно обратиться по любому \n" +
+                "вопросу и отложить урок, если надо. Просто предупредите, что не успеваете, \n" +
+                "мы перенесём дедлайн.",
+        },
+        {
+            id: "accordion-button-9",
+            title:
+                "Учиться можно только гражданам России?",
+            buttonClass: "b9",
+            color: "white",
+            content:
+                "Оплатить и пройти марафон можно из любой страны. Наши ученики живут \n" +
+                "в Беларуси, Испании, на Бали и не только. Заполните форму ниже, и мы с вами \n" +
+                "свяжемся :)",
+        },
+    ]);
 
     return (
-        <div className='main faq'>
-            <div className='title'>
-                FAQ
-            </div>
+        <div className="main faq">
+            <div className="title">FAQ</div>
             <section>
-
                 <div className="accordion">
-                    <div className="accordion-item">
-                        <button id="accordion-button-1" aria-expanded="false"><span className="accordion-title">Why is the moon sometimes out during the day?</span><span
-                            className="icon" aria-hidden="true"></span></button>
-                        <div className="accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
-                                ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <button id="accordion-button-2" aria-expanded="false"><span className="accordion-title">Why is the sky blue?</span><span
-                            className="icon" aria-hidden="true"></span></button>
-                        <div className="accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
-                                ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <button id="accordion-button-3" aria-expanded="false"><span className="accordion-title">Will we ever discover aliens?</span><span
-                            className="icon" aria-hidden="true"></span></button>
-                        <div className="accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
-                                ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <button id="accordion-button-4" aria-expanded="false"><span className="accordion-title">How much does the Earth weigh?</span><span
-                            className="icon" aria-hidden="true"></span></button>
-                        <div className="accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
-                                ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <button id="accordion-button-5" aria-expanded="false"><span className="accordion-title">How do airplanes stay up?</span><span
-                            className="icon" aria-hidden="true"></span></button>
-                        <div className="accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
-                                ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
+                    {accordionItems.map((item, index) => (
+                        <AccordionItem
+                            key={item.id}
+                            item={item}
+                            index={index}
+                            accordionItems={accordionItems}
+                            setAccordionItems={setAccordionItems}
+                        />
+                    ))}
                 </div>
             </section>
+        </div>
+    );
+};
+
+const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
+    const arrowRef = useRef(null);
+
+    useEffect(() => {
+        const button = document.getElementById(item.id);
+
+        const toggleAccordion = (event) => {
+            setAccordionItems(
+                accordionItems.map((accItem, accIndex) => ({
+                    ...accItem,
+                    ariaExpanded: accIndex === index ? !accItem.ariaExpanded : false,
+                }))
+            );
+        };
+
+        button.addEventListener("click", toggleAccordion);
+
+        return () => {
+            button.removeEventListener("click", toggleAccordion);
+        };
+    }, [item.id, index, accordionItems, setAccordionItems]);
+
+    return (
+        <div className='accordion-item'>
+            <button id={item.id} aria-expanded={item.ariaExpanded || false} className={item.buttonClass}>
+                <div className="accordion-title">{item.title}</div>
+                <div className="icon" aria-hidden="true">
+                    <img
+                        ref={arrowRef}
+                        src={item.color === "white" ? arrowWhite : arrowBlack}
+                        alt="1"
+                        style={{transform: item.ariaExpanded ? "rotate(180deg)" : "rotate(0deg)"}}
+                    />
+                </div>
+            </button>
+            <div className="accordion-content">
+                <p>{item.content}</p>
+            </div>
         </div>
     );
 };
