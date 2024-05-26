@@ -1128,7 +1128,7 @@ p {
     background-image: url('./assets/back2.svg');
     background-repeat: no-repeat;
 
-    .text{
+    .text {
         color: rgb(47, 47, 47);
         font-size: 30px;
         font-weight: 500;
@@ -1137,7 +1137,7 @@ p {
         text-align: left;
     }
 
-    .desk{
+    .desk {
         color: rgb(47, 47, 47);
         font-size: 60px;
         font-weight: 500;
@@ -1158,7 +1158,7 @@ p {
     background: #F4F4F6;
     color: #2F2F2F;
 
-    .text{
+    .text {
         color: rgb(47, 47, 47);
         font-size: 30px;
         font-weight: 500;
@@ -1167,7 +1167,7 @@ p {
         text-align: left;
     }
 
-    .desk{
+    .desk {
         color: rgb(47, 47, 47);
         font-size: 60px;
         font-weight: 500;
@@ -1227,20 +1227,20 @@ p {
     letter-spacing: -3px;
     text-align: left;
 
-    span{
+    span {
         color: #c3c3c5;
     }
 
     margin-bottom: 90px;
 }
 
-.description{
-    .text-desk{
+.description {
+    .text-desk {
         margin: 40px 0;
         text-align: left;
     }
 
-    .select{
+    .select {
         text-align: left;
         margin-bottom: 33px;
     }
@@ -1261,11 +1261,11 @@ p {
     }
 }
 
-.custom-p{
-    padding-left: 26px!important;
-    padding-right: 26px!important;
+.custom-p {
+    padding-left: 26px !important;
+    padding-right: 26px !important;
     /*padding-bottom: 33px!important;*/
-    border-radius: 20px!important;
+    border-radius: 20px !important;
 }
 
 .video2-block {
@@ -1280,7 +1280,7 @@ p {
 
     margin-bottom: 180px;
 
-    .video2{
+    .video2 {
         display: flex;
     }
 
@@ -1288,7 +1288,7 @@ p {
         min-width: 725px !important;
     }
 
-    .btn-video{
+    .btn-video {
         margin-top: 27px;
         display: flex;
         justify-content: space-between;
@@ -1322,10 +1322,11 @@ p {
 }
 
 .about {
-    margin-bottom: 180px;
+    margin-bottom: 360px;
 }
 
 .about .title {
+    margin: 0 24px;
     color: rgb(47, 47, 47);
     font-size: 132px;
     font-weight: 500;
@@ -1339,14 +1340,34 @@ p {
 }
 
 .about .block-m {
+    position: relative;
+    top: -30px;
+
+
+    padding: 25px 25px 33px;
     width: 383px;
     height: 386px;
 
     border-radius: 20px;
-    background: rgb(2, 103, 248);
+    background: #C4F449;
+
+    .text {
+        margin-top: 40px;
+        color: rgb(47, 47, 47);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
 }
 
 .about .block-1 {
+    position: relative;
+    top: 170px;
+
+    padding: 25px 25px 33px;
+
     width: 382px;
     height: 472px;
 
@@ -1355,9 +1376,72 @@ p {
     border-radius: 20px;
 
     background: rgb(255, 255, 255);
+
+    .name {
+        margin-bottom: 40px;
+    }
+
+
+    .block-title {
+        margin-bottom: 84px;
+        color: rgb(47, 47, 47);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
+
+    .text {
+        color: rgb(122, 122, 122);
+        font-family: Nunito Sans, serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+}
+
+.block-author {
+
+    width: 224px;
+    height: 225px;
+    background: url("./assets/author.svg") no-repeat;
+
+    .author{
+        animation: rotation 10s linear infinite;
+        scale: 1.2;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-author{
+    position: relative;
+    top: -80px;
+
+    padding: 30px;
+    width: 382px;
+    height: 472px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about .block-2 {
+    position: relative;
+    top: 170px;
+
+    padding: 25px 25px 33px;
     width: 382px;
     height: 472px;
 
@@ -1365,9 +1449,38 @@ p {
     border-radius: 20px;
 
     background: rgb(2, 103, 248);
+
+    .name {
+        margin-bottom: 40px;
+
+    }
+
+    .block-title {
+        margin-bottom: 84px;
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
+
+    .text {
+        color: white;
+        font-family: Nunito Sans, serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0px;
+        text-align: left;
+    }
 }
 
 .about .block-3 {
+    position: relative;
+    top: 270px;
+
+    padding: 25px 25px 33px;
     width: 382px;
     height: 472px;
 
@@ -1375,9 +1488,37 @@ p {
     border-radius: 20px;
 
     background: rgb(255, 232, 22);
+
+    .name {
+        margin-bottom: 40px;
+    }
+
+    .block-title {
+        margin-bottom: 170px;
+        color: #2F2F2F;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
+
+    .text {
+        color: #2F2F2F;
+        font-family: Nunito Sans, serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0px;
+        text-align: left;
+    }
 }
 
 .about .block-4 {
+    position: relative;
+    top: -20px;
+
+    padding: 25px 25px 33px;
     width: 382px;
     height: 472px;
 
@@ -1385,6 +1526,30 @@ p {
     border-radius: 20px;
 
     background: rgb(194, 31, 37);
+
+    .name {
+        margin-bottom: 40px;
+    }
+
+    .block-title {
+        margin-bottom: 170px;
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: left;
+    }
+
+    .text {
+        color: white;
+        font-family: Nunito Sans, serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0px;
+        text-align: left;
+    }
 }
 
 .after .title {
