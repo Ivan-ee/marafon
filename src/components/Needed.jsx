@@ -1,8 +1,10 @@
 import {Video} from "./Video.jsx";
+import starBlack1 from "../assets/star_black.svg";
+import React from "react";
 
 export const Needed = () => {
     return (
-        <div className="whoIsIt">
+        <div className="needed">
             <div className='title'>
                 Подойдёт тем,
                 кто хочет
@@ -10,72 +12,58 @@ export const Needed = () => {
 
             <div className='main-block'>
 
-                <div className='block-1'>
-                    <div className='image'>
-                        <div>1</div>
-                        <div>
-                            Копирайтер — это
-                            человек, который
-                            пишет тексты: для
-                            сайтов, телеграм-
-                            каналов или
-                            рассылок.
-                        </div>
+                <div className="block-1">
+                    <div className="icon">
+                        1
+                    </div>
+                    <div className="block-title">
+                        Попробовать <br/>
+                        удалённую профессию
+                        и не покупать дорогое
+                        обучение
+                    </div>
+                    <div className='text'>
+                        Узнаете, как авторы пишут тексты, и
+                        поработаете с практикующими
+                        редакторами. Решите, нравится ли вам
+                        копирайтинг и хотите ли дальше в нём
+                        развиваться.
                     </div>
                 </div>
 
                 <div className='block-2'>
-                    <div>2</div>
+                    <div className="icon">
+                        2
+                    </div>
                     <div className='block-title'>
-                        Это удаленная
-                        и стабильная
-                        профессия
+                        Начать зарабатывать <br/>
+                        на текстах, даже если
+                        никогда не писал
                     </div>
                     <div className='text'>
-                        Копирайтер — это
-                        человек, который
-                        пишет тексты: для
-                        сайтов, телеграм-
-                        каналов или
-                        рассылок.
+                        Научитесь писать продающие тексты и
+                        узнаете, как находить первых клиентов.
+                        После марафона будете писать просто,
+                        емко и без воды. Поймете, как <br/>
+                        правильно составлять резюме и искать
+                        первых клиентов.
                     </div>
                 </div>
 
                 <div className='block-3'>
-                    <div>3</div>
+                    <div className="icon">
+                        3
+                    </div>
                     <div className='block-title'>
-                        Стоимость работ
-                        начинающих авторов
-                        после обучения:
+                        Вести личный блог так,
+                        чтобы люди читали
                     </div>
-                    <div className='select'>
-                        <div className='item'>
-                            <span className='icon'>
-                                1
-                            </span>
-                            Ведение телеграм-канала,
-                            20 постов в месяц — 40 000 ₽
-                        </div>
-                        <div className='item'>
-                            <span className='icon'>
-                                2
-                            </span>
-                            Ведение телеграм-канала,
-                            20 постов в месяц — 40 000 ₽
-                        </div>
-                        <div className='item'>
-                            <span className='icon'>
-                                3
-                            </span>
-                            Ведение телеграм-канала,
-                            20 постов в месяц — 40 000 ₽
-                        </div>
-                    </div>
-
-                    <div>
-                        <button>
-                            Записаться
-                        </button>
+                    <div className='text'>
+                        Разберётесь в особенностях текстов
+                        для соцсетей. Узнаете, как создавать
+                        интересные истории и придумывать
+                        заголовки, которые привлекают
+                        аудиторию.
                     </div>
                 </div>
             </div>
