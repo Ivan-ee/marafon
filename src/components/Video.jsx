@@ -19,7 +19,7 @@ export const Video = () => {
                 ему платят деньги.
             </div>
             <div className='video-wrapper'>
-                <VideoModal videoId="LcGh0g0Aycs" imageSrc={prev1}/>
+                <VideoModal videoId="L6Hby52EQXQ?si=QFk_HCLQz09qtsMr" imageSrc={prev1}/>
             </div>
         </div>
     )

@@ -71,7 +71,7 @@ export const Reviews = () => {
             <div className="main-block">
                 <div className="block-10">
                     <div className="video-prev">
-                        <VideoModal videoId="3JZ_D3ELwOQ" imageSrc={prev2}/>
+                        <VideoModal videoId="RVfG_kxDm-Q?si=pgFl__ovlRTWnElc" imageSrc={prev2}/>
                     </div>
                     <div className="block-title">Вика, работает
                         фотографом
@@ -96,7 +96,7 @@ export const Reviews = () => {
                 </div>
                 <div className="block-11">
                     <div className="video-prev">
-                        <VideoModal videoId="3JZ_D3ELwOQ" imageSrc={prev3}/>
+                        <VideoModal videoId="zMOjkBax9_Y?si=gFRBlKGIF51j0a4W" imageSrc={prev3}/>
                     </div>
                     <div className="block-title">Яна, работает
                         на конюшне.
@@ -126,11 +126,11 @@ export const Reviews = () => {
                     <div className='image'></div>
                 </div>
                 <div className="block-15">
-                    <VideoModal videoId="3JZ_D3ELwOQ" imageSrc={prev6}/>
+                    <VideoModal videoId="B4RqSKH_oQM?si=DFpeOjh459g8OAIk" imageSrc={prev6}/>
                 </div>
             </div>
             <div className="block-16">
-                <VideoModal videoId="3JZ_D3ELwOQ" imageSrc={prev7}/>
+                <VideoModal videoId="Gxd5DSVMQLM?si=wkKB1BSNDM1GmSg0" imageSrc={prev7}/>
             </div>
         </div>
     );

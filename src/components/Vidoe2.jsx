@@ -1,5 +1,6 @@
 import VideoModal from "./YouTube.jsx";
 import prev1 from "../assets/123.png";
+import prev2 from "../assets/123123.svg";
 import React from "react";
 import starBlack1 from "../assets/star_black.svg";
 import telegram from "../assets/telegramm.svg";
@@ -20,7 +21,7 @@ export const Video2 = () => {
                     рублей в месяц.
                 </div>
                 <div className='video-wrapper'>
-                    <VideoModal videoId="LcGh0g0Aycs" imageSrc={prev1}/>
+                    <VideoModal videoId="JZEB8BSLm4I?si=xDUev7MWsqNkn02M" imageSrc={prev2}/>
                 </div>
             </div>
             <button className='btn-video'>
