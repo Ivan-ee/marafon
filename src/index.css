@@ -2228,7 +2228,7 @@ p {
 }
 
 .hamburger-icon.open .bar1 {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(13px, 5px);
 }
 
 .hamburger-icon.open .bar2 {
@@ -2236,7 +2236,7 @@ p {
 }
 
 .hamburger-icon.open .bar3 {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(13px, -5px);
 }
 
 .menu {
@@ -2246,7 +2246,6 @@ p {
     width: 300px;
     height: 100%;
     background-color: white;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
     z-index: 999;
     transition: transform 0.3s ease-in-out;
 }
