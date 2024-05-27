@@ -4,9 +4,38 @@ import image from '../assets/Arrow 1.svg';
 import diamond from '../assets/diamond.svg';
 import starBlack from '../assets/star_black.svg';
 import starWhite from '../assets/star_white.svg';
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-export const Main = ({children}) => {
+export const Main = () => {
+
+    const currentDate = new Date();
+
+    const formattedDate = currentDate.toLocaleDateString('ru-RU', {
+        day: '2-digit',
+        month: '2-digit',
+    });
+
+    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+    function getTimeLeft() {
+        const now = new Date();
+        const endOfDay = new Date(now);
+        endOfDay.setHours(23, 59, 59, 999);
+        const diff = endOfDay - now;
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        return { hours, minutes, seconds };
+    }
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(getTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className='main-block'>
             <Title/>
@@ -17,7 +46,7 @@ export const Main = ({children}) => {
                         -88% до конца дня
                     </p>
                     <p className='timer'>
-                        12:53:23
+                        {`${timeLeft.hours.toString().padStart(2, '0')}:${timeLeft.minutes.toString().padStart(2, '0')}:${timeLeft.seconds.toString().padStart(2, '0')}`}
                     </p>
                     <div className='last-price'>
                         3990 ₽
@@ -69,7 +98,7 @@ export const Main = ({children}) => {
                         Начинаем учиться
                     </div>
                     <div className='text-2'>
-                        3 января
+                        {formattedDate}
                     </div>
                 </div>
                 <div className="three">
