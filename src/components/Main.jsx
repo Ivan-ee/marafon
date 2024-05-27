@@ -1,13 +1,16 @@
 import {Title} from "./Title.jsx";
 import {Block} from "./block.jsx";
 import image from '../assets/Arrow 1.svg';
+import diamond from '../assets/diamond.svg';
 import starBlack from '../assets/star_black.svg';
 import starWhite from '../assets/star_white.svg';
+import React from "react";
 
 export const Main = ({children}) => {
     return (
         <div className='main-block'>
             <Title/>
+            <img className="diamond" src={diamond} alt='diamond'/>
             <Block className="o-t">
                 <div className="image">
                     <p className='text-1'>
@@ -30,20 +33,20 @@ export const Main = ({children}) => {
                 </div>
             </Block>
             <Block className="t-t">
-                    <div className='text'>
-                        За неделю научитесь писать тексты
-                        для компаний и личного блога —
-                        изучите всю основу по копирайтингу
-                        и поймете, как найти первых клиентов.
-                        Авторский марафон от ех-Главного
-                        редактора УК Газпромбанк —
-                        Марка Николаева.
-                    </div>
+                <div className='text'>
+                    За неделю научитесь писать тексты
+                    для компаний и личного блога —
+                    изучите всю основу по копирайтингу
+                    и поймете, как найти первых клиентов.
+                    Авторский марафон от ех-Главного
+                    редактора УК Газпромбанк —
+                    Марка Николаева.
+                </div>
 
-                    <div className='text-2'>
-                        Подходит для тех,
-                        кто никогда не писал.
-                    </div>
+                <div className='text-2'>
+                    Подходит для тех,
+                    кто никогда не писал.
+                </div>
             </Block>
 
             <Block className="t-3">

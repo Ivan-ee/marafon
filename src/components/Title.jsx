@@ -3,7 +3,7 @@ export const Title = () => {
         <div className='main-block-title'>
             <div className='main-block-title-item'>
                 <h1>
-                    Начните зарабатывать на текстах через 5 дней
+                    Начните зарабатывать <br/> на текстах через 5 дней
                 </h1>
             </div>
         </div>

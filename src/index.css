@@ -22,6 +22,14 @@
 
 }
 
+.diamond {
+    min-width: 550px!important;
+    min-height: 400px!important;
+    position: relative;
+    top: -293px;
+    right: -91px;
+}
+
 p {
     margin: 0;
     padding: 0;

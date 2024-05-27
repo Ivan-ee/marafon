@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Button } from "./Button.jsx";
 import useSmoothScroll from "./SmoothScroll.jsx";
+import image from "../assets/diamond.svg";
 
 export const Header = () => {
     const headerRef = useRef(null);
