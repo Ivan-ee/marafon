@@ -416,7 +416,7 @@ p {
 
 .t-3 .image {
     position: relative;
-    top: -10px;
+    top: -5px;
 
 
     display: flex;
@@ -448,7 +448,7 @@ p {
 
     box-sizing: border-box;
     position: relative;
-    top: -20px;
+    top: -12px;
     width: 383px;
     height: 213px;
 
@@ -486,7 +486,7 @@ p {
 
 .t-3 .three {
     position: relative;
-    top: -29px;
+    top: -18px;
 
     height: 212px;
 
@@ -2160,7 +2160,7 @@ p {
     display: flex;
     justify-content: flex-end;
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .modal__bg {
