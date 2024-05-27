@@ -9,7 +9,7 @@ export const Footer = () => {
 
     return (
         <div className="footer" ref={footerRef}>
-            <Button href="#reviews">Отзывы</Button>
+            <Button href="#popup:pay">Отзывы</Button>
             <Button href="#whoIsIt">Преподаватель</Button>
             <Button href="#description">Программа</Button>
             <Button href="#FAQ">FAQ</Button>

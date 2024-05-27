@@ -2,7 +2,7 @@ import image1 from '../assets/bac_green.png';
 import image2 from '../assets/galka.svg';
 import image from "../assets/Arrow 1.svg";
 import image3 from '../assets/Arrow 1 (1).svg';
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {Die} from "./Die.jsx";
 
 export const WhoIsIt = () => {

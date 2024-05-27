@@ -53,6 +53,8 @@ export const Main = () => {
     return (
         <div className='main-block'>
             <Title/>
+
+            <a href="#popup:pay" style={{pointerEvents: "auto"}}>rkbyr</a>
             <img className="diamond" src={diamond} alt='diamond'/>
             <Block className="o-t">
                 <div className="image">

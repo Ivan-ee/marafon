@@ -680,7 +680,8 @@ p {
     border-radius: 20px;
 
     background: rgba(192, 255, 0, 0.7);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(5px);
+
 
     .icon {
         width: 34px;
@@ -875,7 +876,7 @@ p {
     padding: 25px 14px 30px 26px;
 
     background: rgba(220, 220, 222, 0.3);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(5px);
     border: 1px solid white;
 
     /*background: #F4F4F6;*/
@@ -2038,7 +2039,7 @@ p {
     border-radius: 20px;
 
     background: rgba(184, 255, 0, 0.7);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(5px);
     border: 1px solid white;
 
     .icon {
