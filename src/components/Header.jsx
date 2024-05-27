@@ -13,7 +13,7 @@ export const Header = () => {
             <Button href="#reviews">Отзывы</Button>
             <Button href="#whoIsIt">Преподаватель</Button>
             <Button href="#description">Программа</Button>
-            <Button href="#faq">FAQ</Button>
+            <Button href="#FAQ">FAQ</Button>
         </div>
     );
 };

@@ -2,9 +2,39 @@ import {Block} from "./block.jsx";
 import image from "../assets/Arrow 1.svg";
 import image2 from "../assets/Arrow 1 (2).svg";
 import starBlack from "../assets/star_black.svg";
+import {useEffect, useState} from "react";
 
 
 export const Orders = () => {
+
+    const currentDate = new Date();
+
+    const formattedDate = currentDate.toLocaleDateString('ru-RU', {
+        day: '2-digit',
+        month: '2-digit',
+    });
+
+    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+    function getTimeLeft() {
+        const now = new Date();
+        const endOfDay = new Date(now);
+        endOfDay.setHours(23, 59, 59, 999);
+        const diff = endOfDay - now;
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        return { hours, minutes, seconds };
+    }
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(getTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div style={{marginBottom: 180}}>
             <div className='main order'>
@@ -14,7 +44,7 @@ export const Orders = () => {
                             -88% до конца дня
                         </p>
                         <p className='timer'>
-                            12:53:23
+                            {`${timeLeft.hours.toString().padStart(2, '0')}:${timeLeft.minutes.toString().padStart(2, '0')}:${timeLeft.seconds.toString().padStart(2, '0')}`}
                         </p>
                         <div className='last-price'>
                             3990 ₽
@@ -34,7 +64,7 @@ export const Orders = () => {
                                 Начинаем учиться
                             </div>
                             <div className='desk'>
-                                3 января
+                                {formattedDate}
                             </div>
                         </div>
                     </div>
