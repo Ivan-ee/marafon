@@ -12,7 +12,7 @@ const useSmoothScroll = (ref) => {
                 const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({ top: yPosition, behavior: 'smooth' });
             }
-            
+
         };
 
         const buttons = ref.current.querySelectorAll('a');
