@@ -2216,7 +2216,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -2224,10 +2224,11 @@ p {
     width: 100%;
     height: 4px;
     background-color: black;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .hamburger-icon.open .bar1 {
+    background-color: white;
     transform: rotate(45deg) translate(13px, 5px);
 }
 
@@ -2236,6 +2237,7 @@ p {
 }
 
 .hamburger-icon.open .bar3 {
+    background-color: white;
     transform: rotate(-45deg) translate(13px, -5px);
 }
 
@@ -2246,12 +2248,15 @@ p {
     width: 300px;
     height: 100%;
     background-color: white;
-    z-index: 999;
+    z-index: 1000;
     transition: transform 0.3s ease-in-out;
 }
 
 .menu.open {
+    background: #2F2F2F;
+    color: white;
     transform: translateX(-300px);
+    padding-top: 20px;
 }
 
 .menu nav {
@@ -2261,14 +2266,14 @@ p {
 }
 
 .menu-item {
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin: 10px;
+    font-size: 30px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .menu-item:hover {
-    color: #007bff;
+    opacity: 0.8;
 }
 
 .social-links {
@@ -2284,7 +2289,19 @@ p {
 }
 
 .social-links a:hover {
-    color: #007bff;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Повышаем z-index для оверлея */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
 }
 
 

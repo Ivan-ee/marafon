@@ -30,6 +30,7 @@ export const HamburgerMenu = () => {
                     <div className="bar3"></div>
                 </div>
             )}
+            {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
             <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
         </>
     );
