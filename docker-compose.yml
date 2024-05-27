@@ -4,17 +4,5 @@ services:
   marafon:
     build: .
     ports:
-      - "80:4173"
-    restart: always
-    image: marafon-marafon
-
-  nginx:
-    image: nginx:latest
-    ports:
       - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./public:/usr/share/nginx/html:ro
-    depends_on:
-      - marafon
     restart: always

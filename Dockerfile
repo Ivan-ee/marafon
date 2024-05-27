@@ -1,27 +1,21 @@
-# Используем образ Node.js
-FROM node:20-alpine
+# Используем образ Node.js для сборки
+FROM node:20-alpine AS build
 
 # Устанавливаем зависимости
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Копируем исходный код
+# Копируем исходный код и собираем приложение
 COPY . .
-
-# Сборка приложения
 RUN npm run build
 
-# Запускаем сервер
-CMD ["npm", "run", "preview"]
-
-
+# Используем образ Nginx для сервировки статических файлов
 FROM nginx:stable-alpine
 
-COPY --from=build /usr/src/app/build /usr/share/nginx/html
-
+COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
