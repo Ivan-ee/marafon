@@ -1,21 +1,23 @@
-# Используем образ Node.js для сборки
-FROM node:20-alpine AS build
+# Stage 1: Build React Application
+FROM node:18 AS build
 
-# Устанавливаем зависимости
-WORKDIR /app
+WORKDIR /usr/src/app
+
 COPY package*.json ./
+
 RUN npm install
 
-# Копируем исходный код и собираем приложение
 COPY . .
+
 RUN npm run build
 
-# Используем образ Nginx для сервировки статических файлов
+# Stage 2: Serve React Application with Nginx
 FROM nginx:stable-alpine
 
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
+
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 8000
 
 CMD ["nginx", "-g", "daemon off;"]
