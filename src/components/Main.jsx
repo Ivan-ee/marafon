@@ -36,6 +36,20 @@ export const Main = () => {
         return () => clearInterval(timer);
     }, []);
 
+    const [count, setCount] = useState(9); // Начальное значение 9
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (count > 5) {
+                setCount(count - 1);
+            }
+        }, 60000); // Интервал 60000 миллисекунд (1 минута)
+
+        return () => clearInterval(intervalId); // Очистка интервала при размонтировании компонента
+    }, [count]);
+
+    const formattedCount = count.toString().padStart(3, '0');
+
     return (
         <div className='main-block'>
             <Title/>
@@ -109,7 +123,7 @@ export const Main = () => {
                         Свободно мест
                     </p>
                     <p className='text-2'>
-                        005
+                        {formattedCount}
                     </p>
                 </div>
             </Block>
