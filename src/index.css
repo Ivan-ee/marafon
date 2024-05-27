@@ -2491,7 +2491,7 @@ p {
 .menu.open {
     background: #1c1c1c;
     color: white;
-    transform: translateX(-250px);
+    transform: translateX(-260px);
     padding-top: 20px;
 }
 
