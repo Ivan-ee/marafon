@@ -37,13 +37,26 @@ export const HamburgerMenu = () => {
 };
 
 const Menu = ({ isOpen, toggleMenu }) => {
+    const handleMenuItemClick = (e, href) => {
+        e.preventDefault();
+        toggleMenu();
+
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+            const yOffset = -10; // Задаем отступ в пикселях
+            const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: yPosition, behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className={`menu ${isOpen ? 'open' : ''}`}>
             <nav>
-                <MenuItem href="#reviews" toggleMenu={toggleMenu}>Отзывы</MenuItem>
-                <MenuItem href="#whoIsIt" toggleMenu={toggleMenu}>Преподаватель</MenuItem>
-                <MenuItem href="#description" toggleMenu={toggleMenu}>Программа</MenuItem>
-                <MenuItem href="#FAQ" toggleMenu={toggleMenu}>FAQ</MenuItem>
+                <MenuItem href="#reviews" onClick={handleMenuItemClick}>Отзывы</MenuItem>
+                <MenuItem href="#whoIsIt" onClick={handleMenuItemClick}>Преподаватель</MenuItem>
+                <MenuItem href="#description" onClick={handleMenuItemClick}>Программа</MenuItem>
+                <MenuItem href="#FAQ" onClick={handleMenuItemClick}>FAQ</MenuItem>
+                <MenuItem href="#header" onClick={handleMenuItemClick}>Наверх</MenuItem>
                 <div className="social-links">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -53,9 +66,9 @@ const Menu = ({ isOpen, toggleMenu }) => {
     );
 };
 
-const MenuItem = ({ href, children, toggleMenu }) => {
+const MenuItem = ({ href, children, onClick }) => {
     return (
-        <a href={href} className="menu-item" onClick={toggleMenu}>
+        <a href={href} className="menu-item" onClick={(e) => onClick(e, href)}>
             {children}
         </a>
     );

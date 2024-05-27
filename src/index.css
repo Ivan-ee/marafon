@@ -2244,8 +2244,8 @@ p {
 .menu {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -250px;
+    width: 250px;
     height: 100%;
     background-color: white;
     z-index: 1000;
@@ -2255,7 +2255,7 @@ p {
 .menu.open {
     background: #2F2F2F;
     color: white;
-    transform: translateX(-300px);
+    transform: translateX(-250px);
     padding-top: 20px;
 }
 
@@ -2267,13 +2267,13 @@ p {
 
 .menu-item {
     margin: 10px;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
     color: white;
 }
 
 .menu-item:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .social-links {
@@ -2289,7 +2289,7 @@ p {
 }
 
 .social-links a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .overlay {

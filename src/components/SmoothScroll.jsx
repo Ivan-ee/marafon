@@ -8,8 +8,11 @@ const useSmoothScroll = (ref) => {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const yOffset = -10; // Задаем отступ в пикселях
+                const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: yPosition, behavior: 'smooth' });
             }
+            
         };
 
         const buttons = ref.current.querySelectorAll('a');
