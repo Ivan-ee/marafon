@@ -22,7 +22,8 @@
     "react-modal-video": "^2.0.2",
     "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.2",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "vitest": "^1.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
