@@ -13,7 +13,7 @@ export const Footer = () => {
             <Button href="#whoIsIt">Преподаватель</Button>
             <Button href="#description">Программа</Button>
             <Button href="#FAQ">FAQ</Button>
-            <Button href="#header">Наверх</Button>
+            <Button style='last-btn' href="#header">Наверх</Button>
         </div>
     );
 };

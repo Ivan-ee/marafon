@@ -26,7 +26,6 @@ export const MySlider = () => {
     useEffect(() => {
         const slides = document.querySelectorAll('.slick-slide');
 
-        console.log(slides);
         slides.forEach(slide => {
             const childDiv = slide.querySelector('div');
             if (childDiv) {

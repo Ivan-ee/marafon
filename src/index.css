@@ -45,42 +45,36 @@
 }
 
 .die-whoIsIt {
-    z-index: 10000;
     position: relative;
     top: -33px;
     right: -850px;
 }
 
 .die-slider {
-    z-index: 10000;
     position: relative;
     top: -112px;
     right: -628px;
 }
 
 .die-description {
-    z-index: 10000;
     position: relative;
     top: -105px;
     right: -783px;
 }
 
 .die-about {
-    z-index: 10000;
     position: relative;
     top: -34px;
     right: -439px;
 }
 
 .die-after {
-    z-index: 10000;
     position: relative;
     top: -32px;
     right: -600px;
 }
 
 .die-faq {
-    z-index: 10000;
     position: relative;
     top: -34px;
     right: -178px;
@@ -342,6 +336,19 @@ p {
     color: rgba(250, 250, 250, 1);
 
     transition: all .3s ease-in-out;
+}
+
+.last-btn{
+    background-color: #DCDCDE!important;
+
+    transition: all .3s ease-in-out;
+}
+
+.last-btn:hover{
+    background: black!important;
+    a{
+        color: white;
+    }
 }
 
 .ask .main-block-button:hover {
@@ -2135,10 +2142,12 @@ p {
 
 .video-preview {
     position: relative;
+
     display: inline-block;
 }
 
 .preview-image {
+    z-index: 1000000000;
     width: 100%;
     height: auto;
 }
@@ -2154,7 +2163,13 @@ p {
     border: none;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 25px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.play-button:hover {
+   font-size: 30px;
 }
 
 .video-prev {
