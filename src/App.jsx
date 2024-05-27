@@ -16,6 +16,7 @@ import {FAQ} from "./components/FAQ.jsx";
 import React from "react";
 import {Ask} from "./components/Ask.jsx";
 import {Footer} from "./components/Footer.jsx";
+import {HamburgerMenu} from "./components/HamburgerMenu.jsx";
 
 
 export const App = () => {
@@ -26,6 +27,7 @@ export const App = () => {
         <Layout>
             <Header/>
             <Main/>
+            <HamburgerMenu/>
             <Salary/>
             <WhoIsIt/>
             <Reviews/>
