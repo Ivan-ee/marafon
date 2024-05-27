@@ -444,7 +444,7 @@ p {
 }
 
 .t-3 .two {
-    gap: 3px;
+
     box-sizing: border-box;
     position: relative;
     top: -20px;
@@ -484,7 +484,6 @@ p {
 }
 
 .t-3 .three {
-    gap: 3px;
     position: relative;
     top: -29px;
 
