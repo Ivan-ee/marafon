@@ -10,6 +10,7 @@ import prev6 from '../assets/prev6.svg';
 import prev7 from '../assets/prev7.svg';
 import starBlack1 from "../assets/star_black.svg";
 import VideoModal from "./YouTube.jsx";
+import {Die} from "./Die.jsx";
 
 export const Reviews = () => {
     const reviewsRef = useRef(null);
@@ -23,6 +24,12 @@ export const Reviews = () => {
                     <div>человек</div>
                 </div>
             </div>
+            <Die style='die-whoIsIt'>
+                <div>👧🏻</div>
+                <div>🧑🏻‍🦱</div>
+                <div>👩‍🦰</div>
+                <div>🧑🏾</div>
+            </Die>
 
             <div className="main-block">
                 <div className="block-1">

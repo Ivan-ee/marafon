@@ -3,6 +3,7 @@ import image2 from '../assets/galka.svg';
 import image from "../assets/Arrow 1.svg";
 import image3 from '../assets/Arrow 1 (1).svg';
 import {useRef} from "react";
+import {Die} from "./Die.jsx";
 
 export const WhoIsIt = () => {
     const whoIsItRef = useRef(null);
@@ -18,6 +19,7 @@ export const WhoIsIt = () => {
                     textAlign: 'right'
                 }}>копирайтер?
                 </div>
+
             </div>
 
             <div className='main-block'>

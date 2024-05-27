@@ -6,6 +6,7 @@ import image4 from '../assets/Tinko.svg';
 import image5 from '../assets/alfa.svg';
 import arrow from "../assets/Arrow 1 (Stroke).svg";
 import starBlack from "../assets/star_black.svg";
+import {Die} from "./Die.jsx";
 
 
 export const About = () => {
@@ -27,6 +28,12 @@ export const About = () => {
                     Николаев
                 </div>
             </div>
+            <Die style='die-about'>
+                <div>🧑🏽‍💻</div>
+                <div>🤳🏼</div>
+                <div>🔥</div>
+                <div>👉🏼</div>
+            </Die>
             <div className='main-blocks'>
                 <div className='blocks'>
                     <div className='block-m'>

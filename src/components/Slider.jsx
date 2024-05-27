@@ -9,6 +9,7 @@ import arrow from '../assets/Arrow 1 (Stroke).svg';
 import arrowL from '../assets/Лево.svg';
 import arrowR from '../assets/Право.svg';
 import pol from '../assets/Polygon 1.svg';
+import {Die} from "./Die.jsx";
 
 export const MySlider = () => {
     const [nav1, setNav1] = useState(null);
@@ -73,6 +74,12 @@ export const MySlider = () => {
                 </div>
                 марафон
             </div>
+            <Die style='die-slider'>
+                <div>🤔</div>
+                <div>🧑🏽‍💻</div>
+                <div>💻</div>
+                <div>👇</div>
+            </Die>
             <link
                 rel="stylesheet"
                 type="text/css"

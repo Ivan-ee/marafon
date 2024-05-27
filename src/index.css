@@ -22,11 +22,75 @@
 
 }
 
-.diamond {
-    min-width: 550px!important;
-    min-height: 400px!important;
+.die {
+    width: 164px;
+    height: 46px;
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    background: rgba(220, 220, 222, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 13px 27px !important;
+}
+
+.die-title {
     position: relative;
-    top: -293px;
+    top: -15px;
+    right: -590px;
+}
+
+.die-whoIsIt {
+    z-index: 10000;
+    position: relative;
+    top: -33px;
+    right: -850px;
+}
+
+.die-slider {
+    z-index: 10000;
+    position: relative;
+    top: -112px;
+    right: -628px;
+}
+
+.die-description {
+    z-index: 10000;
+    position: relative;
+    top: -105px;
+    right: -783px;
+}
+
+.die-about {
+    z-index: 10000;
+    position: relative;
+    top: -34px;
+    right: -439px;
+}
+
+.die-after {
+    z-index: 10000;
+    position: relative;
+    top: -32px;
+    right: -600px;
+}
+
+.die-faq {
+    z-index: 10000;
+    position: relative;
+    top: -34px;
+    right: -178px;
+}
+
+.diamond {
+    min-width: 550px !important;
+    min-height: 400px !important;
+    position: relative;
+    top: -320px;
     right: -91px;
 }
 
@@ -1276,7 +1340,7 @@ p {
 
 .description {
 
-    margin-bottom: 80px!important;
+    margin-bottom: 80px !important;
 
     .text-desk {
         margin: 40px 0;
@@ -1368,7 +1432,7 @@ p {
     margin-bottom: 360px;
 }
 
-.about .blocks{
+.about .blocks {
     justify-content: space-between;
 }
 
@@ -1866,7 +1930,7 @@ p {
     display: flex;
     flex-direction: column;
 
-    input, textarea{
+    input, textarea {
         color: black;
         font-size: 26px;
         font-weight: 600;
@@ -2048,15 +2112,15 @@ p {
     margin: 20px 0 40px;
 }
 
-.needed .main-block{
+.needed .main-block {
     margin-bottom: 360px;
 }
 
-.needed{
+.needed {
 
 }
 
-.needed{
+.needed {
     margin-bottom: 180px;
 }
 
@@ -2275,7 +2339,7 @@ p {
     justify-content: space-between;
 }
 
-.menu nav div{
+.menu nav div {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -2296,7 +2360,7 @@ p {
 .social-links {
     margin-top: auto;
     display: flex;
-    flex-direction: row!important;
+    flex-direction: row !important;
 }
 
 .social-links a {

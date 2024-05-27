@@ -3,6 +3,7 @@ import {Accordion, AccordionItem} from "@nextui-org/react";
 import image from '../assets/pol2.svg';
 import image2 from "../assets/galka.svg";
 import image3 from "../assets/Marathon layout (4).svg";
+import {Die} from "./Die.jsx";
 
 export const Description = () => {
     useEffect(() => {
@@ -37,6 +38,12 @@ export const Description = () => {
                 Программа — вся база текстов за 5 дней. <br/>
                 <span>Для тех, кто никогда не писал.</span>
             </div>
+            <Die style='die-description'>
+                <div>🧑🏼‍🌾</div>
+                <div>🧑🏽‍🍳</div>
+                <div>👩🏼‍🏫</div>
+                <div>👩🏼‍🍼</div>
+            </Die>
             <Accordion variant="splitted">
                 <AccordionItem className='a-style' key="1" aria-label="Accordion 1" title="1 день">
                     <div className='text-desk'>

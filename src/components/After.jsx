@@ -3,6 +3,7 @@ import starBlack from "../assets/star_black.svg";
 import React from "react";
 import image from "../assets/Arrow 1.svg";
 import arrow from "../assets/Arrow 1 Stroke (1).svg";
+import {Die} from "./Die.jsx";
 
 export const After = () => {
     return (
@@ -14,6 +15,12 @@ export const After = () => {
                     <div>оплаты</div>
                 </div>
             </div>
+            <Die style='die-after'>
+                <div>💳</div>
+                <div>👉🏼</div>
+                <div>📱</div>
+                <div>🤙🏼</div>
+            </Die>
             <div className='blocks'>
                 <div className='block-1'>
                     <div className="icon">

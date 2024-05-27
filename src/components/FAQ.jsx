@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import arrowWhite from "../assets/up.svg";
 import arrowBlack from "../assets/down.svg";
+import {Die} from "./Die.jsx";
 
 export const FAQ = () => {
     const [accordionItems, setAccordionItems] = useState([
@@ -111,6 +112,12 @@ export const FAQ = () => {
     return (
         <div className="main faq" id='FAQ' ref={faqRef}>
             <div className="title">FAQ</div>
+            <Die style='die-faq'>
+                <div>🤔</div>
+                <div>👀</div>
+                <div>📝</div>
+                <div>👇🏻</div>
+            </Die>
             <section>
                 <div className="accordion">
                     {accordionItems.map((item, index) => (
