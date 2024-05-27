@@ -1,13 +1,13 @@
-import {Title} from "./Title.jsx";
-import {Block} from "./block.jsx";
+import React, { useEffect, useState, useRef } from 'react';
+import { Title } from "./Title.jsx";
+import { Block } from "./block.jsx";
 import image from '../assets/Arrow 1.svg';
 import diamond from '../assets/diamond.svg';
 import starBlack from '../assets/star_black.svg';
 import starWhite from '../assets/star_white.svg';
-import React, {useEffect, useState} from "react";
+import GetCourseModal from "./GetCourse.jsx";
 
 export const Main = () => {
-
     const currentDate = new Date();
 
     const formattedDate = currentDate.toLocaleDateString('ru-RU', {
@@ -16,6 +16,9 @@ export const Main = () => {
     });
 
     const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+    const [count, setCount] = useState(9);
+    const [showModal, setShowModal] = useState(false);
+    const buttonRef = useRef(null);
 
     function getTimeLeft() {
         const now = new Date();
@@ -36,26 +39,49 @@ export const Main = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const [count, setCount] = useState(9); // Начальное значение 9
-
     useEffect(() => {
         const intervalId = setInterval(() => {
             if (count > 5) {
                 setCount(count - 1);
             }
-        }, 60000); // Интервал 60000 миллисекунд (1 минута)
+        }, 60000);
 
-        return () => clearInterval(intervalId); // Очистка интервала при размонтировании компонента
+        return () => clearInterval(intervalId);
     }, [count]);
+
+    useEffect(() => {
+        const handleButtonClick = () => {
+            setShowModal(true);
+        };
+
+        const button = buttonRef.current;
+        if (button) {
+            button.addEventListener('click', handleButtonClick);
+        }
+
+        return () => {
+            if (button) {
+                button.removeEventListener('click', handleButtonClick);
+            }
+        };
+    }, []);
 
     const formattedCount = count.toString().padStart(3, '0');
 
+    const handleButtonClick = () => {
+        const script = document.createElement('script');
+        script.id = '0352f22c5fffbfbf099e6bae6404baf9fe6884b0';
+        script.src = 'http://kurs.crystall.education/pl/lite/widget/script?id=1067346';
+        // script.async = true;
+        document.body.appendChild(script);
+    };
+
     return (
         <div className='main-block'>
-            <Title/>
+            <Title />
 
-            <a href="#popup:pay" style={{pointerEvents: "auto"}}>rkbyr</a>
-            <img className="diamond" src={diamond} alt='diamond'/>
+            <img className="diamond" src={diamond} alt='diamond' />
+            {/*<GetCourseModal show={showModal} onClose={() => setShowModal(false)} />*/}
             <Block className="o-t">
                 <div className="image">
                     <p className='text-1'>
@@ -71,11 +97,13 @@ export const Main = () => {
                         890 ₽
                     </p>
                 </div>
-                <div className='main-block-button'>
+                <div className='main-block-button' ref={buttonRef} onClick={handleButtonClick}>
                     <div>Записаться</div>
                     <div>|</div>
-                    <div><img src={image}/></div>
+                    <div><img src={image} alt="arrow"/></div>
                 </div>
+                <script id="0352f22c5fffbfbf099e6bae6404baf9fe6884b0"
+                        src="http://kurs.crystall.education/pl/lite/widget/script?id=1067346"></script>
             </Block>
             <Block className="t-t">
                 <div className='text'>
@@ -97,18 +125,18 @@ export const Main = () => {
             <Block className="t-3">
                 <div className="image">
                     <div className="icon">
-                        <img src={starBlack} className='star'/>
+                        <img src={starBlack} className='star' alt="star" />
                     </div>
 
                     <div className='text'>
-                        Марафон для тех, <br/>
+                        Марафон для тех, <br />
                         кто хочет освоить
                         удаленную профессию
                     </div>
                 </div>
                 <div className="two">
                     <div className="icon">
-                        <img src={starWhite} className='star'/>
+                        <img src={starWhite} className='star' alt="star" />
                     </div>
                     <div className='text-1'>
                         Начинаем учиться
@@ -119,7 +147,7 @@ export const Main = () => {
                 </div>
                 <div className="three">
                     <div className="icon">
-                        <img src={starBlack} className='star'/>
+                        <img src={starBlack} className='star' alt="star" />
                     </div>
                     <p className='text-1'>
                         Свободно мест
