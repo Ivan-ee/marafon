@@ -106,8 +106,10 @@ export const FAQ = () => {
         },
     ]);
 
+    const faqRef = useRef(null);
+
     return (
-        <div className="main faq">
+        <div className="main faq" id='FAQ' ref={faqRef}>
             <div className="title">FAQ</div>
             <section>
                 <div className="accordion">

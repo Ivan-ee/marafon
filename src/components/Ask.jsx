@@ -7,7 +7,6 @@ export const Ask = () => {
     const { control, register, handleSubmit, formState: { errors }, getValues } = useForm(); // Добавляем getValues
 
     const onSubmit = (data) => {
-        // ... обработка данных
     };
 
     const isFieldInvalid = (fieldName) => {

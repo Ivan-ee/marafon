@@ -1850,7 +1850,7 @@ p {
 }
 
 .ask {
-    margin-bottom: 180px;
+    margin-bottom: 120px;
 }
 
 .ask .form {
@@ -2203,6 +2203,19 @@ p {
         font-weight: 400;
         line-height: 150%;
         text-align: left;
+    }
+}
+
+.scroll-animation {
+    animation: scroll-down 0.5s ease-in-out;
+}
+
+@keyframes scroll-down {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
     }
 }
 

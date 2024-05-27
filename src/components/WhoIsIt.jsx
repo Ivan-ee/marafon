@@ -2,10 +2,13 @@ import image1 from '../assets/bac_green.png';
 import image2 from '../assets/galka.svg';
 import image from "../assets/Arrow 1.svg";
 import image3 from '../assets/Arrow 1 (1).svg';
+import {useRef} from "react";
 
 export const WhoIsIt = () => {
+    const whoIsItRef = useRef(null);
+
     return (
-        <div className="whoIsIt">
+        <div className="whoIsIt" id="whoIsIt" ref={whoIsItRef}>
             <div className='title'>
                 <div className='whoIsIt-titles'>
                     <div>Кто</div>

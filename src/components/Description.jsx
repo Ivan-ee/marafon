@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import image from '../assets/pol2.svg';
 import image2 from "../assets/galka.svg";
@@ -29,8 +29,10 @@ export const Description = () => {
 
     }, []);
 
+    const descriptionRef = useRef(null);
+
     return (
-        <div style={{marginBottom: 180}} className='main description'>
+        <div style={{marginBottom: 180}} className='main description' id='description' ref={descriptionRef}>
             <div className='title'>
                 Программа — вся база текстов за 5 дней. <br/>
                 <span>Для тех, кто никогда не писал.</span>

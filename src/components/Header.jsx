@@ -1,12 +1,18 @@
-import {Button} from "./Button.jsx";
+import React, { useRef } from "react";
+import { Button } from "./Button.jsx";
+import useSmoothScroll from "./SmoothScroll.jsx";
 
 export const Header = () => {
+    const headerRef = useRef(null);
+
+    useSmoothScroll(headerRef);
+
     return (
-        <div className='header'>
-            <Button>Отзывы</Button>
-            <Button>Преподаватель</Button>
-            <Button>Программа</Button>
-            <Button>FAQ</Button>
+        <div className="header" id="header" ref={headerRef}>
+            <Button href="#reviews">Отзывы</Button>
+            <Button href="#whoIsIt">Преподаватель</Button>
+            <Button href="#description">Программа</Button>
+            <Button href="#FAQ">FAQ</Button>
         </div>
-    )
-}
+    );
+};

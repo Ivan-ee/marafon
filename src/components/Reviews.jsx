@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import image1 from '../assets/r1.jpg';
 import arrow from '../assets/Arrow 1 (Stroke).svg';
 import image2 from '../assets/new.svg';
@@ -12,8 +12,10 @@ import starBlack1 from "../assets/star_black.svg";
 import VideoModal from "./YouTube.jsx";
 
 export const Reviews = () => {
+    const reviewsRef = useRef(null);
+
     return (
-        <div className="reviews">
+        <div className="reviews" id='reviews' ref={reviewsRef}>
             <div className="title">
                 Марафон прошли<br/>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
