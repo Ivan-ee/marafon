@@ -62,9 +62,9 @@ const Menu = ({isOpen, toggleMenu}) => {
                     <MenuItem href="#header" onClick={handleMenuItemClick}>Наверх</MenuItem>
                 </div>
                 <div className="social-links">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><AiFillInstagram/></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTelegram/></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaYoutube/></a>
+                    <a href="https://www.instagram.com/marknikolaev_" target="_blank" rel="noopener noreferrer"><AiFillInstagram/></a>
+                    <a href="https://t.me/marknikolaev" target="_blank" rel="noopener noreferrer"><FaTelegram/></a>
+                    <a href="https://www.youtube.com/@marknikolaeff" target="_blank" rel="noopener noreferrer"><FaYoutube/></a>
                 </div>
             </nav>
         </div>

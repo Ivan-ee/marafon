@@ -1,7 +1,8 @@
-import React, {useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import image1 from '../assets/r1.jpg';
 import arrow from '../assets/Arrow 1 (Stroke).svg';
 import image2 from '../assets/new.svg';
+import image4 from '../assets/mini3.svg';
 import prev1 from '../assets/prev1.svg';
 import prev2 from '../assets/prev2.svg';
 import prev3 from '../assets/prev3.svg';
@@ -14,6 +15,28 @@ import {Die} from "./Die.jsx";
 
 export const Reviews = () => {
     const reviewsRef = useRef(null);
+
+    const [currentImage, setCurrentImage] = useState(image2);
+
+    useEffect(() => {
+
+        const updateImage = () => {
+            console.log('Current window width:', window.innerWidth);
+            if (window.innerWidth <= 3100) {
+                setCurrentImage(image4);
+                console.log(1)
+            } else {
+                setCurrentImage(image2);
+                console.log(2)
+            }
+        };
+
+        window.addEventListener('resize', updateImage);
+
+        updateImage();
+
+        return () => window.removeEventListener('resize', updateImage);
+    }, []);
 
     return (
         <div className="reviews" id='reviews' ref={reviewsRef}>
@@ -92,7 +115,7 @@ export const Reviews = () => {
                     </div>
                 </div>
                 <div className="block-5">
-                    <img src={image2} alt="2"/>
+                    <img src={currentImage} alt="2"/>
                 </div>
                 <div className="block-11">
                     <div className="video-prev">

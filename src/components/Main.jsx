@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Title } from "./Title.jsx";
-import { Block } from "./block.jsx";
+import React, {useEffect, useState, useRef} from 'react';
+import {Title} from "./Title.jsx";
+import {Block} from "./block.jsx";
 import image from '../assets/Arrow 1.svg';
 import diamond from '../assets/diamond.svg';
 import starBlack from '../assets/star_black.svg';
@@ -28,7 +28,7 @@ export const Main = () => {
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / 1000 / 60) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
-        return { hours, minutes, seconds };
+        return {hours, minutes, seconds};
     }
 
     useEffect(() => {
@@ -78,9 +78,23 @@ export const Main = () => {
 
     return (
         <div className='main-block'>
-            <Title />
+            <Title/>
 
-            <img className="diamond" src={diamond} alt='diamond' />
+            <Block className="t-mini-1">
+                <div className='text-2'>
+                    Марафон для тех, <br/>
+                    кто хочет освоить <br/>
+                    удаленную профессию
+                </div>
+                <div className='text'>
+                    Начните
+                    зарабатывать
+                    на текстах
+                    через 7 дней
+                </div>
+            </Block>
+
+            <img className="diamond" src={diamond} alt='diamond'/>
             {/*<GetCourseModal show={showModal} onClose={() => setShowModal(false)} />*/}
             <Block className="o-t">
                 <div className="image">
@@ -102,8 +116,6 @@ export const Main = () => {
                     <div>|</div>
                     <div><img src={image} alt="arrow"/></div>
                 </div>
-                <script id="0352f22c5fffbfbf099e6bae6404baf9fe6884b0"
-                        src="http://kurs.crystall.education/pl/lite/widget/script?id=1067346"></script>
             </Block>
             <Block className="t-t">
                 <div className='text'>
@@ -125,18 +137,18 @@ export const Main = () => {
             <Block className="t-3">
                 <div className="image">
                     <div className="icon">
-                        <img src={starBlack} className='star' alt="star" />
+                        <img src={starBlack} className='star' alt="star"/>
                     </div>
 
                     <div className='text'>
-                        Марафон для тех, <br />
+                        Марафон для тех, <br/>
                         кто хочет освоить
                         удаленную профессию
                     </div>
                 </div>
                 <div className="two">
                     <div className="icon">
-                        <img src={starWhite} className='star' alt="star" />
+                        <img src={starWhite} className='star' alt="star"/>
                     </div>
                     <div className='text-1'>
                         Начинаем учиться
@@ -147,7 +159,7 @@ export const Main = () => {
                 </div>
                 <div className="three">
                     <div className="icon">
-                        <img src={starBlack} className='star' alt="star" />
+                        <img src={starBlack} className='star' alt="star"/>
                     </div>
                     <p className='text-1'>
                         Свободно мест
