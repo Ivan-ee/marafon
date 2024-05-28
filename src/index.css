@@ -2600,10 +2600,14 @@ p {
         order: -1;
         grid-column: 1 / 1;
         grid-row: 1 / 1;
-        padding: 25px 14px 30px 26px;
-        width: 308px;
-        height: 296px;
+        padding: 15px 14px 15px 13px;
+
+        width: 100%;
+        height: auto;
         background: url("./assets/mini1.png") no-repeat;
+
+        background-size: 100% auto;
+
 
         .text-2 {
 
@@ -2615,7 +2619,7 @@ p {
             text-align: left;
         }
 
-        .text{
+        .text {
             color: rgb(47, 47, 47);
             font-size: 40px;
             font-weight: 500;
@@ -2631,117 +2635,215 @@ p {
         display: none;
     }
 
-    .main-block{
-        width: 310px;
+    .main {
+        width: 100%;
+        margin: 10px 8px;
+    }
+
+    .main-block {
+
         display: flex;
         flex-direction: column;
     }
 
-    .t-t{
-        width: 308px;
+    .t-t {
+        padding: 15px 14px 15px 13px;
+
+        width: 100%;
+        height: auto;
+
+        background-size: 100% auto;
+
         order: 1;
     }
 
-    .t-3{
-        width: 308px;
+    .t-3 {
+
+        width: 100%;
+        height: auto;
+
+        background-size: 100% auto;
+
         order: 2;
 
-        .two{
-            width: 308px;
+        .two {
+            padding: 15px 14px 15px 13px;
+
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+        }
+
+        .three {
+            padding: 15px 14px 15px 13px;
         }
     }
 
-    .o-t{
-        width: 308px;
+    .o-t {
+
+        width: 100%;
+        height: auto;
+
+        background-size: 100% auto;
         order: 3;
 
-        .image{
-            background: url("./assets/mini2.png") no-repeat;
+        .image {
+            padding: 15px 14px 30px 13px;
 
+            background: url("./assets/mini2.png") no-repeat;
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
 
         }
-        .main-block-button{
-            width: 308px;
+
+        .main-block-button {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
     }
 
-    .salary{
-        .salary-blocks{
+    .salary {
+        .salary-blocks {
             flex-direction: column;
         }
 
-        .salary-block-1, .salary-block-2, .salary-block-3, .salary-block-4, .salary-block-5, .salary-block-6{
-            width: 308px;
-        }
-    }
+        .salary-block-1, .salary-block-2, .salary-block-3, .salary-block-4, .salary-block-5, .salary-block-6 {
+            width: 100%;
+            height: auto;
 
-    .whoIsIt{
+            padding: 15px 14px 15px 13px;
 
-        .title{
-            width: 308px;
-        }
-        .block-1{
-            width: 308px;
-            height: 228px;
+            background-size: 100% auto;
         }
 
-        .block-2{
-            width: 308px;
-            height: 313px;
-        }
+        .salary-block-4, .salary-block-5 {
+            padding: 0;
 
-        .block-3{
-            width: 308px;
-            height: 412px;
-        }
+            img {
+                width: 100%;
+                height: auto;
 
-    }
-
-    .reviews{
-        .block-1{
-            width: 308px;
-            height: 347px;
-        }
-
-        .block-2{
-            width: 308px;
-            height: 481px;
-        }
-
-        .block-3{
-            padding-left: 6px;
-            width: 308px;
-            height: 285px;
-            .image{
                 background-size: 100% auto;
-                width: 295px;
-                height: 256px;
+            }
+        }
+    }
+
+    .whoIsIt {
+
+        .title {
+            width: 308px;
+        }
+
+        .block-1 {
+            width: 100%;
+            height: auto;
+
+            padding: 15px 14px 15px 13px;
+
+            background-size: 100% auto;
+        }
+
+        .block-2 {
+            width: 100%;
+            height: auto;
+
+            padding: 15px 14px 15px 13px;
+
+            background-size: 100% auto;
+        }
+
+        .block-3 {
+            width: 100%;
+            height: auto;
+
+            padding: 15px 14px 15px 13px;
+
+            background-size: 100% auto;
+        }
+
+    }
+
+    .reviews {
+        .block-1 {
+            width: 100%;
+            height: auto;
+
+            padding: 15px 14px 15px 13px;
+
+            background-size: 100% auto;
+        }
+
+        .block-2 {
+            width: 100%;
+            height: auto;
+
+            padding: 15px 14px 15px 13px;
+
+            background-size: 100% auto;
+        }
+
+        .block-3 {
+            width: 100%;
+            height: 39vh;
+
+            padding: 15px 14px 15px 13px;
+
+            background-size: 100% auto;
+
+            .image {
+                width: 100%;
+                /*height: auto;*/
+
+                padding: 15px 14px 15px 13px;
+
+                background-size: 100% auto;
+
+                height: 100vh;
             }
 
         }
 
-        .block-5{
-            width: 308px;
-            height: 185px;
+        .block-5 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+
+            img {
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
 
             background: none;
         }
 
-        .block-11{
-            width: 308px;
-            height: 565px;
+        .block-11 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
 
-        .block-13{
+        .block-13 {
             order: 3;
 
-            width: 308px;
+            width: 100%;
             height: 253px;
+
+            background-size: 100% auto;
+
             overflow: hidden;
             padding: 0;
 
-            img{
-                background-size:100% auto;
+            img {
+                background-size: 100% auto;
 
                 width: 100%;
                 height: 95%;
@@ -2750,10 +2852,11 @@ p {
             }
         }
 
-        .block-13:hover{
+        .block-13:hover {
 
-            height: 360px;
-            img{
+            height: 480px;
+
+            img {
                 width: 100%;
                 height: 95%;
                 object-fit: cover;
@@ -2762,16 +2865,19 @@ p {
             }
         }
 
-        .block-14{
+        .block-14 {
             order: 1;
 
-            width: 308px;
+            width: 100%;
             height: 350px;
+
+
+            background-size: 100% auto;
             padding-left: 6px;
             padding-bottom: 5px;
 
-            .image{
-                background-size:100% auto;
+            .image {
+                background-size: 100% auto;
 
                 width: 100%;
                 height: 95%;
@@ -2780,48 +2886,89 @@ p {
             }
         }
 
-        .block-15{
+        .block-14:hover {
+            height: 590px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center;
+
+            }
+        }
+
+        .block-15 {
             order: 2;
-            width: 308px;
-            height: 362px;
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+
+            .video-preview {
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
 
         }
 
-        .block-10{
-            width: 308px;
-            height: 565px;
+        .block-10 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
 
-        .block-16{
-            width: 308px;
-            height: 337px;
+        .block-16 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+
+            .video-preview{
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
         }
     }
 
-    .needed{
-        .block-1{
-            width: 308px;
-            height: 361px;
+    .needed {
+        .block-1 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
 
-        .block-2{
-            width: 308px;
-            height: 352px;
+        .block-2 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
 
-        .block-3{
-            width: 308px;
-            height: 301px;
+        .block-3 {
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
 
-        .video{
+        .video {
             flex-direction: column;
+            align-items: center;
 
-            width: 308px;
-            height: 505px;
+            width: 100%;
+            height: auto;
 
-            .video-preview{
-                img{
+            background-size: 100% auto;
+
+            .video-preview {
+                img {
                     width: 282px;
                     height: 160px;
                 }
@@ -2829,16 +2976,22 @@ p {
         }
     }
 
-    .slider{
-        .main-slider{
-            width: 308px;
-            padding: 5px;
+    .slider {
+        .main-slider {
 
-            .slider-image{
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+
+            .slider-image {
                 background-image: none;
 
-                .ct-flex{
-                    width: 294px;
+                .ct-flex {
+                    width: 52%;
+                    height: auto;
+
+                    background-size: 100% auto;
                 }
 
                 /*.item{*/
@@ -2849,61 +3002,74 @@ p {
             }
         }
 
-        .wrapper-slider{
-            width: 308px;
-            padding: 5px;
+        .wrapper-slider {
+            width: 100%;
+            height: auto;
 
-            .slider-btn{
-                width: 294px;
+            background-size: 100% auto;
+
+            .slider-btn {
+                width: auto;
             }
         }
     }
 
-    .order{
+    .order {
         flex-direction: column;
+        margin: 0!important;
 
-        .block{
-            padding: 5px;
-            margin: 0!important;
-            width: 308px!important;
+        .block {
+            margin: 0 !important;
+
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
 
 
-            .image2, .image3{
-                width: 308px;
-                height: 149px;
+            .image2, .image3 {
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
                 border-radius: 20px;
 
-                background-size:100% auto;
-                background-repeat: no-repeat;
-                background-position: center;
             }
 
 
-
         }
 
-        .o-t{
-            background-size:100% auto;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 215px;
+        .o-t {
+
+
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+            .image{
+                padding: 25px 14px 30px 13px;
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
         }
 
-        .to-order{
+        .to-order {
             width: 308px;
         }
 
     }
 
-    .video2-block{
-        .video2{
+    .video2-block {
+        .video2 {
             flex-direction: column;
             align-items: center;
 
             height: 505px;
 
-            .video-preview{
-                img{
+            .video-preview {
+                img {
                     width: 282px;
                     height: 160px;
                 }
@@ -2911,49 +3077,120 @@ p {
         }
     }
 
-    .about{
-        .blocks{
+    .about {
+        margin: 0!important;
+        .blocks {
             flex-direction: column;
 
-            .main-author{
+            .main-author {
                 order: 1;
+
             }
 
-            .block-m{
+            .block-m {
                 order: 2;
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
             }
 
-            .block-1{
+            .block-1 {
                 order: 3;
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
             }
 
-            .block-2{
+            .block-2 {
                 order: 5;
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
             }
 
-            .block-3{
+            .block-3 {
                 order: 6;
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
             }
 
-            .block-4{
+            .block-4 {
                 order: 4;
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
 
             }
         }
 
     }
 
-    .after{
-        .blocks{
+    .after {
+        margin: 0!important;
+        .blocks {
             flex-direction: column;
         }
+
+        .block-1{
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+        }
+    }
+
+    .ask {
+        .form {
+            .input-group, .textarea-group {
+                flex-direction: column;
+
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
+
+            input, textarea{
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
+
+            .main-block-button{
+                width: 100%;
+                height: auto;
+
+                background-size: 100% auto;
+            }
+        }
+    }
+
+    .faq{
+        margin: 0!important;
     }
 
     .ask{
+        margin: 0!important;
+
+        .super-block{
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
+        }
+
         .form{
-            .input-group, .textarea-group{
-                flex-direction: column;
-            }
+            width: 100%;
+            height: auto;
+
+            background-size: 100% auto;
         }
     }
 
