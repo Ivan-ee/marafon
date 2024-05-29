@@ -23,8 +23,11 @@ export const Video2 = () => {
                 <div className='video-wrapper'>
                     <VideoModal videoId="JZEB8BSLm4I?si=xDUev7MWsqNkn02M" imageSrc={prev2}/>
                 </div>
+                <button className='btn-video display-n'>
+                    Получить урок <img src={telegram} className="telegram" alt="telegram"/>
+                </button>
             </div>
-            <button className='btn-video'>
+            <button className='btn-video display-y'>
                 Получить урок <img src={telegram} className="telegram" alt="telegram"/>
             </button>
         </div>
