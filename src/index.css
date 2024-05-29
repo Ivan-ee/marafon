@@ -2663,7 +2663,7 @@ p {
 
 @media (max-width: 500px) {
     .display-y, .iicon, .title, .salary-block-3, .footer, .after .block-arr, .header, .main-block-title, .diamond, .t-3 .image, .reviews .arrow-block {
-        display: none!important;
+        display: none !important;
     }
 
     .title-mini {
@@ -2680,7 +2680,7 @@ p {
         }
     }
 
-    .title-mini-big{
+    .title-mini-big {
         margin-top: 120px;
         color: rgb(47, 47, 47);
         font-size: 100px;
@@ -2730,7 +2730,7 @@ p {
     }
 
     .main {
-        width: 100%;
+        width: auto;
         margin: 10px 8px;
 
         box-sizing: border-box;
@@ -3246,9 +3246,10 @@ p {
                     border-radius: 10px;
 
                     .item {
-                        img{
-                            min-width: 294px!important;
+                        img {
+                            min-width: 294px !important;
                         }
+
                         /*border: 1px solid #F4F4F6;*/
                     }
 
@@ -3507,14 +3508,14 @@ p {
             background-size: 100% auto;
         }
 
-        .o-t{
-            top:0;
+        .o-t {
+            top: 0;
 
-            .image{
+            .image {
                 margin-bottom: 0;
             }
 
-            .main-block-button{
+            .main-block-button {
 
             }
         }
@@ -3553,10 +3554,11 @@ p {
 
     .ask {
 
-        .title-mini{
+        .title-mini {
             margin-top: 120px;
             margin-bottom: 30px;
         }
+
         margin: 0 !important;
 
         .super-block {
@@ -3565,7 +3567,7 @@ p {
             width: 100%;
             height: min-content;
 
-            .block-title{
+            .block-title {
                 margin-bottom: 0;
             }
 
@@ -3575,7 +3577,7 @@ p {
         }
 
         .form {
-            top:0;
+            top: 0;
             width: 100%;
             height: auto;
 
@@ -3586,19 +3588,22 @@ p {
     /*.video-wrapper {*/
     /*    min-width: 725px !important;*/
     /*}*/
-
-    .video2-block{
-        .video-wrapper{
+    .video2-block {
+        .video-wrapper {
             min-width: auto;
         }
+    }
+
+    .t-mini-1 {
+        display: block;
     }
 
 
 }
 
 @media (min-width: 500px) {
-    .title-mini, .t-mini-1, .display-n{
-        display: none!important;
+    .title-mini, .t-mini-1, .display-n {
+        display: none !important;
     }
 
 }

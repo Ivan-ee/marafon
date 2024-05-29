@@ -49,9 +49,9 @@ export const Reviews = () => {
             </div>
             <div className="title-mini">
                 Марафон прошли<br/>
-                <div style={{display: "flex", justifyContent: "space-between"}}>
+                <div>
                     <div style={{display: "flex", alignItems: "center", height: "min-content"}}>1600 <img src={arrow} alt='1' style={{height: 19, width: 19, position: "relative", top: 10, right: -5}}/></div>
-                    <div><br/>человек</div>
+                    <div style={{textAlign: "right"}}>человек</div>
                 </div>
             </div>
             <Die style='die-whoIsIt'>
