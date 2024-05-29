@@ -37,10 +37,10 @@ export const App = () => {
             <Description/>
             <Video2/>
             <About/>
-            {/*<After/>*/}
-            {/*<FAQ/>*/}
-            {/*<Ask/>*/}
-            {/*<Footer/>*/}
+            <After/>
+            <FAQ/>
+            <Ask/>
+            <Footer/>
         </Layout>
     )
 }
