@@ -27,7 +27,7 @@ export const App = () => {
         <Layout>
             <Header/>
             <Main/>
-            <HamburgerMenu/>
+            {/*<HamburgerMenu/>*/}
             <Salary/>
             <WhoIsIt/>
             <Reviews/>

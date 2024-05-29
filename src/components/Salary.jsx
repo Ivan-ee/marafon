@@ -3,8 +3,35 @@ import imageSrc2 from '../assets/hh.svg';
 import imageSrc3 from '../assets/pointer.svg';
 import imageSrc4 from '../assets/img2.svg';
 import imageSrc5 from '../assets/img.svg';
+import {useEffect, useState} from "react";
+
+import image5 from "../assets/mini4.svg";
+import image6 from "../assets/mini5.svg";
 
 export const Salary = () => {
+
+    const [currentImage1, setCurrentImage1] = useState(imageSrc4);
+    const [currentImage2, setCurrentImage2] = useState(imageSrc5);
+
+    useEffect(() => {
+
+        const updateImage = () => {
+            if (window.innerWidth <= 500) {
+                setCurrentImage1(image5);
+                setCurrentImage2(image6);
+            } else {
+                setCurrentImage1(imageSrc4);
+                setCurrentImage2(imageSrc5);
+            }
+        };
+
+        window.addEventListener('resize', updateImage);
+
+        updateImage();
+
+        return () => window.removeEventListener('resize', updateImage);
+    }, []);
+
     return (
         <div className='salary'>
             <div className='salary-blocks'>
@@ -37,10 +64,10 @@ export const Salary = () => {
 
                 </div>
                 <div className='salary-block-4'>
-                    <img src={imageSrc4} alt='3'/>
+                    <img src={currentImage1} alt='3'/>
                 </div>
                 <div className='salary-block-5'>
-                    <img src={imageSrc5} alt='3'/>
+                    <img src={currentImage2} alt='3'/>
                 </div>
             </div>
 

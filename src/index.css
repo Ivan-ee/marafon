@@ -1053,6 +1053,14 @@ p {
 
     width: 382px;
     height: 456px;
+
+    .image {
+        width: 100%;
+        height: 253px;
+
+        background-size: 100% auto;
+        background: url("./assets/prev4.svg") no-repeat;
+    }
 }
 
 .reviews .block-14 {
@@ -1897,6 +1905,10 @@ p {
 
     .accordion-item {
         margin-bottom: 10px;
+
+        .icon{
+            margin-left: 10px;
+        }
     }
 }
 
@@ -2632,6 +2644,8 @@ p {
         grid-row: 1 / 1;
         padding: 15px 14px 15px 13px;
 
+        border-radius: 10px;
+
         width: 100%;
         height: auto;
         background: url("./assets/mini1.png") no-repeat;
@@ -2748,6 +2762,8 @@ p {
 
         padding: 15px 14px 15px 13px;
 
+        border-radius: 10px;
+
         width: 100%;
         height: auto;
 
@@ -2802,13 +2818,23 @@ p {
         order: 3;
 
         .image {
-            padding: 25px 14px 30px 13px;
+
+            .text-1, .last-price {
+                font-size: 25px;
+            }
+
+            .timer, .price {
+                font-size: 40px;
+            }
+
+            padding: 32px 14px 30px 13px;
 
             background: url("./assets/mini2.png") no-repeat;
             width: 100%;
-            height: auto;
+            /*min-height: 290px;*/
+            height: 100%;
 
-            background-size: 100% auto;
+            background-size: 100% 100%;
 
         }
 
@@ -2851,7 +2877,7 @@ p {
         }
 
         .salary-block-5 {
-            top: 0;
+            top: -20px;
         }
 
         .salary-block-4, .salary-block-5 {
@@ -2914,6 +2940,8 @@ p {
             width: 100%;
             height: auto;
 
+            border-radius: 10px;
+
             .block-title {
                 margin-bottom: 30px;
                 color: rgb(255, 255, 255);
@@ -2945,6 +2973,7 @@ p {
 
     .reviews {
         .block-1 {
+            border-radius: 10px;
             top: 14px;
             width: 100%;
             height: auto;
@@ -2970,6 +2999,7 @@ p {
         }
 
         .block-3 {
+            border-radius: 10px;
             top: 60px;
             width: 100%;
             height: 39vh;
@@ -2986,9 +3016,17 @@ p {
 
                 background-size: 100% auto;
 
-                height: 100vh;
+                height: 35vh;
             }
 
+        }
+
+        .block-3:hover {
+            height: min-content;
+
+            .image {
+                height: 72vh;
+            }
         }
 
         .block-5 {
@@ -3019,21 +3057,23 @@ p {
         }
 
         .block-13 {
+            border-radius: 10px;
+            top: -167px;
             order: 3;
 
             width: 100%;
-            height: 253px;
+            height: 293px;
 
             background-size: 100% auto;
 
             overflow: hidden;
             padding: 0;
 
-            img {
+            .image {
                 background-size: 100% auto;
 
                 width: 100%;
-                height: 95%;
+                height: 265px;
                 object-fit: cover;
                 object-position: top center;
             }
@@ -3041,18 +3081,19 @@ p {
 
         .block-13:hover {
 
-            height: 480px;
+            height: 480px !important;
 
-            img {
+            .image {
+                height: 500px;
                 width: 100%;
-                height: 95%;
-                object-fit: cover;
-                object-position: top center;
+
+                background-size: 100% auto;
 
             }
         }
 
         .block-14 {
+            border-radius: 10px;
             top: -160px;
             order: 1;
 
@@ -3068,7 +3109,7 @@ p {
                 background-size: 100% auto;
 
                 width: 100%;
-                height: 95%;
+                height: 98%;
                 object-fit: cover;
                 object-position: top center;
             }
@@ -3090,11 +3131,12 @@ p {
             position: relative;
             top: -160px;
             order: 2;
-            width: 100%;
+            /*width: 100%;*/
             /*height: auto;*/
             border-radius: 10px;
 
-            height: 576px;
+            width: 100%;
+            height: auto;
 
             background-size: 100% auto;
 
@@ -3119,7 +3161,7 @@ p {
 
         .block-16 {
             position: relative;
-            top: -180px;
+            top: -278px;
             width: 100%;
             height: auto;
 
@@ -3316,12 +3358,12 @@ p {
 
 
             .image2, .image3 {
+                border-radius: 10px;
                 padding: 15px 14px 15px 13px;
                 width: 100%;
                 height: auto;
 
                 background-size: 100% auto;
-                border-radius: 20px;
 
                 .icon {
                     margin-bottom: 30px;
@@ -3331,6 +3373,10 @@ p {
             .image3 {
                 position: relative;
                 top: -10px;
+            }
+
+            .image2 {
+                background-image: url('./assets/mini8.svg');
             }
 
 
@@ -3349,9 +3395,10 @@ p {
             .image {
                 padding: 25px 14px 30px 13px;
                 width: 100%;
-                height: auto;
+                /*min-height: 290px;*/
+                height: 100%;
 
-                background-size: 100% auto;
+                background-size: 100% 100%;
             }
         }
 
@@ -3359,15 +3406,14 @@ p {
     }
 
     .to-order {
-        position: relative;
-        z-index: 10;
-        top: -10px;
+
         width: 100%;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
     .video2-block {
         padding: 15px 14px 15px 13px;
+        border-radius: 10px;
 
         .video2 {
 
@@ -3512,7 +3558,7 @@ p {
             top: 0;
 
             .image {
-                margin-bottom: 0;
+                margin-bottom: 10px;
             }
 
             .main-block-button {
@@ -3533,15 +3579,24 @@ p {
             }
 
             input, textarea {
+                border-radius: 10px;
                 width: 100%;
                 height: auto;
+
 
                 background-size: 100% auto;
             }
 
+            textarea{
+                margin-bottom: 0;
+            }
+
             .main-block-button {
+                margin-top: -15px;
                 width: 100%;
                 height: auto;
+
+                border-radius: 10px;
 
                 background-size: 100% auto;
             }
