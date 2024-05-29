@@ -9,6 +9,10 @@ export const Needed = () => {
                 Подойдёт тем,
                 кто хочет
             </div>
+            <div className='title-mini'>
+                Подойдёт тем,
+                кто хочет
+            </div>
 
             <div className='main-block'>
 

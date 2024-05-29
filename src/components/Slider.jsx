@@ -73,6 +73,11 @@ export const MySlider = () => {
                 </div>
                 марафон
             </div>
+            <div className='title-mini'>
+                    <div>Как</div>
+                    <div>проходит</div>
+                марафон
+            </div>
             <Die style='die-slider'>
                 <div>🤔</div>
                 <div>🧑🏽‍💻</div>
@@ -99,22 +104,22 @@ export const MySlider = () => {
                             afterChange={handleAfterChange}
                         >
                             <div className='item'>
-                                <img style={{borderRadius: 20}} src={mr1} alt='1'/>
+                                <img  src={mr1} alt='1'/>
                             </div>
                             <div className='item'>
-                                <img style={{borderRadius: 20}} src={mr2} alt='1'/>
+                                <img  src={mr2} alt='1'/>
                             </div>
                             <div className='item'>
-                                <img style={{borderRadius: 20}} src={mr3} alt='1'/>
+                                <img src={mr3} alt='1'/>
                             </div>
                             <div className='item'>
-                                <img style={{borderRadius: 20}} src={mr4} alt='1'/>
+                                <img  src={mr4} alt='1'/>
                             </div>
                         </Slider>
                     </div>
                 </div>
                 <div className='wrapper-slider'>
-                    <img src={arrow} alt='1' style={{height: 34, width: 34}}/>
+                    <img src={arrow} className='iicon' alt='1' style={{height: 34, width: 34}}/>
                     <Slider
                         asNavFor={nav1}
                         ref={sliderRef2}

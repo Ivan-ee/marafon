@@ -28,6 +28,23 @@ export const About = () => {
                     Николаев
                 </div>
             </div>
+            <div className='title-mini'>
+                Препода- <br/>
+                <div style={{textAlign: "right"}}> ватель</div>
+                Марк
+                <div style={{textAlign: "right"}}>
+                    <img src={arrow} alt='1'
+                         style={{
+                             height: 19,
+                             width: 19,
+                             display: "inline-block",
+                             position: "relative",
+                             top: '-112px',
+                             left: '-85px'
+                         }}/>
+                    Николаев
+                </div>
+            </div>
             <Die style='die-about'>
                 <div>🧑🏽‍💻</div>
                 <div>🤳🏼</div>
@@ -68,7 +85,7 @@ export const About = () => {
 
                     <div className='main-author'>
                         <div className="block-author">
-                            <img className='author'  src={image2} alt='2'/>
+                            <img className='author' src={image2} alt='2'/>
                         </div>
                     </div>
 

@@ -17,11 +17,15 @@ export const Ask = () => {
         <div className="main ask">
             <div className="title">
                 <div>Остались</div>
-                <div style={{ textAlign: "right" }}>вопросы?</div>
+                <div style={{textAlign: "right"}}>вопросы?</div>
+            </div>
+            <div className="title-mini">
+                <div>Остались</div>
+                <div style={{textAlign: "right"}}>вопросы?</div>
             </div>
 
             <div className="super-block">
-                <img className="icon" src={image} />
+                <img className="icon" src={image}/>
                 <div className="block-title">
                     Заполните форму,
                     мы напишем вам
@@ -35,8 +39,8 @@ export const Ask = () => {
                         name="name"
                         control={control}
                         defaultValue=""
-                        rules={{ required: "Это поле обязательно" }}
-                        render={({ field }) => (
+                        rules={{required: "Это поле обязательно"}}
+                        render={({field}) => (
                             <input
                                 type="text"
                                 placeholder="ИМЯ"
@@ -51,8 +55,8 @@ export const Ask = () => {
                         name="phone"
                         control={control}
                         defaultValue=""
-                        rules={{ required: "Это поле обязательно" }}
-                        render={({ field }) => (
+                        rules={{required: "Это поле обязательно"}}
+                        render={({field}) => (
                             <input
                                 type="text"
                                 placeholder="НОМЕР ТЕЛЕФОНА"
@@ -67,8 +71,8 @@ export const Ask = () => {
                         name="telegram"
                         control={control}
                         defaultValue=""
-                        rules={{ required: "Это поле обязательно" }}
-                        render={({ field }) => (
+                        rules={{required: "Это поле обязательно"}}
+                        render={({field}) => (
                             <input
                                 type="text"
                                 placeholder="НИК В ТЕЛЕГРАМЕ"
@@ -85,8 +89,8 @@ export const Ask = () => {
                         name="question"
                         control={control}
                         defaultValue=""
-                        rules={{ required: "Это поле обязательно" }}
-                        render={({ field }) => (
+                        rules={{required: "Это поле обязательно"}}
+                        render={({field}) => (
                             <textarea
                                 placeholder="ВАШ ВОПРОС"
                                 {...field}
@@ -96,12 +100,12 @@ export const Ask = () => {
                     />
                     {/* {errors.question && <span className="error">{errors.question.message}</span>} */}
 
-                    <div style={{ display: "flex", alignItems: "flex-end", marginBottom: 15 }}>
+                    <div style={{display: "flex", alignItems: "flex-end", marginBottom: 15}}>
                         <button type="submit" className="main-block-button">
                             <div>Записаться</div>
                             <div>|</div>
                             <div>
-                                <img src={image2} />
+                                <img src={image2}/>
                             </div>
                         </button>
                     </div>

@@ -19,7 +19,22 @@ export const WhoIsIt = () => {
                     textAlign: 'right'
                 }}>копирайтер?
                 </div>
+            </div>
 
+            <div className='title-mini'>
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div>Кто</div>
+                    <div>такой</div>
+                </div>
+                <div style={{
+                    textAlign: 'left'
+                }}>копи-
+                    <div style={{
+                        textAlign: 'right'
+                    }}>
+                        райтер?
+                    </div>
+                </div>
             </div>
 
             <div className='main-block'>
@@ -28,10 +43,10 @@ export const WhoIsIt = () => {
                     <div className='icon'>1</div>
                     <div className='block-title'>
                         Копирайтер — это
-                        человек, который <br/>
+                        человек, который
                         пишет тексты: для
                         сайтов, телеграм-
-                        каналов или <br/>
+                        каналов или
                         рассылок.
                     </div>
                 </div>
@@ -39,8 +54,8 @@ export const WhoIsIt = () => {
                 <div className='block-2'>
                     <div className='icon'>2</div>
                     <div className='block-title'>
-                        Это удаленная <br/>
-                        и стабильная <br/>
+                        Это удаленная
+                        и стабильная
                         профессия
                     </div>
                     <div className='text'>

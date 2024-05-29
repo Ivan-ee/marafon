@@ -10,9 +10,19 @@ export const After = () => {
         <div className='main after'>
             <div className='title'>
                 Что будет <br/>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div style={{display: "flex", justifyContent: "space-between"}}>
                     <div>после</div>
                     <div>оплаты</div>
+                </div>
+            </div>
+            <div className='title-mini'>
+               <div style={{display: "flex", justifyContent: "space-between"}}>
+                  <div>Что</div>
+                  <div>будет</div>
+               </div>
+                <div>
+                    <div>после</div>
+                    <div style={{textAlign:"right"}}>оплаты</div>
                 </div>
             </div>
             <Die style='die-after'>

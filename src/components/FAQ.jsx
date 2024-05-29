@@ -112,6 +112,7 @@ export const FAQ = () => {
     return (
         <div className="main faq" id='FAQ' ref={faqRef}>
             <div className="title">FAQ</div>
+            <div className="title-mini-big">FAQ</div>
             <Die style='die-faq'>
                 <div>🤔</div>
                 <div>👀</div>
