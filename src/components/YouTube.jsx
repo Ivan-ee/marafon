@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { IoCloseOutline } from "react-icons/io5";
-import { BiLoaderAlt } from "react-icons/bi";
+import React, {useState} from "react";
+import {IoCloseOutline} from "react-icons/io5";
+import {BiLoaderAlt} from "react-icons/bi";
 import {FaPlay} from "react-icons/fa";
 
-function VideoModal({ videoId, imageSrc }) {
+function VideoModal({videoId, imageSrc}) {
     const [modal, setModal] = useState(false);
     const [videoLoading, setVideoLoading] = useState(true);
 
@@ -15,14 +15,20 @@ function VideoModal({ videoId, imageSrc }) {
         setVideoLoading(false);
     };
 
+    const closeModalOnBackgroundClick = (e) => {
+        if (e.target.classList.contains('modal__align')) {
+            setModal(false);
+        }
+    };
+
     return (
         <div className="video-preview">
-            <img src={imageSrc} alt="Video Preview" className="preview-image" />
+            <img src={imageSrc} alt="Video Preview" className="preview-image"/>
             <button onClick={openModal} className="play-button">
-                <FaPlay />
+                <FaPlay/>
             </button>
             {modal ? (
-                <section className="modal__bg">
+                <section className="modal__bg" onClick={closeModalOnBackgroundClick}>
                     <div className="modal__align">
                         <div className="modal__content" modal={modal.toString()}>
                             <IoCloseOutline
@@ -33,7 +39,7 @@ function VideoModal({ videoId, imageSrc }) {
                             <div className="modal__video-align">
                                 {videoLoading ? (
                                     <div className="modal__spinner">
-                                        <BiLoaderAlt className="modal__spinner-style" fadeIn="none" />
+                                        <BiLoaderAlt className="modal__spinner-style" fadeIn="none"/>
                                     </div>
                                 ) : null}
                                 <iframe
