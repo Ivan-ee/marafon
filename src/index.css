@@ -1052,11 +1052,23 @@ p {
     background: rgb(47, 47, 47);
 
     width: 382px;
-    height: 456px;
+    height: 273px;
 
     .image {
         width: 100%;
         height: 253px;
+
+        background-size: 100% auto;
+        background: url("./assets/prev4.svg") no-repeat;
+    }
+}
+
+.reviews .block-13:hover {
+    height: 450px;
+
+    .image {
+        width: 100%;
+        height: 430px;
 
         background-size: 100% auto;
         background: url("./assets/prev4.svg") no-repeat;
@@ -1277,11 +1289,16 @@ p {
 
 .order {
     display: flex;
+    justify-content: space-between;
+
+    .block{
+        margin: 0;
+    }
 }
 
 .order .image1 {
     background-image: url('./assets/back.svg');
-    width: 388px;
+    width: 383px;
     height: 281px;
     background-repeat: no-repeat;
 
@@ -1294,7 +1311,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 26px 16px 26px;
-    width: 388px;
+    width: 383px;
     height: 281px;
     background-image: url('./assets/back2.svg');
     background-repeat: no-repeat;
@@ -1323,7 +1340,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 26px 16px 26px;
-    width: 388px;
+    width: 383px;
     height: 281px;
     border-radius: 20px;
     background: #F4F4F6;
@@ -1780,6 +1797,7 @@ p {
 
 .after .blocks {
     display: flex;
+    justify-content: space-between;
 }
 
 .after {
@@ -1819,6 +1837,7 @@ p {
 }
 
 .faq .title {
+    margin: 0 24px;
     color: rgb(47, 47, 47);
     font-size: 132px;
     font-weight: 500;
@@ -3377,6 +3396,10 @@ p {
 
             .image2 {
                 background-image: url('./assets/mini8.svg');
+
+                /*.desk{*/
+                /*   padding-bottom: 10px;*/
+                /*}*/
             }
 
 
@@ -3657,7 +3680,7 @@ p {
 }
 
 @media (min-width: 500px) {
-    .title-mini, .t-mini-1, .display-n {
+    .title-mini, .title-mini-big, .t-mini-1, .display-n {
         display: none !important;
     }
 

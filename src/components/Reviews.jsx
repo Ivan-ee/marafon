@@ -29,7 +29,7 @@ export const Reviews = () => {
     useEffect(() => {
 
         const updateImage = () => {
-            if (window.innerWidth <= 3100) {
+            if (window.innerWidth <= 500) {
                 setCurrentImage(image4);
 
                 setCurrentImag6(mini6);
