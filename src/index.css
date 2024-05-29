@@ -2520,7 +2520,7 @@ p {
 
 .hamburger-icon .bar3 {
     margin-left: 10px;
-    width: 20px; /*  Делаем его короче */
+    width: 20px;
 }
 
 .hamburger-icon.open .bar1 {
@@ -2691,6 +2691,12 @@ p {
             letter-spacing: -1px;
             text-align: left;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .block-author{
+        scale: 0.9;
     }
 }
 
@@ -3387,6 +3393,13 @@ p {
                 .icon {
                     margin-bottom: 30px;
                 }
+
+                .desk{
+                    font-size: 40px;
+                }
+                .text{
+                    font-size: 25px;
+                }
             }
 
             .image3 {
@@ -3396,10 +3409,11 @@ p {
 
             .image2 {
                 background-image: url('./assets/mini8.svg');
+                width: 100%;
+                height: auto;
 
-                /*.desk{*/
-                /*   padding-bottom: 10px;*/
-                /*}*/
+                background-size: 100% auto;
+
             }
 
 
