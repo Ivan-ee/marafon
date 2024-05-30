@@ -110,10 +110,10 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
 
             if (!item.ariaExpanded) {
 
-                // // setTimeout(() => {
+                setTimeout(() => {
                 const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
                 window.scrollTo({top: offsetTop, behavior: "smooth"});
-                // }, 450); // Adjust the delay to match the CSS transition duration
+                }, 1); // Adjust the delay to match the CSS transition duration
                 e.preventDefault()
             }
 

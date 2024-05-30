@@ -152,10 +152,10 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
             );
 
             if (!item.ariaExpanded) {
-                // setTimeout(() => {
+                setTimeout(() => {
                     const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
                     window.scrollTo({top: offsetTop, behavior: "smooth"});
-                // }, 410);
+                }, 1);
                 e.preventDefault()
             }
         };
