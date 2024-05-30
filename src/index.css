@@ -2640,21 +2640,46 @@ p {
 }
 
 .modal {
+    z-index: 10000000;
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /*  Полупрозрачный фон  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
 }
 
+
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    margin: 10vh auto;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: auto;
+    max-width: 865px;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+}
+
+.close {
+    position: relative;
+    display: block;
+    color: #777777;
+    float: right;
+    top: 0;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: black;
 }
 
 .main-block {
@@ -3693,22 +3718,19 @@ p {
     }
 
     /*.description {*/
-
     /*}*/
-
     .accordion-item {
         border-radius: 10px !important;
     }
 
-    .faq{
-        button{
+    .faq {
+        button {
             border-radius: 10px !important;
         }
     }
 
 
     /*.faq .accordion-description {*/
-
     /*    .accordion-item {*/
     /*        .icon {*/
     /*            width: min-content;*/
@@ -3716,30 +3738,24 @@ p {
     /*            min-width: 10px;*/
     /*        }*/
     /*    }*/
-
     /*    button {*/
     /*        padding: 12px !important;*/
     /*    }*/
-
     /*    .accordion-title {*/
     /*        font-weight: bold;*/
     /*        font-size: 16px !important;*/
     /*        padding: 0px !important;*/
     /*    }*/
-
     /*    .accordion-content {*/
     /*        p {*/
     /*            font-size: 15px;*/
     /*            padding: 12px;*/
     /*        }*/
-
     /*        .select {*/
     /*            font-size: 14px;*/
     /*            padding: 12px;*/
     /*        }*/
     /*    }*/
-
-
     /*}*/
 
 

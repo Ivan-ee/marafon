@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import { Controller, useForm } from "react-hook-form";
 import image from "../assets/Arrow 1 Stroke (2).svg";
 import image2 from "../assets/Arrow 1.svg";
+import GetCourseModal from "./GetCourse.jsx";
 
 export const Ask = () => {
     const { control, register, handleSubmit, formState: { errors }, getValues } = useForm(); // Добавляем getValues
@@ -12,6 +13,8 @@ export const Ask = () => {
     const isFieldInvalid = (fieldName) => {
         return errors[fieldName] !== undefined && getValues(fieldName) === ""; // Проверяем, пустое ли поле и есть ли ошибка
     };
+
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <div className="main ask">
@@ -33,6 +36,8 @@ export const Ask = () => {
                 </div>
             </div>
 
+            <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
+
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="input-group">
                     <Controller
@@ -45,7 +50,7 @@ export const Ask = () => {
                                 type="text"
                                 placeholder="ИМЯ"
                                 {...field}
-                                className={`input ${isFieldInvalid("name") ? "error" : ""}`}
+                                className={`input`}
                             />
                         )}
                     />
@@ -61,7 +66,7 @@ export const Ask = () => {
                                 type="text"
                                 placeholder="НОМЕР ТЕЛЕФОНА"
                                 {...field}
-                                className={`input ${isFieldInvalid("phone") ? "error" : ""}`}
+                                className={`input`}
                             />
                         )}
                     />
@@ -77,7 +82,7 @@ export const Ask = () => {
                                 type="text"
                                 placeholder="НИК В ТЕЛЕГРАМЕ"
                                 {...field}
-                                className={`input ${isFieldInvalid("telegram") ? "error" : ""}`}
+                                className={`input`}
                             />
                         )}
                     />
@@ -94,15 +99,15 @@ export const Ask = () => {
                             <textarea
                                 placeholder="ВАШ ВОПРОС"
                                 {...field}
-                                className={`textarea ${isFieldInvalid("question") ? "error" : ""}`} // Добавляем класс "error"
+                                className={`textarea`}
                             />
                         )}
                     />
                     {/* {errors.question && <span className="error">{errors.question.message}</span>} */}
 
                     <div style={{display: "flex", alignItems: "flex-end", marginBottom: 15}}>
-                        <button type="submit" className="main-block-button">
-                            <div>Записаться</div>
+                        <button type="submit" className="main-block-button" >
+                            <div>Отравить</div>
                             <div>|</div>
                             <div>
                                 <img src={image2}/>

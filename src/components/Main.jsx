@@ -17,8 +17,8 @@ export const Main = () => {
 
     const [timeLeft, setTimeLeft] = useState(getTimeLeft());
     const [count, setCount] = useState(9);
-    const [showModal, setShowModal] = useState(false);
     const buttonRef = useRef(null);
+    const [showModal, setShowModal] = useState(false);
 
     function getTimeLeft() {
         const now = new Date();
@@ -49,32 +49,7 @@ export const Main = () => {
         return () => clearInterval(intervalId);
     }, [count]);
 
-    useEffect(() => {
-        const handleButtonClick = () => {
-            setShowModal(true);
-        };
-
-        const button = buttonRef.current;
-        if (button) {
-            button.addEventListener('click', handleButtonClick);
-        }
-
-        return () => {
-            if (button) {
-                button.removeEventListener('click', handleButtonClick);
-            }
-        };
-    }, []);
-
     const formattedCount = count.toString().padStart(3, '0');
-
-    const handleButtonClick = () => {
-        const script = document.createElement('script');
-        script.id = '0352f22c5fffbfbf099e6bae6404baf9fe6884b0';
-        script.src = 'http://kurs.crystall.education/pl/lite/widget/script?id=1067346';
-        // script.async = true;
-        document.body.appendChild(script);
-    };
 
     return (
         <div className='main-block'>
@@ -96,6 +71,7 @@ export const Main = () => {
 
             <img className="diamond" src={diamond} alt='diamond'/>
             {/*<GetCourseModal show={showModal} onClose={() => setShowModal(false)} />*/}
+            <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
             <Block className="o-t">
                 <div className="image">
                     <p className='text-1'>
@@ -111,7 +87,7 @@ export const Main = () => {
                         890 ₽
                     </p>
                 </div>
-                <div className='main-block-button' ref={buttonRef} onClick={handleButtonClick}>
+                <div className='main-block-button' onClick={() => setShowModal(true)}>
                     <div>Записаться</div>
                     <div>|</div>
                     <div><img src={image} alt="arrow"/></div>

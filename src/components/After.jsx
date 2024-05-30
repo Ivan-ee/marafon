@@ -4,6 +4,7 @@ import React, {useEffect, useRef, useState} from "react";
 import image from "../assets/Arrow 1.svg";
 import arrow from "../assets/Arrow 1 Stroke (1).svg";
 import {Die} from "./Die.jsx";
+import GetCourseModal from "./GetCourse.jsx";
 
 export const After = () => {
 
@@ -14,6 +15,7 @@ export const After = () => {
         month: '2-digit',
     });
 
+    const [showModal, setShowModal] = useState(false);
     const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
     function getTimeLeft() {
@@ -73,6 +75,8 @@ export const After = () => {
                         удобно.
                     </div>
                 </div>
+
+                <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
                 <Block className="o-t">
                     <div className="image">
                         <p className='text-1'>
@@ -88,7 +92,7 @@ export const After = () => {
                             890 ₽
                         </p>
                     </div>
-                    <div className='main-block-button'>
+                    <div className='main-block-button' onClick={() => setShowModal(true)}>
                         <div>Записаться</div>
                         <div>|</div>
                         <div><img src={image}/></div>

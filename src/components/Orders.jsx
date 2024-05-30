@@ -2,10 +2,13 @@ import {Block} from "./block.jsx";
 import image from "../assets/Arrow 1.svg";
 import image2 from "../assets/Arrow 1 (2).svg";
 import starBlack from "../assets/star_black.svg";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import GetCourseModal from "./GetCourse.jsx";
 
 
 export const Orders = () => {
+
+
 
     const currentDate = new Date();
 
@@ -14,6 +17,7 @@ export const Orders = () => {
         month: '2-digit',
     });
 
+    const [showModal, setShowModal] = useState(false);
     const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
     function getTimeLeft() {
@@ -100,7 +104,8 @@ export const Orders = () => {
                     </div>
                 </Block>
             </div>
-            <button className='to-order'>Записаться <img src={image2} className='star'/></button>
+            <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
+            <button className='to-order' onClick={() => setShowModal(true)}>Записаться <img src={image2} className='star'/></button>
         </div>
     )
 }
