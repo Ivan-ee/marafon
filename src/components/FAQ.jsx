@@ -1,4 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
+import { animateScroll as scroll } from "react-scroll";
+
 import arrowWhite from "../assets/up.svg";
 import arrowBlack from "../assets/down.svg";
 import {Die} from "./Die.jsx";
@@ -153,10 +155,12 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
 
             if (!item.ariaExpanded) {
                 setTimeout(() => {
-                    const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
-                    window.scrollTo({top: offsetTop, behavior: "smooth"});
-                }, 1);
-                e.preventDefault()
+                    scroll.scrollTo(itemRef.current.offsetTop - 10, {
+                        duration: 1000,
+                        delay: 0,
+                        smooth: "easeInOutQuart"
+                    });
+                }, 1600); // Adjust delay if needed
             }
         };
 

@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 import image from '../assets/pol2.svg';
 import image3 from "../assets/Marathon layout (4).svg";
@@ -100,7 +101,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     useEffect((e) => {
         const button = document.getElementById(item.id);
 
-        const toggleAccordion = () => {
+        const toggleAccordion = (e) => {
             setAccordionItems(
                 accordionItems.map((accItem, accIndex) => ({
                     ...accItem,
@@ -109,12 +110,13 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
             );
 
             if (!item.ariaExpanded) {
-
                 setTimeout(() => {
-                const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
-                window.scrollTo({top: offsetTop, behavior: "smooth"});
-                }, 1); // Adjust the delay to match the CSS transition duration
-                e.preventDefault()
+                    scroll.scrollTo(itemRef.current.offsetTop - 10, {
+                        duration: 800,
+                        delay: 0,
+                        smooth: "easeInOutQuart"
+                    });
+                }, 1600); // Adjust delay if needed
             }
 
         };
@@ -127,8 +129,8 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     }, [item.id, index, accordionItems, setAccordionItems, item.ariaExpanded]);
 
     return (
-        <div className="accordion-item" ref={itemRef}>
-            <button id={item.id} aria-expanded={item.ariaExpanded || false} className={item.buttonClass}>
+        <div className="accordion-item" >
+            <button id={item.id} ref={itemRef} aria-expanded={item.ariaExpanded || false} className={item.buttonClass}>
                 <div className="accordion-title">{item.title}</div>
                 <div className="icon" aria-hidden="true">
                     <img
