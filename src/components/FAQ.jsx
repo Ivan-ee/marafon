@@ -160,7 +160,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
                         delay: 0,
                         smooth: "easeInOutQuart"
                     });
-                }, 1600); // Adjust delay if needed
+                }, 1610);
             }
         };
 
