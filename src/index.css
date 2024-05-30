@@ -1291,7 +1291,7 @@ p {
     display: flex;
     justify-content: space-between;
 
-    .block{
+    .block {
         margin: 0;
     }
 }
@@ -1925,12 +1925,9 @@ p {
     .accordion-item {
         margin-bottom: 10px;
 
-        .icon{
+        .icon {
             margin-left: 10px;
             min-width: 25px;
-            img{
-
-            }
         }
     }
 }
@@ -2699,7 +2696,7 @@ p {
 }
 
 @media (max-width: 400px) {
-    .block-author{
+    .block-author {
         scale: 0.9;
     }
 }
@@ -3398,10 +3395,11 @@ p {
                     margin-bottom: 30px;
                 }
 
-                .desk{
+                .desk {
                     font-size: 40px;
                 }
-                .text{
+
+                .text {
                     font-size: 25px;
                 }
             }
@@ -3628,7 +3626,7 @@ p {
                 background-size: 100% auto;
             }
 
-            textarea{
+            textarea {
                 margin-bottom: 0;
             }
 
@@ -3693,6 +3691,56 @@ p {
     .t-mini-1 {
         display: block;
     }
+
+    /*.description {*/
+
+    /*}*/
+
+    .accordion-item {
+        border-radius: 10px !important;
+    }
+
+    .faq{
+        button{
+            border-radius: 10px !important;
+        }
+    }
+
+
+    /*.faq .accordion-description {*/
+
+    /*    .accordion-item {*/
+    /*        .icon {*/
+    /*            width: min-content;*/
+    /*            margin-left: 10px;*/
+    /*            min-width: 10px;*/
+    /*        }*/
+    /*    }*/
+
+    /*    button {*/
+    /*        padding: 12px !important;*/
+    /*    }*/
+
+    /*    .accordion-title {*/
+    /*        font-weight: bold;*/
+    /*        font-size: 16px !important;*/
+    /*        padding: 0px !important;*/
+    /*    }*/
+
+    /*    .accordion-content {*/
+    /*        p {*/
+    /*            font-size: 15px;*/
+    /*            padding: 12px;*/
+    /*        }*/
+
+    /*        .select {*/
+    /*            font-size: 14px;*/
+    /*            padding: 12px;*/
+    /*        }*/
+    /*    }*/
+
+
+    /*}*/
 
 
 }
