@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
+
 import image from '../assets/pol2.svg';
 import image3 from "../assets/Marathon layout (4).svg";
 import arrowWhite from "../assets/up.svg";
@@ -96,7 +97,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     const arrowRefDesc = useRef(null);
     const itemRef = useRef(null);
 
-    useEffect(() => {
+    useEffect((e) => {
         const button = document.getElementById(item.id);
 
         const toggleAccordion = () => {
@@ -108,11 +109,14 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
             );
 
             if (!item.ariaExpanded) {
-                setTimeout(() => {
-                    const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
-                    window.scrollTo({top: offsetTop, behavior: "smooth"});
-                }, 200); // Adjust the delay to match the CSS transition duration
+
+                // // setTimeout(() => {
+                const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
+                window.scrollTo({top: offsetTop, behavior: "smooth"});
+                // }, 450); // Adjust the delay to match the CSS transition duration
+                e.preventDefault()
             }
+
         };
 
         button.addEventListener("click", toggleAccordion);
@@ -135,7 +139,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
                     />
                 </div>
             </button>
-            <div className="accordion-content" style={{display: item.ariaExpanded ? "block" : "none"}}>
+            <div className="accordion-content">
                 <p>{item.content}</p>
                 <div className="select">
                     <div className="item">

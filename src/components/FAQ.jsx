@@ -140,7 +140,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     const arrowRef = useRef(null);
     const itemRef = useRef(null);
 
-    useEffect(() => {
+    useEffect((e) => {
         const button = document.getElementById(item.id);
 
         const toggleAccordion = () => {
@@ -152,10 +152,11 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
             );
 
             if (!item.ariaExpanded) {
-                setTimeout(() => {
+                // setTimeout(() => {
                     const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
                     window.scrollTo({top: offsetTop, behavior: "smooth"});
-                }, 410);
+                // }, 410);
+                e.preventDefault()
             }
         };
 
