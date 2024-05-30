@@ -138,17 +138,25 @@ export const FAQ = () => {
 
 const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     const arrowRef = useRef(null);
+    const itemRef = useRef(null);
 
     useEffect(() => {
         const button = document.getElementById(item.id);
 
-        const toggleAccordion = (event) => {
+        const toggleAccordion = () => {
             setAccordionItems(
                 accordionItems.map((accItem, accIndex) => ({
                     ...accItem,
                     ariaExpanded: accIndex === index ? !accItem.ariaExpanded : false,
                 }))
             );
+
+            if (!item.ariaExpanded) {
+                setTimeout(() => {
+                    const offsetTop = itemRef.current.getBoundingClientRect().top + window.pageYOffset - 10;
+                    window.scrollTo({top: offsetTop, behavior: "smooth"});
+                }, 410);
+            }
         };
 
         button.addEventListener("click", toggleAccordion);
@@ -156,10 +164,10 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
         return () => {
             button.removeEventListener("click", toggleAccordion);
         };
-    }, [item.id, index, accordionItems, setAccordionItems]);
+    }, [item.id, index, accordionItems, setAccordionItems, item.ariaExpanded]);
 
     return (
-        <div className='accordion-item'>
+        <div className='accordion-item' ref={itemRef} >
             <button id={item.id} aria-expanded={item.ariaExpanded || false} className={item.buttonClass}>
                 <div className="accordion-title">{item.title}</div>
                 <div className="icon" aria-hidden="true">
