@@ -2192,6 +2192,9 @@ p {
     box-sizing: border-box;
     border: 1px solid rgb(47, 47, 47);
     border-radius: 20px;
+
+    resize: none;              /* Запрещаем изменение размера */
+    overflow: auto;
 }
 
 .ask .textarea {
