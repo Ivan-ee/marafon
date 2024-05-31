@@ -1812,7 +1812,7 @@ p {
     padding: 25px 14px 30px 26px;
     position: relative;
     top: -35px;
-    z-index: 1000;
+    z-index: 10;
 
     width: 383px;
     height: 530px;
@@ -2098,7 +2098,7 @@ p {
     padding: 25px 14px 30px 26px;
     position: relative;
     top: -180px;
-    z-index: 1000;
+    z-index: 10;
     width: 383px;
     height: 242px;
 
@@ -2727,6 +2727,15 @@ p {
     .block-author {
         scale: 0.9;
     }
+
+    .about{
+        .title-mini{
+            img{
+                top: -30vw!important;
+                left: -10vw!important;
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -2745,6 +2754,19 @@ p {
 
         span {
             color: #c3c3c5;
+        }
+    }
+
+    .about{
+        .title-mini{
+            img{
+                height: 19px;
+                width: 19px;
+                display: inline-block;
+                position: relative;
+                top: -25vw;
+                left: -16vw;
+            }
         }
     }
 

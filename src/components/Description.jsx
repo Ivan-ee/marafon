@@ -110,7 +110,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
             );
 
             if (!item.ariaExpanded) {
-                
+
                 setTimeout(() => {
                     scroll.scrollTo(itemRef.current.offsetTop - 10, {
                         duration: 800,

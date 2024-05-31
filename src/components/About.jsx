@@ -33,15 +33,7 @@ export const About = () => {
                 <div style={{textAlign: "right"}}> ватель</div>
                 Марк
                 <div style={{textAlign: "right"}}>
-                    <img src={arrow} alt='1'
-                         style={{
-                             height: 19,
-                             width: 19,
-                             display: "inline-block",
-                             position: "relative",
-                             top: '-112px',
-                             left: '-85px'
-                         }}/>
+                    <img src={arrow} alt='1'/>
                     Николаев
                 </div>
             </div>
