@@ -3754,33 +3754,63 @@ p {
     }
 
 
-    /*.faq .accordion-description {*/
-    /*    .accordion-item {*/
-    /*        .icon {*/
-    /*            width: min-content;*/
-    /*            margin-left: 10px;*/
-    /*            min-width: 10px;*/
-    /*        }*/
-    /*    }*/
-    /*    button {*/
-    /*        padding: 12px !important;*/
-    /*    }*/
-    /*    .accordion-title {*/
-    /*        font-weight: bold;*/
-    /*        font-size: 16px !important;*/
-    /*        padding: 0px !important;*/
-    /*    }*/
-    /*    .accordion-content {*/
-    /*        p {*/
-    /*            font-size: 15px;*/
-    /*            padding: 12px;*/
-    /*        }*/
-    /*        .select {*/
-    /*            font-size: 14px;*/
-    /*            padding: 12px;*/
-    /*        }*/
-    /*    }*/
-    /*}*/
+    .accordion-description {
+        .accordion-item {
+            .icon {
+                width: min-content;
+                margin-left: 10px;
+                min-width: 14px;
+            }
+        }
+        button {
+            padding: 12px !important;
+        }
+        .accordion-title {
+            font-weight: bold;
+            font-size: 16px !important;
+            padding: 0px !important;
+        }
+        .accordion-content {
+            p {
+                letter-spacing: 0;
+                font-size: 16px;
+                padding: 12px;
+            }
+            .select {
+                font-size: 14px;
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .accordion{
+        .accordion-item {
+            .icon {
+                width: min-content;
+                margin-left: 20px;
+                min-width: 14px;
+
+            }
+        }
+        button {
+            padding: 12px !important;
+        }
+        .accordion-title {
+            letter-spacing: 0!important;
+            font-weight: bold;
+            font-size: 16px !important;
+            padding: 0px !important;
+        }
+        .accordion-content {
+            p {
+                letter-spacing: 0;
+                font-size: 14px;
+                padding: 12px;
+            }
+
+        }
+    }
 
 
 }
