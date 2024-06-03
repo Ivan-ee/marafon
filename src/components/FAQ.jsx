@@ -152,16 +152,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
                     ariaExpanded: accIndex === index ? !accItem.ariaExpanded : false,
                 }))
             );
-
-            if (!item.ariaExpanded) {
-                setTimeout(() => {
-                    scroll.scrollTo(itemRef.current.offsetTop - 10, {
-                        duration: 1000,
-                        delay: 0,
-                        smooth: "easeInOutQuart"
-                    });
-                }, 1610);
-            }
+            
         };
 
         button.addEventListener("click", toggleAccordion);

@@ -1005,6 +1005,8 @@ p {
     top: 380px;
     z-index: 100;
 
+    transition: all .3s;
+
     box-sizing: border-box;
 
     border-radius: 20px;
@@ -1020,6 +1022,8 @@ p {
     text-align: center;
 
     .image {
+        transition: all .3s;
+
         width: 332px;
         height: 290px;
         background: url("./assets/r1.jpg") no-repeat;
@@ -1029,6 +1033,7 @@ p {
 .reviews .block-3:hover {
     height: 625px;
     overflow: visible;
+
 
     .image {
         height: 100%;
