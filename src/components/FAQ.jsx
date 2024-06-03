@@ -152,7 +152,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
                     ariaExpanded: accIndex === index ? !accItem.ariaExpanded : false,
                 }))
             );
-            
+
         };
 
         button.addEventListener("click", toggleAccordion);
