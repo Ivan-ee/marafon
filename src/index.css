@@ -2198,7 +2198,7 @@ p {
     border: 1px solid rgb(47, 47, 47);
     border-radius: 20px;
 
-    resize: none;              /* Запрещаем изменение размера */
+    resize: none; /* Запрещаем изменение размера */
     overflow: auto;
 }
 
@@ -2673,6 +2673,15 @@ p {
     max-height: 90%;
     overflow: auto;
     position: relative;
+
+    iframe {
+        min-width: 860px;
+        width: 860px;
+        min-height: 1100px;
+        height: 1100px;
+        border: none;
+        overflow: hidden;
+    }
 }
 
 .close {
@@ -2736,11 +2745,11 @@ p {
         scale: 0.9;
     }
 
-    .about{
-        .title-mini{
-            img{
-                top: -30vw!important;
-                left: -10vw!important;
+    .about {
+        .title-mini {
+            img {
+                top: -30vw !important;
+                left: -10vw !important;
             }
         }
     }
@@ -2765,9 +2774,9 @@ p {
         }
     }
 
-    .about{
-        .title-mini{
-            img{
+    .about {
+        .title-mini {
+            img {
                 height: 19px;
                 width: 19px;
                 display: inline-block;
@@ -3770,20 +3779,24 @@ p {
                 min-width: 14px;
             }
         }
+
         button {
             padding: 12px !important;
         }
+
         .accordion-title {
             font-weight: bold;
             font-size: 16px !important;
             padding: 0px !important;
         }
+
         .accordion-content {
             p {
                 letter-spacing: 0;
                 font-size: 16px;
                 padding: 12px;
             }
+
             .select {
                 font-size: 14px;
                 padding: 12px;
@@ -3792,7 +3805,7 @@ p {
         }
     }
 
-    .accordion{
+    .accordion {
         .accordion-item {
             .icon {
                 width: min-content;
@@ -3801,15 +3814,18 @@ p {
 
             }
         }
+
         button {
             padding: 12px !important;
         }
+
         .accordion-title {
-            letter-spacing: 0!important;
+            letter-spacing: 0 !important;
             font-weight: bold;
             font-size: 16px !important;
             padding: 0px !important;
         }
+
         .accordion-content {
             p {
                 letter-spacing: 0;
@@ -3817,6 +3833,23 @@ p {
                 padding: 12px;
             }
 
+        }
+    }
+
+    .modal{
+
+        .modal-content{
+            margin: 1vh auto;
+            max-width: none;
+            height: 100vh;
+            max-height: 100vh;
+
+            iframe{
+                min-width: 100vw;
+                width: 100%;
+                min-height: 150vh;
+                height: max-content;
+            }
         }
     }
 
