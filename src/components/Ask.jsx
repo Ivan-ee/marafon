@@ -1,13 +1,45 @@
 import React, {useState} from "react";
-import { Controller, useForm } from "react-hook-form";
+import {Controller, useForm} from "react-hook-form";
 import image from "../assets/Arrow 1 Stroke (2).svg";
 import image2 from "../assets/Arrow 1.svg";
 import GetCourseModal from "./GetCourse.jsx";
+import Swal from 'sweetalert2'
 
 export const Ask = () => {
-    const { control, register, handleSubmit, formState: { errors }, getValues } = useForm(); // Добавляем getValues
+    const {control, register, handleSubmit, formState: {errors}, getValues, reset} = useForm(); // Добавляем getValues
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
+        const formData = new FormData();
+        formData.append("fields[name_1]", data.name);
+        formData.append("fields[1087639_1][1365867]", data.phone);
+        formData.append("fields[1171299_1]", data.telegram);
+        formData.append("fields[1090023_2]", data.question);
+        formData.append("form_id", '1355242');
+        formData.append("hash", '3c626dad4da708a4364ca2968e354835');
+
+        const userOrigin = JSON.stringify({
+            datetime: new Date().toString(),
+            referer: window.location.href
+        });
+        formData.append("user_origin", userOrigin);
+
+        try {
+            const response = await fetch("https://forms.amocrm.ru/queue/add", {
+                method: "POST",
+                body: formData,
+                encType: "multipart/form-data",
+            });
+
+        } catch (error) {
+            console.error("Ошибка при отправке формы:", error);
+        }
+
+        Swal.fire({
+            title: "Ваша заявка отправлена!",
+            icon: "success"
+        });
+
+        reset();
     };
 
     const isFieldInvalid = (fieldName) => {
@@ -36,7 +68,7 @@ export const Ask = () => {
                 </div>
             </div>
 
-            <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
+            <GetCourseModal show={showModal} onClose={() => setShowModal(false)}/>
 
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="input-group">
@@ -54,7 +86,6 @@ export const Ask = () => {
                             />
                         )}
                     />
-                    {/* {errors.name && <span className="error">{errors.name.message}</span>} */}
 
                     <Controller
                         name="phone"
@@ -70,7 +101,6 @@ export const Ask = () => {
                             />
                         )}
                     />
-                    {/* {errors.phone && <span className="error">{errors.phone.message}</span>} */}
 
                     <Controller
                         name="telegram"
@@ -86,7 +116,6 @@ export const Ask = () => {
                             />
                         )}
                     />
-                    {/* {errors.telegram && <span className="error">{errors.telegram.message}</span>} */}
                 </div>
 
                 <div className="textarea-group" style={{justifyContent: 'left', gap: '25px'}}>
@@ -103,10 +132,9 @@ export const Ask = () => {
                             />
                         )}
                     />
-                    {/* {errors.question && <span className="error">{errors.question.message}</span>} */}
 
                     <div style={{display: "flex", alignItems: "flex-end", marginBottom: 15}}>
-                        <button type="submit" className="main-block-button" >
+                        <button type="submit" className="main-block-button">
                             <div>Отравить</div>
                             <div>|</div>
                             <div>

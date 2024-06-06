@@ -2740,6 +2740,10 @@ p {
     }
 }
 
+.amoforms_iframe{
+    /*display: none;*/
+}
+
 @media (max-width: 400px) {
     .block-author {
         scale: 0.9;
