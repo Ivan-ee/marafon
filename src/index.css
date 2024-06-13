@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -2740,8 +2741,77 @@ p {
     }
 }
 
-.amoforms_iframe{
+.amoforms_iframe {
     /*display: none;*/
+}
+
+.btn-yandex {
+
+    height: 38px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 18px 5px 5px;
+
+    background: white;
+
+    box-sizing: border-box;
+    border: 1px solid rgb(220, 220, 222);
+    border-radius: 50px;
+
+    transition: all .3s ease-in-out;
+
+    .btn-yandex__text{
+        max-height: 28px;
+        margin-bottom: 3px;
+    }
+
+    .btn-yandex__img{
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+    }
+
+    .btn-yandex__text-star{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .btn-yandex__star-rating{
+            font-weight: bold;
+            color: black;
+
+            margin-right: 5px;
+
+            font-family: Nunito Sans, serif;
+            font-size:14px;
+        }
+
+        .btn-yandex__star-img{
+            width: 10px;
+            height: 10px;
+            margin-right: 3px;
+        }
+    }
+
+    .btn-yandex__text-desk{
+        font-size: 7px;
+        font-weight: 400;
+        color: black;
+        text-align: left;
+        margin-bottom: 8px;
+        line-height: 7px;
+    }
+
+    /*a {*/
+    /*    color: white;*/
+    /*}*/
+
+    /*cursor: pointer;*/
+    /*color: white;*/
+    /*background-color: rgba(138, 83, 255, 1);*/
 }
 
 @media (max-width: 400px) {
@@ -3840,15 +3910,15 @@ p {
         }
     }
 
-    .modal{
+    .modal {
 
-        .modal-content{
+        .modal-content {
             margin: 1vh auto;
             max-width: none;
             height: 100vh;
             max-height: 100vh;
 
-            iframe{
+            iframe {
                 min-width: 100vw;
                 width: 100%;
                 min-height: 150vh;
