@@ -27,9 +27,9 @@ export const Video2 = () => {
                     Получить урок <img src={telegram} className="telegram" alt="telegram"/>
                 </button>
             </div>
-            <button className='btn-video display-y'>
+            <a href={'https://salebot.site/mark_nikolaev_1'} className='btn-video display-y'>
                 Получить урок <img src={telegram} className="telegram" alt="telegram"/>
-            </button>
+            </a>
         </div>
     )
 }

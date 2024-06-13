@@ -137,9 +137,9 @@ export const MySlider = () => {
                                 Читайте и смотрите уроки в метро, кафе
                                 или на улице в любое свободное время.
                             </div>
-                            <button className='slider-btn'>
-                                Смотреть разбор из телеграмма <img src={pol} alt='1'/>
-                            </button>
+                            <a href={'https://docs.google.com/document/d/1gDcxV-m7l7axZnHc39wnchroKlYHYZw3UJsdFftf6CY/edit'} className='slider-btn'>
+                                Читать кусочек урока <img src={pol} alt='1'/>
+                            </a>
                         </div>
                         <div className='slider-item'>
                             <div className='slider-title'>
@@ -151,9 +151,9 @@ export const MySlider = () => {
                                 Получите обратную связь на каждую
                                 работу от практикующих редакторов.
                             </div>
-                            <button className='slider-btn'>
+                            <a href={'https://www.youtube.com/watch?v=zmRHLf9VI2I&feature=youtu.be'} className='slider-btn'>
                                 Смотреть разбор домашки <img src={pol} alt='1'/>
-                            </button>
+                            </a>
                         </div>
                         <div className='slider-item'>
                             <div className='slider-title'>
@@ -167,6 +167,10 @@ export const MySlider = () => {
                                 помогут доработать текст, ответят
                                 на конкретный вопрос.
                             </div>
+                            <a href={'https://youtu.be/E3jZpkcFClo'}
+                               className='slider-btn'>
+                                Смотреть переписку с куратором <img src={pol} alt='1'/>
+                            </a>
                         </div>
                         <div className='slider-item'>
                             <div className='slider-title'>

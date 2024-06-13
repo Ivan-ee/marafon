@@ -6,7 +6,7 @@ import image4 from '../assets/mini3.svg';
 import prev1 from '../assets/prev1.svg';
 import prev2 from '../assets/prev2.svg';
 import prev3 from '../assets/prev3.svg';
-import prev4 from '../assets/prev4.svg';
+import newR from '../assets/new-review.png';
 
 import prev6 from '../assets/prev6.svg';
 import prev7 from '../assets/prev7.svg';
@@ -133,7 +133,7 @@ export const Reviews = () => {
                     </div>
                 </div>
                 <div className="block-5">
-                    <img src={currentImage} alt="2"/>
+                    <img src={newR} alt="2"/>
                 </div>
                 <div className="block-11">
                     <div className="video-prev">
