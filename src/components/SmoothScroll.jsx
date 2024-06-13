@@ -6,7 +6,6 @@ const useSmoothScroll = (ref) => {
 
             const href = e.currentTarget.getAttribute('href');
 
-            // If href starts with http or https, do not perform smooth scroll
             if (href.startsWith('http://') || href.startsWith('https://')) {
                 return;
             }

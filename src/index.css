@@ -84,11 +84,11 @@
 
 .diamond {
     z-index: -100;
-    min-width: 485px !important;
+    min-width: 355px !important;
     min-height: 400px !important;
     position: relative;
-    top: -268px;
-    right: -129px;
+    top: -226px;
+    right: -289px;
 }
 
 p {
