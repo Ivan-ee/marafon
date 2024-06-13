@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import icon from "../assets/yandex_icon.svg";
 import star from "../assets/yandex-star.svg";
 
-export const BtnReviews = () => {
+export const BtnReviews = forwardRef(({ href }, ref) => {
     return (
-        <a className="btn-yandex">
+        <a ref={ref} className="btn-yandex" href={href} target="_blank" rel="noopener noreferrer">
             <img className="btn-yandex__img" src={icon} alt="yandex"/>
             <div className="btn-yandex__text">
                 <div className="btn-yandex__text-star">
@@ -21,4 +21,4 @@ export const BtnReviews = () => {
             </div>
         </a>
     );
-};
+});

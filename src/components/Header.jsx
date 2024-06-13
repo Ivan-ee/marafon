@@ -15,7 +15,7 @@ export const Header = () => {
             <Button href="#whoIsIt">Преподаватель</Button>
             <Button href="#description">Программа</Button>
             <Button href="#FAQ">FAQ</Button>
-            <BtnReviews/>
+            <BtnReviews href="https://yandex.ru/maps/-/CDrkaFlp"/>
         </div>
     );
 };
