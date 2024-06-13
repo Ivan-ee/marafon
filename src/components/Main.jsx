@@ -6,6 +6,7 @@ import diamond from '../assets/diamond.svg';
 import starBlack from '../assets/star_black.svg';
 import starWhite from '../assets/star_white.svg';
 import GetCourseModal from "./GetCourse.jsx";
+import {BtnReviews} from "./BtnReviews.jsx";
 
 export const Main = () => {
     const currentDate = new Date();
@@ -111,6 +112,7 @@ export const Main = () => {
             </Block>
 
             <Block className="t-3">
+                <BtnReviews href="https://yandex.ru/maps/-/CDrkaFlp"/>
                 <div className="image">
                     <div className="icon">
                         <img src={starBlack} className='star' alt="star"/>
