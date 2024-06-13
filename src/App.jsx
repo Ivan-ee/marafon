@@ -13,23 +13,44 @@ import {Video2} from "./components/Vidoe2.jsx";
 import {About} from "./components/About.jsx";
 import {After} from "./components/After.jsx";
 import {FAQ} from "./components/FAQ.jsx";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Ask} from "./components/Ask.jsx";
 import {Footer} from "./components/Footer.jsx";
 import {HamburgerMenu} from "./components/HamburgerMenu.jsx";
-import {TelegramWidget} from "./components/TelegramWidget.jsx";
+import PopupTelegram from "./components/PopupTelegram.jsx";
 
 
 export const App = () => {
 
-    return (
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+    const [popupCount, setPopupCount] = useState(0);
+    const maxPopups = 3;
+    const interval = 2 * 60 * 1000;
 
+    useEffect(() => {
+        const showPopup = () => {
+            setIsPopupVisible(true);
+            setPopupCount(prevCount => prevCount + 1);
+        };
+
+        if (popupCount < maxPopups) {
+            const timer = setTimeout(showPopup, interval);
+            return () => clearTimeout(timer);
+        }
+    }, [popupCount]);
+
+    const handleClose = () => {
+        setIsPopupVisible(false);
+    };
+
+
+    return (
 
         <Layout>
             <Header/>
+            {isPopupVisible && <PopupTelegram onClose={handleClose} />}
             <Main/>
             <HamburgerMenu/>
-            {/*<TelegramWidget/>*/}
             <Salary/>
             <WhoIsIt/>
             <Reviews/>
