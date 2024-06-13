@@ -2509,6 +2509,46 @@ p {
     }
 }
 
+.telegram-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100000;
+
+    cursor: pointer;
+
+    .telegram-widget-pc {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 20px;
+        padding: 5px 18px 5px 5px;
+
+        background: #F4F4F6;
+
+        .telegram-widget-pc-icon {
+            margin-right: 15px;
+            width: 28px;
+            height: 28px;
+        }
+
+        .telegram-widget-pc-text {
+            font-size: 16px;
+
+            background: linear-gradient(to bottom, #37BBFE, #007DBB);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    .telegram-widget-mobile{
+        display: none;
+    }
+}
+
 .hamburger-icon {
     position: fixed;
     top: 20px;
@@ -2763,40 +2803,40 @@ p {
 
     transition: all .3s ease-in-out;
 
-    .btn-yandex__text{
+    .btn-yandex__text {
         max-height: 28px;
         margin-bottom: 3px;
     }
 
-    .btn-yandex__img{
+    .btn-yandex__img {
         width: 28px;
         height: 28px;
         margin-right: 5px;
     }
 
-    .btn-yandex__text-star{
+    .btn-yandex__text-star {
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
-        .btn-yandex__star-rating{
+        .btn-yandex__star-rating {
             font-weight: bold;
             color: black;
 
             margin-right: 5px;
 
             font-family: Nunito Sans, serif;
-            font-size:14px;
+            font-size: 14px;
         }
 
-        .btn-yandex__star-img{
+        .btn-yandex__star-img {
             width: 10px;
             height: 10px;
             margin-right: 3px;
         }
     }
 
-    .btn-yandex__text-desk{
+    .btn-yandex__text-desk {
         font-size: 7px;
         font-weight: 400;
         color: black;
@@ -2805,13 +2845,12 @@ p {
         line-height: 7px;
     }
 
-    /*a {*/
-    /*    color: white;*/
-    /*}*/
+}
 
-    /*cursor: pointer;*/
-    /*color: white;*/
-    /*background-color: rgba(138, 83, 255, 1);*/
+.t-3 {
+    .btn-yandex {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
@@ -2830,42 +2869,60 @@ p {
 }
 
 @media (max-width: 500px) {
-    .display-y, .iicon, .title, .salary-block-3, .footer, .after .block-arr, .header, .main-block-title, .diamond, .t-3 .image, .reviews .arrow-block {
+    .telegram-widget-pc, .display-y, .iicon, .title, .salary-block-3, .footer, .after .block-arr, .header, .main-block-title, .diamond, .t-3 .image, .reviews .arrow-block {
         display: none !important;
     }
 
-    .btn-yandex{
-        margin-bottom: 10px;
+    .telegram-widget-mobile{
+        display: block!important;
+
+        .telegram-widget-pc-icon{
+            width: 39px!important;
+            height: 39px!important;
+        }
+
+    }
+
+    .t-3 {
+        .btn-yandex {
+            display: flex;
+        }
+    }
+
+    .btn-yandex {
+        /*display: block;/*/
+        margin-top: 20px;
+        margin-bottom: 30px;
         height: 65px;
         justify-content: flex-start;
         padding: 13px 22px 13px 13px;
 
-        .btn-yandex__img{
+        .btn-yandex__img {
             width: 39px;
             height: 39px;
             margin-right: 8px;
         }
 
-        .btn-yandex__star-rating{
-            font-size: 20px!important;
+        .btn-yandex__star-rating {
+            font-size: 20px !important;
             margin-right: 8px;
         }
 
-        .btn-yandex__star-img{
-            width: 14px!important;
-            height: 14px!important;
+        .btn-yandex__star-img {
+            width: 14px !important;
+            height: 14px !important;
         }
 
-        .btn-yandex__text-desk{
-            font-size: 12px!important;
+        .btn-yandex__text-desk {
+            font-size: 12px !important;
             margin-bottom: 0;
         }
 
-        .btn-yandex__text-star{
+        .btn-yandex__text-star {
             margin-right: 5px;
         }
 
-        .btn-yandex__text{
+        .btn-yandex__text {
             margin-bottom: 7px;
             max-height: 34px;
 

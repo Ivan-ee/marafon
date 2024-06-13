@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {FaTelegram, FaYoutube} from "react-icons/fa";
 import {AiFillInstagram} from "react-icons/ai";
+import {TelegramWidget} from "./TelegramWidget.jsx";
 
 export const HamburgerMenu = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -34,6 +35,8 @@ export const HamburgerMenu = () => {
             )}
             {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
             <Menu isOpen={isOpen} toggleMenu={toggleMenu}/>
+            {!isOpen && <TelegramWidget />}
+
         </>
     );
 };
@@ -63,7 +66,7 @@ const Menu = ({isOpen, toggleMenu}) => {
                 </div>
                 <div className="social-links">
                     <a href="https://www.instagram.com/marknikolaev_" target="_blank" rel="noopener noreferrer"><AiFillInstagram/></a>
-                    <a href="https://t.me/marknikolaev" target="_blank" rel="noopener noreferrer"><FaTelegram/></a>
+                    <a href="https://t.me/+jbYNkBI4mhIwYWE6" target="_blank" rel="noopener noreferrer"><FaTelegram/></a>
                     <a href="https://www.youtube.com/@marknikolaeff" target="_blank" rel="noopener noreferrer"><FaYoutube/></a>
                 </div>
             </nav>

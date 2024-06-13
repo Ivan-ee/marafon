@@ -17,6 +17,7 @@ import React from "react";
 import {Ask} from "./components/Ask.jsx";
 import {Footer} from "./components/Footer.jsx";
 import {HamburgerMenu} from "./components/HamburgerMenu.jsx";
+import {TelegramWidget} from "./components/TelegramWidget.jsx";
 
 
 export const App = () => {
@@ -28,6 +29,7 @@ export const App = () => {
             <Header/>
             <Main/>
             <HamburgerMenu/>
+            {/*<TelegramWidget/>*/}
             <Salary/>
             <WhoIsIt/>
             <Reviews/>
