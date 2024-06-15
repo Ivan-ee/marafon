@@ -35,7 +35,7 @@ export const HamburgerMenu = () => {
             )}
             {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
             <Menu isOpen={isOpen} toggleMenu={toggleMenu}/>
-            {!isOpen && <TelegramWidget />}
+            {isVisible && !isOpen && <TelegramWidget />}
 
         </>
     );
