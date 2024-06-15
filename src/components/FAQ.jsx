@@ -4,6 +4,10 @@ import { animateScroll as scroll } from "react-scroll";
 import arrowWhite from "../assets/up.svg";
 import arrowBlack from "../assets/down.svg";
 import {Die} from "./Die.jsx";
+import s1 from "../assets/Emogy/Thinking Face.svg";
+import s2 from "../assets/Emogy/Emoji Mega Pack Eyes.svg";
+import s3 from "../assets/Emogy/Emoji Mega Pack (1).svg";
+import s4 from "../assets/Emogy/Backhand Index Down Light Skin.svg";
 
 export const FAQ = () => {
     const [accordionItems, setAccordionItems] = useState([
@@ -116,10 +120,10 @@ export const FAQ = () => {
             <div className="title">FAQ</div>
             <div className="title-mini-big">FAQ</div>
             <Die style='die-faq'>
-                <div>🤔</div>
-                <div>👀</div>
-                <div>📝</div>
-                <div>👇🏻</div>
+                <div><img src={s1} alt={s1}/></div>
+                <div><img src={s2} alt={s1}/></div>
+                <div><img src={s3} alt={s1}/></div>
+                <div><img src={s4} alt={s1}/></div>
             </Die>
             <section>
                 <div className="accordion">

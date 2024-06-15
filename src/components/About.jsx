@@ -7,6 +7,10 @@ import image5 from '../assets/alfa.svg';
 import arrow from "../assets/Arrow 1 (Stroke).svg";
 import starBlack from "../assets/star_black.svg";
 import {Die} from "./Die.jsx";
+import s1 from "../assets/Emogy/Technologist Emoji.svg";
+import s2 from "../assets/Emogy/Emoji Mega Pack Light Skin Tone.svg";
+import s3 from "../assets/Emogy/Emoji Mega Pack (2).svg";
+import s4 from "../assets/Emogy/Right Pointing Hand Light Skin Tone.svg";
 
 
 export const About = () => {
@@ -38,16 +42,16 @@ export const About = () => {
                 </div>
             </div>
             <Die style='die-about'>
-                <div>🧑🏽‍💻</div>
-                <div>🤳🏼</div>
-                <div>🔥</div>
-                <div>👉🏼</div>
+                <div><img src={s1} alt={s1}/></div>
+                <div><img src={s2} alt={s1}/></div>
+                <div><img src={s3} alt={s1}/></div>
+                <div><img src={s4} alt={s1}/></div>
             </Die>
             <div className='main-blocks'>
                 <div className='blocks'>
                     <div className='block-m'>
                         <div className="icon">
-                            <img src={starBlack} className='star'/>
+                        <img src={starBlack} className='star'/>
                         </div>
                         <div className='text'>Главный редактор<br/>
                             УК Газпромбанк, <br/>

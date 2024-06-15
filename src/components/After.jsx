@@ -5,6 +5,10 @@ import image from "../assets/Arrow 1.svg";
 import arrow from "../assets/Arrow 1 Stroke (1).svg";
 import {Die} from "./Die.jsx";
 import GetCourseModal from "./GetCourse.jsx";
+import s1 from "../assets/Emogy/Emoji Mega Pack Credit Card.svg";
+import s2 from "../assets/Emogy/Right Pointing Hand Light Skin Tone.svg";
+import s3 from "../assets/Emogy/Emoji Mega Pack (3).svg";
+import s4 from "../assets/Emogy/Hand Medium Light Skin Tone.svg";
 
 export const After = () => {
 
@@ -57,10 +61,10 @@ export const After = () => {
                 </div>
             </div>
             <Die style='die-after'>
-                <div>💳</div>
-                <div>👉🏼</div>
-                <div>📱</div>
-                <div>🤙🏼</div>
+                <div><img src={s1} alt={s1}/></div>
+                <div><img src={s2} alt={s1}/></div>
+                <div><img src={s3} alt={s1}/></div>
+                <div><img src={s4} alt={s1}/></div>
             </Die>
             <div className='blocks'>
                 <div className='block-1'>

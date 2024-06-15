@@ -17,6 +17,10 @@ import mini7 from '../assets/mini7.svg';
 import starBlack1 from "../assets/star_black.svg";
 import VideoModal from "./YouTube.jsx";
 import {Die} from "./Die.jsx";
+import s1 from "../assets/Emogy/Girl Light Skin Tone.svg";
+import s2 from "../assets/Emogy/Person Light Skin Curly.svg";
+import s3 from "../assets/Emogy/Emoji Mega Pack Woman Medium.svg";
+import s4 from "../assets/Emogy/Blond Hair Emoji.svg";
 
 export const Reviews = () => {
     const reviewsRef = useRef(null);
@@ -61,15 +65,23 @@ export const Reviews = () => {
             <div className="title-mini">
                 Марафон прошли<br/>
                 <div>
-                    <div style={{display: "flex", alignItems: "center", height: "min-content"}}>1600 <img src={arrow} alt='1' style={{height: 19, width: 19, position: "relative", top: 10, right: -5}}/></div>
+                    <div style={{display: "flex", alignItems: "center", height: "min-content"}}>1600 <img src={arrow}
+                                                                                                          alt='1'
+                                                                                                          style={{
+                                                                                                              height: 19,
+                                                                                                              width: 19,
+                                                                                                              position: "relative",
+                                                                                                              top: 10,
+                                                                                                              right: -5
+                                                                                                          }}/></div>
                     <div style={{textAlign: "right"}}>человек</div>
                 </div>
             </div>
             <Die style='die-whoIsIt'>
-                <div>👧🏻</div>
-                <div>🧑🏻‍🦱</div>
-                <div>👩‍🦰</div>
-                <div>🧑🏾</div>
+                <div><img src={s1} alt={s1}/></div>
+                <div><img src={s2} alt={s1}/></div>
+                <div><img src={s3} alt={s1}/></div>
+                <div><img src={s4} alt={s1}/></div>
             </Die>
 
             <div className="main-block">

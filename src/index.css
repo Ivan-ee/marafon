@@ -38,12 +38,18 @@
     align-items: center;
 
     padding: 13px 27px !important;
+
+    img{
+        max-width: 20px;
+    }
 }
 
 .die-title {
     position: relative;
     top: -15px;
     right: -590px;
+
+
 }
 
 .die-whoIsIt {

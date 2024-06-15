@@ -6,6 +6,10 @@ import image3 from "../assets/Marathon layout (4).svg";
 import arrowWhite from "../assets/up.svg";
 import arrowBlack from "../assets/down.svg";
 import {Die} from "./Die.jsx";
+import s1 from "../assets/Emogy/Farmer Emoji.svg";
+import s2 from "../assets/Emogy/Cook Medium Skin Tone.svg";
+import s3 from "../assets/Emogy/Teacher Emoji.svg";
+import s4 from "../assets/Emogy/Woman Feeding Baby Medium Light Skin Tone.svg";
 
 export const Description = () => {
     const [accordionItemsDesc, setAccordionItemsDesc] = useState([
@@ -72,10 +76,10 @@ export const Description = () => {
                 <span>Для тех, кто никогда не писал.</span>
             </div>
             <Die style="die-description">
-                <div>🧑🏼‍🌾</div>
-                <div>🧑🏽‍🍳</div>
-                <div>👩🏼‍🏫</div>
-                <div>👩🏼‍🍼</div>
+                <div><img src={s1} alt={s1}/></div>
+                <div><img src={s2} alt={s1}/></div>
+                <div><img src={s3} alt={s1}/></div>
+                <div><img src={s4} alt={s1}/></div>
             </Die>
             <section>
                 <div className="accordion-description">

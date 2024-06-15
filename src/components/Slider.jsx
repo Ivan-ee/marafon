@@ -10,6 +10,10 @@ import arrowL from '../assets/Лево.svg';
 import arrowR from '../assets/Право.svg';
 import pol from '../assets/Polygon 1.svg';
 import {Die} from "./Die.jsx";
+import s1 from "../assets/Emogy/Thinking Face.svg";
+import s2 from "../assets/Emogy/Technologist Emoji.svg";
+import s3 from "../assets/Emogy/Emoji Mega Pack.svg";
+import s4 from "../assets/Emogy/Backhand Index Pointing Down.svg";
 
 export const MySlider = () => {
     const [nav1, setNav1] = useState(null);
@@ -79,10 +83,10 @@ export const MySlider = () => {
                 марафон
             </div>
             <Die style='die-slider'>
-                <div>🤔</div>
-                <div>🧑🏽‍💻</div>
-                <div>💻</div>
-                <div>👇</div>
+                <div><img src={s1} alt={s1}/></div>
+                <div><img src={s2} alt={s1}/></div>
+                <div><img src={s3} alt={s1}/></div>
+                <div><img src={s4} alt={s1}/></div>
             </Die>
             <link
                 rel="stylesheet"
