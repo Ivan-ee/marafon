@@ -9,11 +9,11 @@ export const BtnReviews = forwardRef(({ href }, ref) => {
             <div className="btn-yandex__text">
                 <div className="btn-yandex__text-star">
                     <span className="btn-yandex__star-rating">4.9</span>
-                    <img className="btn-yandex__star-img" src={star} alt="star"/>
-                    <img className="btn-yandex__star-img" src={star} alt="star"/>
-                    <img className="btn-yandex__star-img" src={star} alt="star"/>
-                    <img className="btn-yandex__star-img" src={star} alt="star"/>
-                    <img className="btn-yandex__star-img" src={star} alt="star"/>
+                    <img className="btn-yandex__star-img star-wave" src={star} alt="star"/>
+                    <img className="btn-yandex__star-img star-wave" src={star} alt="star"/>
+                    <img className="btn-yandex__star-img star-wave" src={star} alt="star"/>
+                    <img className="btn-yandex__star-img star-wave" src={star} alt="star"/>
+                    <img className="btn-yandex__star-img star-wave" src={star} alt="star"/>
                 </div>
                 <div className="btn-yandex__text-desk">
                     Положительных отзывов студентов в Яндекс
