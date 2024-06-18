@@ -4,15 +4,15 @@ import React from "react";
 
 export const Needed = () => {
     return (
-        <div className="needed">
-            <div className='title'>
+        <section className="needed">
+            <h2 className='title'>
                 Подойдёт тем,
                 кто хочет
-            </div>
-            <div className='title-mini'>
+            </h2>
+            <h2 className='title-mini'>
                 Подойдёт тем,
                 кто хочет
-            </div>
+            </h2>
 
             <div className='main-block'>
 
@@ -72,6 +72,6 @@ export const Needed = () => {
                 </div>
             </div>
             <Video/>
-        </div>
+        </section>
     );
 }

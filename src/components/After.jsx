@@ -42,15 +42,15 @@ export const After = () => {
     }, []);
 
     return (
-        <div className='main after'>
-            <div className='title'>
+        <section className='main after'>
+            <h2 className='title'>
                 Что будет <br/>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                     <div>после</div>
                     <div>оплаты</div>
                 </div>
-            </div>
-            <div className='title-mini'>
+            </h2>
+            <h2 className='title-mini'>
                <div style={{display: "flex", justifyContent: "space-between"}}>
                   <div>Что</div>
                   <div>будет</div>
@@ -59,7 +59,7 @@ export const After = () => {
                     <div>после</div>
                     <div style={{textAlign:"right"}}>оплаты</div>
                 </div>
-            </div>
+            </h2>
             <Die style='die-after'>
                 <div><img src={s1} alt={s1}/></div>
                 <div><img src={s2} alt={s1}/></div>
@@ -106,6 +106,6 @@ export const After = () => {
                     <img className='arrow-block' style={{height: 70, width: 70}} src={arrow} alt='1'/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

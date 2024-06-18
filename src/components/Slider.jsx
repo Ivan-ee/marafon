@@ -69,19 +69,19 @@ export const MySlider = () => {
     const totalSlides = 4;
 
     return (
-        <div className='main slider'>
-            <div className='title'>
+        <section className='main slider'>
+            <h2 className='title'>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <div>Как</div>
                     <div>проходит</div>
                 </div>
                 марафон
-            </div>
-            <div className='title-mini'>
+            </h2>
+            <h2 className='title-mini'>
                     <div>Как</div>
                     <div>проходит</div>
                 марафон
-            </div>
+            </h2>
             <Die style='die-slider'>
                 <div><img src={s1} alt={s1}/></div>
                 <div><img src={s2} alt={s1}/></div>
@@ -132,11 +132,11 @@ export const MySlider = () => {
                         afterChange={handleAfterChange}
                     >
                         <div className='slider-item'>
-                            <div className='slider-title'>
+                            <h6 className='slider-title'>
                                 Изучаете 8 уроков <br/>
                                 в формате текстов и
                                 видео.
-                            </div>
+                            </h6>
                             <div className='slider-desc'>
                                 Читайте и смотрите уроки в метро, кафе
                                 или на улице в любое свободное время.
@@ -146,11 +146,11 @@ export const MySlider = () => {
                             </a>
                         </div>
                         <div className='slider-item'>
-                            <div className='slider-title'>
+                            <h6 className='slider-title'>
                                 Выполняете
                                 4 практических
                                 домашних задания
-                            </div>
+                            </h6>
                             <div className='slider-desc'>
                                 Получите обратную связь на каждую
                                 работу от практикующих редакторов.
@@ -160,11 +160,11 @@ export const MySlider = () => {
                             </a>
                         </div>
                         <div className='slider-item'>
-                            <div className='slider-title'>
+                            <h6 className='slider-title'>
                                 Работаете
                                 с куратором
                                 индивидуально
-                            </div>
+                            </h6>
                             <div className='slider-desc'>
                                 Общайтесь с редакторами в личных
                                 сообщениях. Они расскажут о работе,
@@ -177,11 +177,11 @@ export const MySlider = () => {
                             </a>
                         </div>
                         <div className='slider-item'>
-                            <div className='slider-title'>
+                            <h6 className='slider-title'>
                                 Смотрите 3 вебинара <br/>
                                 от Марка с разборами
                                 текстов
-                            </div>
+                            </h6>
                             <div className='slider-desc'>
                                 Узнайте, какие ошибки делают <br/>
                                 начинающие авторы и как их исправить.
@@ -203,6 +203,6 @@ export const MySlider = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

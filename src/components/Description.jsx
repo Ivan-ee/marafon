@@ -66,15 +66,15 @@ export const Description = () => {
     ]);
 
     return (
-        <div style={{marginBottom: 180}} className="main description" id="description">
-            <div className="title">
+        <section style={{marginBottom: 180}} className="main description" id="description">
+            <h2 className="title">
                 Программа — вся база текстов за 5 дней. <br/>
                 <span>Для тех, кто никогда не писал.</span>
-            </div>
-            <div className="title-mini">
+            </h2>
+            <h2 className="title-mini">
                 Программа — вся база текстов за 5 дней. <br/>
                 <span>Для тех, кто никогда не писал.</span>
-            </div>
+            </h2>
             <Die style="die-description">
                 <div><img src={s1} alt={s1}/></div>
                 <div><img src={s2} alt={s1}/></div>
@@ -94,7 +94,7 @@ export const Description = () => {
                     ))}
                 </div>
             </section>
-        </div>
+        </section>
     );
 };
 
@@ -125,7 +125,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     return (
         <div className="accordion-item" >
             <button id={item.id} ref={itemRef} aria-expanded={item.ariaExpanded || false} className={item.buttonClass}>
-                <div className="accordion-title">{item.title}</div>
+                <h6 className="accordion-title">{item.title}</h6>
                 <div className="icon" aria-hidden="true">
                     <img
                         ref={arrowRefDesc}

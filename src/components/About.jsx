@@ -16,8 +16,8 @@ import s4 from "../assets/Emogy/Right Pointing Hand Light Skin Tone.svg";
 export const About = () => {
 
     return (
-        <div className='main about'>
-            <div className='title'>
+        <section className='main about'>
+            <h2 className='title'>
                 Преподаватель
                 Марк
                 <div style={{textAlign: "right"}}>
@@ -31,8 +31,8 @@ export const About = () => {
                          }}/>
                     Николаев
                 </div>
-            </div>
-            <div className='title-mini'>
+            </h2>
+            <h2 className='title-mini'>
                 Препода- <br/>
                 <div style={{textAlign: "right"}}> ватель</div>
                 Марк
@@ -40,7 +40,7 @@ export const About = () => {
                     <img src={arrow} alt='1'/>
                     Николаев
                 </div>
-            </div>
+            </h2>
             <Die style='die-about'>
                 <div><img src={s1} alt={s1}/></div>
                 <div><img src={s2} alt={s1}/></div>
@@ -132,6 +132,6 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

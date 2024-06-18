@@ -49,15 +49,15 @@ export const Ask = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className="main ask">
-            <div className="title">
+        <section className="main ask">
+            <h2 className="title">
                 <div>Остались</div>
                 <div style={{textAlign: "right"}}>вопросы?</div>
-            </div>
-            <div className="title-mini">
+            </h2>
+            <h2 className="title-mini">
                 <div>Остались</div>
                 <div style={{textAlign: "right"}}>вопросы?</div>
-            </div>
+            </h2>
 
             <div className="super-block">
                 <img className="icon" src={image}/>
@@ -144,6 +144,6 @@ export const Ask = () => {
                     </div>
                 </div>
             </form>
-        </div>
+        </section>
     );
 };

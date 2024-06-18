@@ -8,12 +8,12 @@ export const Footer = () => {
     useSmoothScroll(footerRef);
 
     return (
-        <div className="footer" ref={footerRef}>
+        <footer className="footer" ref={footerRef}>
             <Button href="#popup:pay">Отзывы</Button>
             <Button href="#whoIsIt">Преподаватель</Button>
             <Button href="#description">Программа</Button>
             <Button href="#FAQ">FAQ</Button>
             <Button style='last-btn' href="#header">Наверх</Button>
-        </div>
+        </footer>
     );
 };

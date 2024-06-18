@@ -48,7 +48,7 @@ export const App = () => {
 
         <Layout>
             <Header/>
-            {isPopupVisible && <PopupTelegram onClose={handleClose} />}
+            {isPopupVisible && <PopupTelegram onClose={handleClose}/>}
             <Main/>
             <HamburgerMenu/>
             <Salary/>

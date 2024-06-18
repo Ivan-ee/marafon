@@ -10,12 +10,12 @@ export const Header = () => {
     useSmoothScroll(headerRef);
 
     return (
-        <div className="header" id="header" ref={headerRef}>
+        <nav className="header" id="header" ref={headerRef}>
             <Button href="#reviews">Отзывы</Button>
             <Button href="#whoIsIt">Преподаватель</Button>
             <Button href="#description">Программа</Button>
             <Button href="#FAQ">FAQ</Button>
             <BtnReviews href="https://yandex.ru/maps/-/CDrkaFlp"/>
-        </div>
+        </nav>
     );
 };

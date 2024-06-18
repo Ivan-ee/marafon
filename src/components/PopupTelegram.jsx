@@ -17,16 +17,16 @@ const PopupTelegram = ({ onClose }) => {
     }, [onClose]);
 
     return (
-        <div className="popup-overlay" onClick={onClose}>
+        <section className="popup-overlay" onClick={onClose}>
             <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-                <div className="popup-title">
+                <h3 className="popup-title">
                     Получите бесплатный
                     видеоурок
-                </div>
-                <div className="popup-desk">
+                </h3>
+                <h6 className="popup-desk">
                     «Как начать писать и найти
                     первых клиентов»
-                </div>
+                </h6>
                 <div className="popup-text">
                     Пошаговый урок, как написать текст, создать
                     резюме и найти первого клиента. В подарок —
@@ -37,7 +37,7 @@ const PopupTelegram = ({ onClose }) => {
                     ЖМИТЕ СЮДА
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

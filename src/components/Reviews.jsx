@@ -54,14 +54,14 @@ export const Reviews = () => {
     }, []);
 
     return (
-        <div className="reviews" id='reviews' ref={reviewsRef}>
-            <div className="title">
+        <section className="reviews" id='reviews' ref={reviewsRef}>
+            <h2 className="title">
                 Марафон прошли<br/>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                     <div>1600</div>
                     <div>человек</div>
                 </div>
-            </div>
+            </h2>
             <div className="title-mini">
                 Марафон прошли<br/>
                 <div>
@@ -186,7 +186,7 @@ export const Reviews = () => {
             <div className="block-16">
                 <VideoModal videoId="Gxd5DSVMQLM?si=wkKB1BSNDM1GmSg0" imageSrc={currentImag7}/>
             </div>
-        </div>
+        </section>
     );
 };
 

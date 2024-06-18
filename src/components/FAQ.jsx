@@ -116,9 +116,9 @@ export const FAQ = () => {
     const faqRef = useRef(null);
 
     return (
-        <div className="main faq" id='FAQ' ref={faqRef}>
-            <div className="title">FAQ</div>
-            <div className="title-mini-big">FAQ</div>
+        <section className="main faq" id='FAQ' ref={faqRef}>
+            <h2 className="title">FAQ</h2>
+            <h2 className="title-mini-big">FAQ</h2>
             <Die style='die-faq'>
                 <div><img src={s1} alt={s1}/></div>
                 <div><img src={s2} alt={s1}/></div>
@@ -138,7 +138,7 @@ export const FAQ = () => {
                     ))}
                 </div>
             </section>
-        </div>
+        </section>
     );
 };
 
@@ -178,7 +178,7 @@ const AccordionItem = ({item, index, accordionItems, setAccordionItems}) => {
     return (
         <div className='accordion-item' ref={itemRef} >
             <button id={item.id} aria-expanded={item.ariaExpanded || false} className={item.buttonClass}>
-                <div className="accordion-title">{item.title}</div>
+                <h6 className="accordion-title">{item.title}</h6>
                 <div className="icon" aria-hidden="true">
                     <img
                         ref={arrowRef}

@@ -9,8 +9,8 @@ export const WhoIsIt = () => {
     const whoIsItRef = useRef(null);
 
     return (
-        <div className="whoIsIt" id="whoIsIt" ref={whoIsItRef}>
-            <div className='title'>
+        <section className="whoIsIt" id="whoIsIt" ref={whoIsItRef}>
+            <h2 className='title'>
                 <div className='whoIsIt-titles'>
                     <div>Кто</div>
                     <div>такой</div>
@@ -19,9 +19,9 @@ export const WhoIsIt = () => {
                     textAlign: 'right'
                 }}>копирайтер?
                 </div>
-            </div>
+            </h2>
 
-            <div className='title-mini'>
+            <h2 className='title-mini'>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <div>Кто</div>
                     <div>такой</div>
@@ -35,7 +35,7 @@ export const WhoIsIt = () => {
                         райтер?
                     </div>
                 </div>
-            </div>
+            </h2>
 
             <div className='main-block'>
 
@@ -101,6 +101,6 @@ export const WhoIsIt = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

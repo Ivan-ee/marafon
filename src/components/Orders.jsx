@@ -54,7 +54,7 @@ export const Orders = () => {
     const formattedCount = count.toString().padStart(3, '0');
 
     return (
-        <div style={{marginBottom: 180}}>
+        <section style={{marginBottom: 180}}>
             <div className='main order'>
                 <Block className="o-t">
                     <div className="image">
@@ -106,6 +106,6 @@ export const Orders = () => {
             </div>
             <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
             <button className='to-order' onClick={() => setShowModal(true)}>Записаться <img src={image2} className='star'/></button>
-        </div>
+        </section>
     )
 }

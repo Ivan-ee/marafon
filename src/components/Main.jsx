@@ -53,7 +53,7 @@ export const Main = () => {
     const formattedCount = count.toString().padStart(3, '0');
 
     return (
-        <div className='main-block'>
+        <header className='main-block'>
             <Title/>
 
             <Block className="t-mini-1">
@@ -147,6 +147,6 @@ export const Main = () => {
                     </p>
                 </div>
             </Block>
-        </div>
+        </header>
     )
 }

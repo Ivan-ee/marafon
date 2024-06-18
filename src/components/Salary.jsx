@@ -33,7 +33,7 @@ export const Salary = () => {
     }, []);
 
     return (
-        <div className='salary'>
+        <section className='salary'>
             <div className='salary-blocks'>
                 <div className='salary-block-1'>
                     <img className='salary-icon' src={imageSrc1} alt='1'/>
@@ -71,7 +71,7 @@ export const Salary = () => {
                 </div>
             </div>
 
-        </div>
+        </section>
 
     )
 }
