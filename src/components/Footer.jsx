@@ -1,6 +1,6 @@
 import useSmoothScroll from "./SmoothScroll.jsx";
-import React, { useRef } from "react";
-import { Button } from "./Button.jsx";
+import React, {useRef} from "react";
+import {Button} from "./Button.jsx";
 
 export const Footer = () => {
     const footerRef = useRef(null);
@@ -8,12 +8,14 @@ export const Footer = () => {
     useSmoothScroll(footerRef);
 
     return (
-        <footer className="footer" ref={footerRef}>
-            <Button href="#popup:pay">Отзывы</Button>
-            <Button href="#whoIsIt">Преподаватель</Button>
-            <Button href="#description">Программа</Button>
-            <Button href="#FAQ">FAQ</Button>
-            <Button style='last-btn' href="#header">Наверх</Button>
+        <footer >
+            <nav className="footer" ref={footerRef}>
+                <Button href="#popup:pay">Отзывы</Button>
+                <Button href="#whoIsIt">Преподаватель</Button>
+                <Button href="#description">Программа</Button>
+                <Button href="#FAQ">FAQ</Button>
+                <Button style='last-btn' href="#header">Наверх</Button>
+            </nav>
         </footer>
     );
 };
