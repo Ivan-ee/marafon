@@ -104,7 +104,7 @@ export const Reviews = () => {
                         <div className="video-prev">
                             <VideoModal videoId="LcGh0g0Aycs" imageSrc={prev1}/>
                         </div>
-                        <div className="block-title">Стас, 24 года, никогда не писал тексты.</div>
+                        <div className="block-title">Стас, 24 года, никогда не писал тексты</div>
                         <div className="desk">
                             Пошёл в копирайтинг, чтобы освоить удаленную профессию и начать работать из дома. За неделю
                             Стас
@@ -128,7 +128,7 @@ export const Reviews = () => {
                     </div>
                     <div className="block-title">Вика, работает
                         фотографом
-                        и официантом.
+                        и официантом
                     </div>
                     <div className="desk">
                         Мечтала найти удаленную работу и
@@ -152,7 +152,7 @@ export const Reviews = () => {
                         <VideoModal videoId="zMOjkBax9_Y?si=gFRBlKGIF51j0a4W" imageSrc={prev3}/>
                     </div>
                     <div className="block-title">Яна, работает
-                        на конюшне.
+                        на конюшне
                     </div>
                     <div className="desk">
                         Хочет продолжать работать с лошадьми,

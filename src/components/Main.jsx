@@ -107,7 +107,7 @@ export const Main = () => {
 
                 <div className='text-2'>
                     Подходит для тех,
-                    кто никогда не писал.
+                    кто никогда не писал
                 </div>
             </Block>
 

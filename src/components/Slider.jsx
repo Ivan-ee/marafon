@@ -135,7 +135,7 @@ export const MySlider = () => {
                             <h6 className='slider-title'>
                                 Изучаете 8 уроков <br/>
                                 в формате текстов и
-                                видео.
+                                видео
                             </h6>
                             <div className='slider-desc'>
                                 Читайте и смотрите уроки в метро, кафе

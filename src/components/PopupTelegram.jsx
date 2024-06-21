@@ -33,9 +33,9 @@ const PopupTelegram = ({ onClose }) => {
                     список пяти телеграм-каналов для поиска
                     первого клиента
                 </div>
-                <div className='button'>
+                <a className='button' href={'https://t.me/MarkVebinar_bot'}>
                     ЖМИТЕ СЮДА
-                </div>
+                </a>
             </div>
         </section>
     );

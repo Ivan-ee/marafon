@@ -7,7 +7,7 @@ import s4 from "../assets/Emogy/Backhand Index Right Medium Light.svg";
 export const Title = () => {
     return (
         <section className='main-block-title'>
-            <title className='main-block-title-item'>
+            <div className='main-block-title-item'>
                 <h1>
                     Начните зарабатывать <br/> на текстах через 5 дней
                 </h1>
@@ -17,7 +17,7 @@ export const Title = () => {
                     <div><img src={s3} alt={s1}/></div>
                     <div><img src={s4} alt={s1}/></div>
                 </Die>
-            </title>
+            </div>
         </section>
     )
 }
