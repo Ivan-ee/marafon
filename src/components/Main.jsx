@@ -2,7 +2,7 @@ import React, {useEffect, useState, useRef} from 'react';
 import {Title} from "./Title.jsx";
 import {Block} from "./block.jsx";
 import image from '../assets/Arrow 1.svg';
-import diamond from '../assets/diamond.svg';
+import diamond from '../assets/Марафон макет 1.jpg';
 import starBlack from '../assets/star_black.svg';
 import starWhite from '../assets/star_white.svg';
 import GetCourseModal from "./GetCourse.jsx";
