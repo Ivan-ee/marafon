@@ -34,10 +34,10 @@ export const Ask = () => {
             console.error("Ошибка при отправке формы:", error);
         }
 
-        Swal.fire({
-            title: "Ваша заявка отправлена!",
-            icon: "success"
-        });
+        // Swal.fire({
+        //     title: "Ваша заявка отправлена!",
+        //     icon: "success"
+        // });
 
         reset();
     };
