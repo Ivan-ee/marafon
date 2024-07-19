@@ -3,7 +3,6 @@ import {Controller, useForm} from "react-hook-form";
 import image from "../assets/Arrow 1 Stroke (2).svg";
 import image2 from "../assets/Arrow 1.svg";
 import GetCourseModal from "./GetCourse.jsx";
-import Swal from 'sweetalert2'
 
 export const Ask = () => {
     const {control, register, handleSubmit, formState: {errors}, getValues, reset} = useForm(); // Добавляем getValues
@@ -34,10 +33,6 @@ export const Ask = () => {
             console.error("Ошибка при отправке формы:", error);
         }
 
-        // Swal.fire({
-        //     title: "Ваша заявка отправлена!",
-        //     icon: "success"
-        // });
 
         reset();
     };
