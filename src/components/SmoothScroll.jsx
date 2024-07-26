@@ -15,7 +15,7 @@ const useSmoothScroll = (ref) => {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                const yOffset = -10; // Задаем отступ в пикселях
+                const yOffset = -10;
                 const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({ top: yPosition, behavior: 'smooth' });
             }
