@@ -73,7 +73,6 @@ export const Main = () => {
             <img className="diamond" src={diamond} alt='diamond'/>
             {/*<GetCourseModal show={showModal} onClose={() => setShowModal(false)} />*/}
             <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
-            <a href={"#popup:pay"}>ШМЯК</a>
             <Block className="o-t">
                 <div className="image">
                     <p className='text-1'>
