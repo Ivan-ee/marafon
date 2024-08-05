@@ -9,12 +9,44 @@ import GetCourseModal from "./GetCourse.jsx";
 import {BtnReviews} from "./BtnReviews.jsx";
 
 export const Main = () => {
-    const currentDate = new Date();
 
-    const formattedDate = currentDate.toLocaleDateString('ru-RU', {
-        day: '2-digit',
-        month: '2-digit',
-    });
+    function getNextDayOfWeek(dayOfWeek) {
+        const currentDate = new Date();
+        const resultDate = new Date(currentDate);
+
+        resultDate.setDate(currentDate.getDate() + (dayOfWeek + 7 - currentDate.getDay()) % 7);
+        return resultDate;
+    }
+
+    function formatDate(date) {
+        return date.toLocaleDateString('ru-RU', {
+            day: '2-digit',
+            month: '2-digit'
+        });
+    }
+
+    function getNextTuesdayOrFriday() {
+        const currentDate = new Date();
+        const dayOfWeek = currentDate.getDay();
+
+        let nextTuesday = getNextDayOfWeek(2); // Вторник
+        let nextFriday = getNextDayOfWeek(5);  // Пятница
+
+        if (dayOfWeek === 2) { // Если сегодня вторник, то следующий вторник - через неделю
+            nextTuesday.setDate(nextTuesday.getDate() + 7);
+        } else if (dayOfWeek === 5) { // Если сегодня пятница, то следующая пятница - через неделю
+            nextFriday.setDate(nextFriday.getDate() + 7);
+        }
+
+        if (nextTuesday < nextFriday) {
+            return nextTuesday;
+        } else {
+            return nextFriday;
+        }
+    }
+
+    const nextMarathonDate = getNextTuesdayOrFriday();
+    const formattedNextMarathonDate = formatDate(nextMarathonDate);
 
     const [timeLeft, setTimeLeft] = useState(getTimeLeft());
     const [count, setCount] = useState(9);
@@ -71,12 +103,11 @@ export const Main = () => {
             </Block>
 
             <img className="diamond" src={diamond} alt='diamond'/>
-            {/*<GetCourseModal show={showModal} onClose={() => setShowModal(false)} />*/}
             <GetCourseModal show={showModal} onClose={() => setShowModal(false)} />
             <Block className="o-t">
                 <div className="image">
                     <p className='text-1'>
-                        -88% до конца дня
+                        -49% до конца дня
                     </p>
                     <p className='timer'>
                         {`${timeLeft.hours.toString().padStart(2, '0')}:${timeLeft.minutes.toString().padStart(2, '0')}:${timeLeft.seconds.toString().padStart(2, '0')}`}
@@ -85,7 +116,7 @@ export const Main = () => {
                         3990 ₽
                     </div>
                     <p className='price'>
-                        890 ₽
+                        1990 ₽
                     </p>
                 </div>
                 <div className='main-block-button' onClick={() => setShowModal(true)}>
@@ -132,7 +163,7 @@ export const Main = () => {
                         Начинаем учиться
                     </div>
                     <div className='text-2'>
-                        {formattedDate}
+                        {formattedNextMarathonDate}
                     </div>
                 </div>
                 <div className="three">
