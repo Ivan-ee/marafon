@@ -107,7 +107,7 @@ export const Main = () => {
             <Block className="o-t">
                 <div className="image">
                     <p className='text-1'>
-                        -49% до конца дня
+                        -82% до конца дня
                     </p>
                     <p className='timer'>
                         {`${timeLeft.hours.toString().padStart(2, '0')}:${timeLeft.minutes.toString().padStart(2, '0')}:${timeLeft.seconds.toString().padStart(2, '0')}`}
@@ -116,7 +116,7 @@ export const Main = () => {
                         3990 ₽
                     </div>
                     <p className='price'>
-                        1990 ₽
+                        890 ₽
                     </p>
                 </div>
                 <div className='main-block-button' onClick={() => setShowModal(true)}>
